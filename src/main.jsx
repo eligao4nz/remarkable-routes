@@ -708,6 +708,18 @@ const servicePages = [
       ["Half day", "$500 for 5 hours"],
       ["Full day", "$920 for 10 hours"],
     ],
+    zh: {
+      title: "皇后镇私人包车一日游",
+      kicker: "私人包车价格",
+      intro:
+        "从皇后镇出发，灵活安排风景路线、季节停留、美食、酒庄、摄影和本地轻松规划。行程使用7座奔驰商务车，最多可乘坐6位客人。价格包含车辆与司机向导服务；活动门票与餐食不包含在内。",
+      rates: [
+        ["私人包车按小时", "每小时 $120"],
+        ["半日行程", "5小时 $500"],
+        ["一日行程", "10小时 $920"],
+      ],
+      cta: "咨询私人包车",
+    },
   },
   {
     id: "activity-bookings",
@@ -720,6 +732,18 @@ const servicePages = [
       "Some activities need advance booking before the discount is available.",
       "Some activities need availability checked after the request is placed before we can confirm.",
     ],
+    zh: {
+      title: "活动预订",
+      kicker: "限时活动优惠",
+      intro:
+        "大部分新西兰活动可享受95折预订，包括皇后镇 Skyline 缆车、TSS Earnslaw 蒸汽船、直升机体验等。",
+      details: [
+        "部分活动可随时预订，并立即使用优惠。",
+        "部分活动需要提前预订，优惠才可确认。",
+        "部分活动需要先查询名额，提交需求后我们会为您确认可订选项。",
+      ],
+      cta: "咨询活动预订",
+    },
   },
   {
     id: "latest-deals",
@@ -732,6 +756,18 @@ const servicePages = [
       "We can combine private transport with discounted activities where available.",
       "Send your date, group size, and wish list, and we will check the best current option.",
     ],
+    zh: {
+      title: "最新优惠",
+      kicker: "季节限定优惠",
+      intro:
+        "欢迎咨询当前适用的季节优惠，范围包括私人包车、接送服务、活动预订、雪场行程、酒庄路线和湖边体验。",
+      details: [
+        "优惠会根据天气、合作方名额和出行日期而变化。",
+        "如条件合适，我们可以把私人交通与优惠活动组合安排。",
+        "请发送您的日期、人数和想体验的内容，我们会帮您查询当前最合适的选择。",
+      ],
+      cta: "咨询最新优惠",
+    },
   },
 ];
 
@@ -1414,7 +1450,7 @@ function ServicePage({
               className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-teal-700 px-6 py-3 text-sm font-bold text-white transition hover:bg-teal-800"
               href="#contact"
             >
-              {serviceContent.cta ?? "Enquire now"}
+              {serviceContent.cta ?? (language === "zh" ? "立即咨询" : "Enquire now")}
               <ArrowRight className="size-4" aria-hidden="true" />
             </a>
           </div>
