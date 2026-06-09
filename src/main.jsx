@@ -830,7 +830,8 @@ const copy = {
         travelDate: "Travel Date",
         startDate: "Start Date",
         endDate: "End Date",
-        messagePlaceholder: "Tell us what you'd like to see or experience.",
+        messagePlaceholder:
+          "Tell us your travel dates, group size, places you'd like to visit, and experiences you're interested in.\nIf you have a promo code, referral, or special request, feel free to include it here.",
         successTitle: "Thank you for your enquiry.",
         successBody: "We have received your message and will reply within 24 hours.",
         successRedirect: "Redirecting you back to Routes...",
@@ -887,7 +888,8 @@ const copy = {
         travelDate: "出行日期",
         startDate: "开始日期",
         endDate: "结束日期",
-        messagePlaceholder: "告诉我们您想去哪里、喜欢什么样的体验，剩下的交给我们。",
+        messagePlaceholder:
+          "告诉我们您的出行日期、人数、想去的地方或喜欢的体验。\n如有优惠码、推荐人或特殊需求，也欢迎一并填写。",
         successTitle: "感谢您的咨询。",
         successBody: "我们已经收到您的信息，并将在24小时内回复。",
         successRedirect: "正在返回路线页面...",
