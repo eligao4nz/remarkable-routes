@@ -196,48 +196,68 @@ const seasons = [
   {
     id: "spring",
     label: "Spring",
+    labelZh: "春季",
     months: "September - November",
+    monthsZh: "9月 - 11月",
     theme:
       "Lupin season, fresh alpine landscapes, and the first signs of summer across the Southern Alps.",
-    themeZh: "鲁冰花盛开，雪山渐渐苏醒，南岛迎来一年中最鲜活的色彩。",
+    themeZh: "鲁冰花盛开，山谷重新变绿，南岛在春光里慢慢醒来。",
     title: "Spring routes for Glenorchy, Tekapo, flowers, and soft alpine light.",
+    titleZh: "春季路线：格林诺奇、特卡波花海与柔和山光。",
     intro:
       "Spring is made for Glenorchy's green valleys, Lake Tekapo lupins, snow still sitting high above the roads, and slower photo-rich days before peak season.",
+    introZh:
+      "春天适合把节奏放慢：从皇后镇出发，看格林诺奇的新绿山谷、特卡波湖畔的鲁冰花，以及高山上仍未融尽的积雪。旺季到来前，路上更安静，也更适合停下来好好拍照。",
     image:
       images.tekapo,
     heroImages: [images.springDaffodils, images.springCherry, images.springLakeJetty],
     routes: [
       {
-        name: "Glenorchy & Paradise spring valley",
+        name: "Glenorchy spring valley",
+        nameZh: "格林诺奇春日山谷",
         description:
-          "A scenic spring road day from Queenstown along Lake Wakatipu to Glenorchy and Paradise. Expect fresh green valleys, braided rivers, mountain reflections, short nature walks, and quiet photo stops before the busy summer season arrives.",
+          "A scenic spring road day from Queenstown along Lake Wakatipu to Glenorchy. Expect fresh green valleys, braided rivers, mountain reflections, short nature walks, and quiet photo stops before the busy summer season arrives.",
+        descriptionZh:
+          "从皇后镇沿瓦卡蒂普湖一路前往格林诺奇，是春季最舒服的风景路线之一。沿途湖光山色相伴，新绿山谷、辫状河流与远处雪山交织成南岛很经典的风景画面。途中可停留 Bennetts Bluff、格林诺奇码头、达特河观景区等经典地点，在游客较少的季节里慢慢前行，感受春天刚刚苏醒的南岛。",
         images: [images.glenorchyHorseLupins, images.glenorchyLupinsLake],
       },
       {
         name: "Lake Tekapo lupin journey",
+        nameZh: "特卡波湖鲁冰花之旅",
         description:
           "A flower-focused journey through the Mackenzie Basin when lupins are in bloom. We can build in Lake Pukaki viewpoints, Church of the Good Shepherd, easy lakeside walks, golden-hour photography, and optional stargazing if you want a longer day.",
+        descriptionZh:
+          "花季时前往麦肯齐盆地，重点欣赏特卡波湖一带的鲁冰花。行程可加入普卡基湖观景点、好牧羊人教堂、轻松湖边散步和黄昏拍照；如果想把一天安排得更完整，也可以延伸到夜晚观星。",
         images: [images.tekapoLupinsLake, images.springTekapoPukakiSnowView],
       },
       {
         name: "Cherry blossom and garden pockets",
+        nameZh: "樱花街区与春日花园",
         description:
           "A gentle route for cherry blossom streets, spring gardens, lakeside walks, and local cafe stops around Queenstown, Arrowtown, and nearby residential pockets where the season feels quiet and local.",
+        descriptionZh:
+          "这是一条轻松的本地春日路线，适合看樱花街道、花园角落和湖边步道。我们会在皇后镇、箭镇及周边安静社区之间安排停留，也可加入咖啡馆小憩，让春天显得更从容、更有当地生活感。",
         images: [images.springCherry, uploadedImages[47], images.springCherryBlueSky],
       },
     ],
     highlights: ["Glenorchy", "Tekapo lupins", "Cherry blossom", "Photography"],
+    highlightsZh: ["格林诺奇", "特卡波鲁冰花", "樱花", "摄影"],
   },
   {
     id: "summer",
     label: "Summer",
+    labelZh: "夏季",
     months: "December - February",
+    monthsZh: "12月 - 2月",
     theme:
       "Long daylight hours, lake adventures, cherry season, and the South Island at its most energetic.",
-    themeZh: "漫长白昼、水上活动与樱桃季，让南岛展现最热闹也最自由的一面。",
+    themeZh: "白昼很长，湖边活动、樱桃季和夏日公路旅行，让南岛的节奏更轻快。",
     title: "Summer routes for Milford Sound, waterfalls, kayaking, and lake time.",
+    titleZh: "夏季路线：樱桃、湖上活动、蒂阿瑙萤火虫与夏日公路旅行。",
     intro:
       "Summer opens up bigger days: Milford Sound waterfalls, lake cruises, kayaking options, swim stops, picnic viewpoints, and late golden-hour drives.",
+    introZh:
+      "夏天的皇后镇适合把一天安排得更丰富：清晨出发去湖边活动，午后到酒庄和果园，傍晚还有很长的金色光线。我们会按天气、体力和兴趣，把樱桃季、瓦纳卡公路、蒂阿瑙萤火虫或峡湾方向灵活串起来。",
     image:
       images.summerForest,
     heroImages: [images.summerLakeKayakPicnicLevel],
@@ -245,8 +265,11 @@ const seasons = [
     routes: [
       {
         name: "Queenstown lake and water day",
+        nameZh: "皇后镇湖边与水上夏日",
         description:
           "Start local with Lake Wakatipu and Queenstown's summer water energy: kayaking, Moke Lake, Lake Hayes, lake fishing, scenic cruises, jet boating, the Shark Boat, picnic coves, and golden-hour viewpoints.",
+        descriptionZh:
+          "从皇后镇本地的湖边节奏开始，围绕瓦卡蒂普湖安排皮划艇、湖边野餐、喷射快艇、湖上巡游、湖钓或轻松散步。也可以加入 Moke Lake、Lake Hayes 和傍晚观景点，让一天既有水上活动，也有安静的夏日停留。",
         images: [
           images.summerWaterDay01,
           images.summerWaterDay02,
@@ -258,8 +281,11 @@ const seasons = [
       },
       {
         name: "Cromwell cherries and wine country",
+        nameZh: "Cromwell 樱桃与酒庄乡野",
         description:
           "A sunny Central Otago day through Gibbston, Bannockburn, Cromwell, and orchard country. Seasonal cherry picking, cellar doors, lakeside stops, fruit stalls, and relaxed winery lunches can all be built in.",
+        descriptionZh:
+          "夏季去中奥塔哥很适合把樱桃和酒庄安排在同一天。从 Gibbston 到 Bannockburn、Cromwell 和果园乡间，可加入樱桃采摘、果摊停留、酒庄品尝、湖边观景和轻松午餐，节奏可以很悠闲。",
         images: [
           images.cromwell,
           images.cromwellCherries01,
@@ -270,10 +296,11 @@ const seasons = [
       },
       {
         name: "Te Anau day hikes, Kepler and Fiordland edge",
+        nameZh: "蒂阿瑙、凯普勒步道与萤火虫",
         description:
           "A slower gateway-to-Fiordland route with Te Anau lakefront time and well-known day hike options, including sections inspired by the Kepler Track, forest walks, birdlife, optional glowworm caves, and quiet lake views.",
         descriptionZh:
-          "一条节奏更从容的峡湾边缘路线，可安排蒂阿瑙湖边停留、凯普勒步道灵感的一日轻徒步、森林步道、鸟类观察、可选萤火虫洞体验，以及安静的湖景时间。",
+          "这是一条节奏更从容的峡湾边缘路线，适合想看湖景、森林和萤火虫的客人。可安排蒂阿瑙湖边停留、凯普勒步道灵感的一日轻徒步、森林步道、鸟类观察，也可以加入蒂阿瑙萤火虫洞体验，把夏日白天和夜晚都用得刚刚好。",
         images: [
           images.teAnauDayHike01,
           images.teAnauDayHike02,
@@ -284,8 +311,11 @@ const seasons = [
       },
       {
         name: "Milford Sound waterfalls and cruise",
+        nameZh: "米尔福德峡湾瀑布与游船",
         description:
           "A full scenic fiord day with rainforest, alpine road stops, mirror lakes, dramatic valley viewpoints, waterfall watching, and optional Milford Sound cruise or kayak timing depending on weather and pace.",
+        descriptionZh:
+          "如果想把夏日的一天留给峡湾，可以安排米尔福德方向的完整风景日。沿途有雨林、高山公路停留点、镜湖、山谷观景台和瀑布；抵达后可按天气和节奏衔接峡湾游船，或在合适条件下安排皮划艇体验。",
         images: [
           images.milfordSound01,
           images.milfordSound02,
@@ -297,30 +327,42 @@ const seasons = [
       },
       {
         name: "Bluff shark cage diving extension",
+        nameZh: "南部海岸延伸路线",
         description:
           "For adventurous travellers, we can plan a serious South Coast extension toward Bluff for great white shark cage diving, coastal seafood, wild ocean scenery, and overnight routing if needed.",
+        descriptionZh:
+          "如果时间更充裕，也可以根据兴趣规划南部海岸方向的延伸路线，加入海岸风景、当地海鲜、南端地标或过夜行程。适合想把南岛旅程走得更远、节奏更完整的客人。",
         images: [images.summerBluffShellBeach],
         imageLayout: "portrait",
       },
     ],
     highlights: ["Milford Sound", "Kayaking options", "Lake days", "Late sunsets"],
+    highlightsZh: ["樱桃季", "湖上活动", "蒂阿瑙萤火虫", "瓦纳卡公路旅行"],
   },
   {
     id: "autumn",
     label: "Autumn",
+    labelZh: "秋季",
     months: "March - May",
+    monthsZh: "3月 - 5月",
     theme:
       "Arrowtown autumn colours, vineyard landscapes, and some of the South Island's most beautiful drives.",
-    themeZh: "箭镇缤纷秋色、酒庄风景与稳定天气，是许多人最喜欢的南岛季节。",
+    themeZh: "箭镇渐渐转金，酒庄和中奥塔哥的山谷也进入一年中最适合慢慢看的季节。",
     title: "Autumn routes for Arrowtown colour and Central Otago depth.",
+    titleZh: "秋季路线：箭镇秋色、Gibbston 酒庄与中奥塔哥风景公路。",
     intro:
       "Autumn is Queenstown's most photogenic slow season: Arrowtown turns gold, Central Otago softens, and the wine roads feel made for private touring.",
+    introZh:
+      "秋天是皇后镇最适合摄影和慢行的季节之一。箭镇的树色变得温暖，中奥塔哥的山谷光线更柔和，Gibbston 和周边酒庄路段也很适合私人包车慢慢走。",
     image: images.autumnTrees,
     routes: [
       {
         name: "Arrowtown autumn colour walk",
+        nameZh: "箭镇秋色慢行",
         description:
           "A golden autumn loop through Arrowtown's riverside colour, Millbrook Resort, quiet resort lanes, and Lake Hayes reflections. Best for slow walking, photo stops, cafes, soft afternoon light, and an easy return from Queenstown.",
+        descriptionZh:
+          "从皇后镇轻松前往箭镇，适合把时间留给河边秋色、老街散步、咖啡馆和安静的拍照点。可顺路加入 Millbrook Resort 周边、Lake Hayes 倒影和午后柔和光线，是一条不赶路、但很有季节感的半日路线。",
         images: [
           images.autumnArrowtownHillside,
           images.autumnMillbrookValley,
@@ -330,8 +372,11 @@ const seasons = [
       },
       {
         name: "Central Otago winery trail",
+        nameZh: "中奥塔哥酒庄风景线",
         description:
           "A private wine-country route through Gibbston, Bannockburn, Cromwell, or Bendigo. Pinot Noir, long lunches, cellar doors, lake viewpoints, and autumn vineyard colour make this one of the most relaxed seasonal days.",
+        descriptionZh:
+          "沿 Gibbston、Bannockburn、Cromwell 或 Bendigo 一带安排私人酒乡路线，适合喜欢黑皮诺、酒庄午餐和开阔风景的客人。秋季葡萄园颜色更有层次，路上也可以加入湖景停留和中奥塔哥山谷观景点。",
         images: [
           images.autumnCentralOtagoSheepHills,
           images.autumnCentralOtagoLake,
@@ -343,8 +388,11 @@ const seasons = [
       },
       {
         name: "Clyde cycling day",
+        nameZh: "Clyde 轻骑行与河谷风景",
         description:
           "A Central Otago cycling-focused day around Clyde and nearby trail sections. Think easy riding, river scenery, historic streets, coffee stops, and vehicle support so the day stays comfortable.",
+        descriptionZh:
+          "围绕 Clyde 和附近步道安排轻松骑行，很适合想体验中奥塔哥河谷风景、历史街区和咖啡停留的客人。我们可以根据体力选择路段，并用车辆做接驳支持，让一天保持舒适，不需要把行程变成运动挑战。",
         images: [
           images.autumnClydeOrchardRow,
           images.autumnClydeCyclingGorge,
@@ -355,23 +403,32 @@ const seasons = [
       },
     ],
     highlights: ["Arrowtown", "Central Otago", "Wine country", "Gold rush towns"],
+    highlightsZh: ["箭镇秋色", "Gibbston 酒庄", "中奥塔哥", "摄影"],
   },
   {
     id: "winter",
     label: "Winter",
+    labelZh: "冬季",
     months: "June - August",
+    monthsZh: "6月 - 8月",
     theme: "Snow-covered mountains, ski days, hot pools, and clear southern skies after dark.",
-    themeZh: "滑雪、雪山、温泉与璀璨星空，构成皇后镇最经典的冬季体验。",
+    themeZh: "雪山、滑雪场、温泉和清冷夜空，让皇后镇的冬天既有活力，也很适合放慢。",
     title: "Winter routes for Queenstown snow views, hot pools, stargazing, and nightlife.",
+    titleZh: "冬季路线：雪山风景、滑雪场、Onsen 温泉与清澈夜空。",
     intro:
       "Winter in Queenstown is not only for skiers. Snow scenery, hot pools, early dark skies, lakefront hot chocolate, and lively nights can all be shaped into a private cold-season route.",
+    introZh:
+      "皇后镇的冬天不只属于滑雪者。即使不滑雪，也可以上山看雪、坐缆车、泡 Onsen Hot Pools、在湖边喝热饮，或等夜色早点落下后看清澈的南半球星空。",
     image:
       images.milford,
     routes: [
       {
         name: "Queenstown snow fields and alpine play",
+        nameZh: "皇后镇雪场与高山玩雪",
         description:
           "A flexible winter day around Queenstown's nearby snow fields, including Coronet Peak and The Remarkables. You do not need to ski to enjoy the mountain: go for snow views, family snow play, scenic chairlift time, cafe stops, photos, and extra activities such as Go tobogganing! We can also build in transfers, gear rental stops, beginner-friendly support, or a warm recovery plan after the mountain.",
+        descriptionZh:
+          "围绕皇后镇附近雪场安排灵活的一日冬季路线，包括 Coronet Peak 和 The Remarkables。即使不滑雪，也可以上山看雪景、玩雪、坐观景缆车、在山上咖啡馆停留和拍照；如果想尝试滑雪，我们也可以加入接送、雪具租赁和适合初学者的安排。",
         images: [
           images.winterSkiCloudSea,
           images.winterSkiSnowPlay,
@@ -382,15 +439,21 @@ const seasons = [
       },
       {
         name: "Onsen, spa, and hot pool recovery",
+        nameZh: "Onsen 温泉与冬日放松",
         description:
           "A recovery-focused winter route built around Queenstown's best hot pool and spa stops, including the famous Onsen Hot Pools. We can also include the newer hot pool experience near the base of the gondola, so you can ride up for Skyline snow views, come back down, and end the day soaking somewhere warm.",
+        descriptionZh:
+          "冬天很适合把温泉安排进行程里。可以围绕 Onsen Hot Pools、湖边或山景 spa 体验设计一个放松半日，也可结合 Skyline 观景、山景晚餐或镇中心轻松活动，再用温泉为一天收尾。适合雪场之后恢复体力，也适合完全不滑雪的轻松冬日。",
         images: [],
         imageLayout: "landscape",
       },
       {
         name: "Winter stargazing and southern skies",
+        nameZh: "冬季观星与南半球夜空",
         description:
           "Winter gets dark earlier and the air is often clearer, which makes it a beautiful season for southern-sky stargazing. Join a Skyline or Cardrona stargazing experience, look for constellations you do not see in the Northern Hemisphere, or keep it simple on the Lake Wakatipu shore with a hot chocolate and a clear view overhead.",
+        descriptionZh:
+          "冬季天黑得早，空气也常常更清透，很适合安排观星。可以选择 Skyline 或 Cardrona 一带的观星体验，也可以简单地在瓦卡蒂普湖边停留，带上一杯热饮，看南半球独有的星空和清冷夜色。",
         images: [
           images.winterAuroraTown,
           images.winterAuroraLake,
@@ -400,8 +463,11 @@ const seasons = [
       },
       {
         name: "Queenstown winter nightlife and ice bar",
+        nameZh: "皇后镇冬夜与冰吧体验",
         description:
           "A night route for Queenstown after dark: lakefront drinks, small bars, lively town energy, and the ice bar experience for something especially wintry. Good after a snow day, spa afternoon, or stargazing plan when you still want the town to feel alive.",
+        descriptionZh:
+          "冬天的皇后镇夜晚也很有气氛。雪场、温泉或观星之后，可以安排湖边小酌、镇中心酒吧、餐厅和冰吧体验，让一天从白天的雪景自然过渡到更温暖、热闹的夜晚。",
         images: [
           images.winterNightlifeGroup,
           images.winterNightlifeClub,
@@ -411,6 +477,7 @@ const seasons = [
       },
     ],
     highlights: ["Snow fields", "Hot pools", "Stargazing", "Ice bar"],
+    highlightsZh: ["雪山风景", "滑雪场", "Onsen 温泉", "清澈夜空"],
   },
 ];
 
@@ -533,10 +600,10 @@ const seasonRouteReferences = {
       title: "从皇后镇出发",
       headers: ["方向", "距离", "车程", "建议时间"],
       rows: [
-        ["皇后镇湖上活动", "市区及周边", "约25–40分钟", "半日游"],
-        ["Cromwell / Lake Dunstan / 樱桃季", "约60公里单程", "约1小时10分钟单程", "半日游至一日游"],
-        ["Te Anau / 峡湾边缘", "约170公里单程", "约2小时20分钟单程", "一日游"],
-        ["Milford Sound", "约290公里单程", "约4小时20分钟单程", "一日游"],
+        ["皇后镇湖边活动", "市区及周边", "约25–40分钟", "半日游"],
+        ["Cromwell / Lake Dunstan / 樱桃季", "约60公里单程", "约1小时10分钟单程", "半日至一日游"],
+        ["蒂阿瑙 / 峡湾边缘", "约170公里单程", "约2小时20分钟单程", "一日游"],
+        ["米尔福德峡湾", "约290公里单程", "约4小时20分钟单程", "一日游"],
       ],
     },
   },
@@ -554,8 +621,8 @@ const seasonRouteReferences = {
       title: "从皇后镇出发",
       headers: ["方向", "距离", "车程", "建议时间"],
       rows: [
-        ["箭镇", "约20公里单程", "约45分钟单程", "半日游"],
-        ["Gibbston / 酒庄", "约25公里单程", "约45分钟单程", "半日游"],
+        ["箭镇秋色", "约20公里单程", "约45分钟单程", "半日游"],
+        ["Gibbston 酒庄区", "约25公里单程", "约45分钟单程", "半日游"],
         ["Cromwell / Bannockburn / Clyde", "约60–90公里单程", "约1小时10分钟–1小时35分钟单程", "一日游"],
       ],
     },
@@ -577,8 +644,8 @@ const seasonRouteReferences = {
       rows: [
         ["Coronet Peak", "约20公里单程", "约45分钟单程", "半日至一日游"],
         ["The Remarkables 滑雪场", "约24公里单程", "约55分钟–1小时5分钟单程", "半日至一日游"],
-        ["箭镇 / 温泉", "约20–40公里，视路线而定", "约45分钟–1小时5分钟", "半日游"],
-        ["Tekapo / 星空延伸路线", "约260公里单程", "约3小时20分钟单程", "建议过夜"],
+        ["箭镇 / Onsen 温泉", "约20–40公里，视路线而定", "约45分钟–1小时5分钟", "半日游"],
+        ["特卡波 / 观星延伸路线", "约260公里单程", "约3小时20分钟单程", "建议过夜"],
       ],
     },
   },
@@ -1368,6 +1435,17 @@ function SeasonDetail({
       ? "object-contain"
       : "object-cover";
   const isMixedRoute = activeRoute.imageLayout === "mixed";
+  const isChinese = language === "zh";
+  const seasonLabel = isChinese ? season.labelZh ?? season.label : season.label;
+  const seasonMonths = isChinese ? season.monthsZh ?? season.months : season.months;
+  const seasonTitle = isChinese ? season.titleZh ?? season.title : season.title;
+  const seasonIntro = isChinese ? season.introZh ?? season.intro : season.intro;
+  const seasonHighlights = isChinese ? season.highlightsZh ?? season.highlights : season.highlights;
+  const activeRouteName = isChinese ? activeRoute.nameZh ?? activeRoute.name : activeRoute.name;
+  const recommendationLabel = isChinese ? "季节路线推荐" : "Seasonal recommendations";
+  const imageCounterLabel = isChinese
+    ? `图片 ${featureImageIndex + 1} / ${featureImages.length}`
+    : `Image ${featureImageIndex + 1} / ${featureImages.length}`;
   const quickFacts = seasonRouteReferences[season.id]?.[language === "zh" ? "zh" : "en"];
 
   React.useEffect(() => {
@@ -1432,7 +1510,7 @@ function SeasonDetail({
             <img
               className={`absolute inset-0 h-full w-full ${featureImageFit} ${featureImagePosition}`}
               src={featureImages[featureImageIndex]}
-              alt={`${activeRoute.name} route highlight`}
+              alt={`${activeRouteName} route highlight`}
               onError={(event) => {
                 event.currentTarget.src = season.image;
               }}
@@ -1444,7 +1522,7 @@ function SeasonDetail({
                   className="grid size-10 place-items-center rounded-full border border-white/60 bg-white/85 text-stone-950 shadow-lg backdrop-blur transition hover:bg-white"
                   onClick={previousRouteImage}
                   type="button"
-                  aria-label="Previous route image"
+                  aria-label={isChinese ? "上一张路线图片" : "Previous route image"}
                 >
                   <ArrowRight className="size-4 rotate-180" aria-hidden="true" />
                 </button>
@@ -1452,7 +1530,7 @@ function SeasonDetail({
                   className="grid size-10 place-items-center rounded-full border border-white/60 bg-white/85 text-stone-950 shadow-lg backdrop-blur transition hover:bg-white"
                   onClick={nextRouteImage}
                   type="button"
-                  aria-label="Next route image"
+                  aria-label={isChinese ? "下一张路线图片" : "Next route image"}
                 >
                   <ArrowRight className="size-4" aria-hidden="true" />
                 </button>
@@ -1460,15 +1538,15 @@ function SeasonDetail({
             )}
             <div className="absolute bottom-0 p-6 text-white sm:p-8">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-teal-100">
-                {season.months}
+                {seasonMonths}
               </p>
-              <h1 className="mt-3 text-4xl font-semibold sm:text-6xl">{season.label}</h1>
+              <h1 className="mt-3 text-4xl font-semibold sm:text-6xl">{seasonLabel}</h1>
               <p className="mt-3 max-w-xl text-base font-semibold text-white/90">
-                {activeRoute.name}
+                {activeRouteName}
               </p>
               {featureImages.length > 1 && (
                 <p className="mt-2 text-xs font-bold uppercase tracking-[0.16em] text-white/75">
-                  Image {featureImageIndex + 1} / {featureImages.length}
+                  {imageCounterLabel}
                 </p>
               )}
             </div>
@@ -1499,13 +1577,13 @@ function SeasonDetail({
           </div>
           <div className="p-6 sm:p-8 lg:p-10">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-teal-700">
-              Seasonal recommendations
+              {recommendationLabel}
             </p>
-            <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">{season.title}</h2>
-            <p className="mt-4 leading-7 text-stone-600">{season.intro}</p>
+            <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">{seasonTitle}</h2>
+            <p className="mt-4 leading-7 text-stone-600">{seasonIntro}</p>
 
             <div className="mt-6 flex flex-wrap gap-2">
-              {season.highlights.map((highlight) => (
+              {seasonHighlights.map((highlight) => (
                 <span
                   className="rounded-full border border-stone-200 bg-stone-50 px-3 py-1.5 text-sm font-medium text-stone-700"
                   key={highlight}
@@ -1524,7 +1602,9 @@ function SeasonDetail({
                     type="button"
                     aria-expanded={openRoute === index}
                   >
-                    <span className="font-semibold">{route.name}</span>
+                    <span className="font-semibold">
+                      {isChinese ? route.nameZh ?? route.name : route.name}
+                    </span>
                     <span className="grid size-8 shrink-0 place-items-center rounded-full border border-stone-200 bg-white text-teal-700">
                       {openRoute === index ? (
                         <span className="h-0.5 w-3.5 rounded-full bg-current" aria-hidden="true" />
@@ -1555,14 +1635,20 @@ function SeasonDetail({
                                 setLightboxImage(image);
                               }}
                               type="button"
-                              aria-label={`Show ${route.name} image ${imageIndex + 1}`}
+                              aria-label={
+                                isChinese
+                                  ? `查看${route.nameZh ?? route.name}图片 ${imageIndex + 1}`
+                                  : `Show ${route.name} image ${imageIndex + 1}`
+                              }
                             >
                               <img
                                 className={`h-full w-full ${
                                   route.imageLayout === "mixed" ? "object-contain" : "object-cover"
                                 }`}
                                 src={image}
-                                alt={`${route.name} thumbnail ${imageIndex + 1}`}
+                                alt={`${
+                                  isChinese ? route.nameZh ?? route.name : route.name
+                                } thumbnail ${imageIndex + 1}`}
                                 onError={(event) => {
                                   event.currentTarget.src = season.image;
                                 }}
