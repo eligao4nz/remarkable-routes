@@ -1676,12 +1676,15 @@ function SeasonDetail({
               ))}
               <div className="rounded-lg border border-teal-700/30 bg-teal-50 px-4 py-4">
                 <div className="flex items-center justify-between gap-4">
-                  <span className="font-semibold text-teal-950">Customise your trip</span>
+                  <span className="font-semibold text-teal-950">
+                    {isChinese ? "定制您的专属行程" : "Customise your trip"}
+                  </span>
                   <Sparkles className="size-5 shrink-0 text-teal-700" aria-hidden="true" />
                 </div>
                 <p className="mt-2 text-sm leading-6 text-teal-900">
-                  Tell us your dates, pace, group style, and must-see places. We will shape the route
-                  around you.
+                  {isChinese
+                    ? "告诉我们您的出行日期、旅行节奏、同行人数，以及想看的风景和体验。我们会根据您的需求设计专属路线。"
+                    : "Tell us your dates, pace, group style, and must-see places. We will shape the route around you."}
                 </p>
               </div>
             </div>
@@ -1690,7 +1693,7 @@ function SeasonDetail({
               className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-teal-700 px-6 py-3 text-sm font-bold text-white transition hover:bg-teal-800"
               href="#contact"
             >
-              Contact us to customise
+              {isChinese ? "联系我们定制行程" : "Contact us to customise"}
               <ArrowRight className="size-4" aria-hidden="true" />
             </a>
           </div>
