@@ -1114,6 +1114,20 @@ function SeasonSelection({
   const [activeIndex, setActiveIndex] = React.useState(0);
   const carouselRef = React.useRef(null);
   const activeSeason = seasons[activeIndex];
+  const seasonChineseLabels = {
+    spring: { label: "春季", months: "9月 - 11月", action: "查看春季路线" },
+    summer: { label: "夏季", months: "12月 - 2月", action: "查看夏季路线" },
+    autumn: { label: "秋季", months: "3月 - 5月", action: "查看秋季路线" },
+    winter: { label: "冬季", months: "6月 - 8月", action: "查看冬季路线" },
+  };
+  const getSeasonLabel = (season) =>
+    language === "zh" ? seasonChineseLabels[season.id]?.label ?? season.label : season.label;
+  const getSeasonMonths = (season) =>
+    language === "zh" ? seasonChineseLabels[season.id]?.months ?? season.months : season.months;
+  const getSeasonAction = (season) =>
+    language === "zh"
+      ? seasonChineseLabels[season.id]?.action ?? `查看${getSeasonLabel(season)}路线`
+      : `View ${season.label.toLowerCase()} routes`;
 
   React.useEffect(() => {
     const carousel = carouselRef.current;
@@ -1176,18 +1190,18 @@ function SeasonSelection({
                 key={season.id}
                 onClick={() => setActiveIndex(index)}
                 type="button"
-                aria-label={`Select ${season.label}`}
+                aria-label={`Select ${getSeasonLabel(season)}`}
               >
                 <img
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   src={season.image}
-                  alt={`${season.label} in New Zealand`}
+                  alt={`${getSeasonLabel(season)} in New Zealand`}
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-stone-950/70 to-transparent p-5 text-left text-white">
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-teal-100">
-                    {season.months}
+                    {getSeasonMonths(season)}
                   </p>
-                  <h3 className="mt-2 text-3xl font-semibold">{season.label}</h3>
+                  <h3 className="mt-2 text-3xl font-semibold">{getSeasonLabel(season)}</h3>
                 </div>
               </button>
             ))}
@@ -1213,9 +1227,11 @@ function SeasonSelection({
           <div className="mt-5 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">
-                {activeSeason.months}
+                {getSeasonMonths(activeSeason)}
               </p>
-              <h3 className="mt-1 text-3xl font-semibold text-stone-950">{activeSeason.label}</h3>
+              <h3 className="mt-1 text-3xl font-semibold text-stone-950">
+                {getSeasonLabel(activeSeason)}
+              </h3>
               <p className="mt-2 max-w-2xl text-base leading-7 text-stone-600">
                 {language === "zh" ? activeSeason.themeZh : activeSeason.theme}
               </p>
@@ -1225,7 +1241,7 @@ function SeasonSelection({
               onClick={() => onSelectSeason(activeSeason.id)}
               type="button"
             >
-              View {activeSeason.label.toLowerCase()} routes
+              {getSeasonAction(activeSeason)}
               <ArrowRight className="size-4" aria-hidden="true" />
             </button>
           </div>
