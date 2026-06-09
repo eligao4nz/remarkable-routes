@@ -103,6 +103,7 @@ const uploadedImages = Array.from(
 );
 
 const heroImage = "/gallery/rrhomepagepic2.png";
+const mobileHeroImage = "/gallery/queenstown-arrival.jpg";
 const web3FormsAccessKey = "b32095ed-5e6a-409e-bf90-0c86b93f1e6e";
 
 const images = {
@@ -1046,11 +1047,14 @@ function HomePage({
   return (
     <>
       <section className="hero-section relative min-h-screen overflow-hidden bg-stone-950">
-        <img
-          className="hero-image absolute inset-0 h-full w-full object-cover object-center"
-          src={heroImage}
-          alt="Aerial arrival over Queenstown, Lake Wakatipu, and the Remarkables"
-        />
+        <picture>
+          <source media="(min-width: 768px)" srcSet={heroImage} />
+          <img
+            className="hero-image absolute inset-0 h-full w-full object-cover"
+            src={mobileHeroImage}
+            alt="Aerial arrival over Queenstown, Lake Wakatipu, and the Remarkables"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-stone-950/8 via-stone-950/8 to-stone-950/72" />
         <div className="absolute inset-0 bg-gradient-to-r from-stone-950/38 via-stone-950/10 to-transparent" />
         <BrandNav

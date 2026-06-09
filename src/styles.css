@@ -67,6 +67,16 @@ a {
   text-shadow: 0 10px 32px rgb(0 0 0 / 0.45);
 }
 
+.hero-image {
+  object-position: 50% 42%;
+}
+
+@media (min-width: 768px) {
+  .hero-image {
+    object-position: center;
+  }
+}
+
 .desktop-nav {
   display: none;
 }
