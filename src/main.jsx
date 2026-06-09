@@ -1004,8 +1004,8 @@ function BrandNav({
   }
 
   return (
-    <nav className="relative z-20 mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8">
-      <button className="flex items-center gap-3" onClick={onHome} type="button">
+    <nav className="site-nav relative z-20 mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8">
+      <button className="site-brand flex items-center gap-3" onClick={onHome} type="button">
         <span
           className={`grid size-10 place-items-center rounded-full border backdrop-blur ${
             isLight ? "border-white/30 bg-white/16" : "border-stone-950/15 bg-white/60"
@@ -1492,7 +1492,7 @@ function SeasonDetail({
   }
 
   return (
-    <section className="bg-stone-100 text-stone-950">
+    <section className="season-detail bg-stone-100 text-stone-950">
       <BrandNav
         language={language}
         onContact={onContact}
@@ -1512,8 +1512,8 @@ function SeasonDetail({
           </button>
         }
       />
-      <div className="mx-auto max-w-7xl px-5 pb-20 pt-8 sm:px-8 lg:pb-28">
-        <div className="grid min-w-0 grid-cols-1 overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+      <div className="season-detail-container mx-auto max-w-7xl px-5 pb-20 pt-8 sm:px-8 lg:pb-28">
+        <div className="season-detail-grid grid min-w-0 grid-cols-1 overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div className="min-w-0">
           <div
             className={`relative aspect-[4/3] min-w-0 w-full max-w-full overflow-hidden ${
@@ -1588,7 +1588,7 @@ function SeasonDetail({
             </div>
           )}
           </div>
-          <div className="p-6 sm:p-8 lg:p-10">
+          <div className="season-detail-content p-6 sm:p-8 lg:p-10">
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-teal-700">
               {recommendationLabel}
             </p>
@@ -1608,14 +1608,14 @@ function SeasonDetail({
 
             <div className="mt-8 grid gap-3">
               {season.routes.map((route, index) => (
-                <div className="rounded-lg border border-stone-200 bg-stone-50" key={route.name}>
+                <div className="season-route-card rounded-lg border border-stone-200 bg-stone-50" key={route.name}>
                   <button
-                    className="flex w-full items-center justify-between gap-4 px-4 py-4 text-left"
+                    className="season-route-toggle flex w-full items-center justify-between gap-4 px-4 py-4 text-left"
                     onClick={() => setOpenRoute(openRoute === index ? null : index)}
                     type="button"
                     aria-expanded={openRoute === index}
                   >
-                    <span className="font-semibold">
+                    <span className="min-w-0 font-semibold">
                       {isChinese ? route.nameZh ?? route.name : route.name}
                     </span>
                     <span className="grid size-8 shrink-0 place-items-center rounded-full border border-stone-200 bg-white text-teal-700">
@@ -1628,14 +1628,14 @@ function SeasonDetail({
                   </button>
                   {openRoute === index && (
                     <div className="border-t border-stone-200 px-4 pb-4 pt-3">
-                      <p className="text-sm leading-6 text-stone-600">
+                      <p className="season-route-description text-sm leading-6 text-stone-600">
                         {language === "zh" && route.descriptionZh ? route.descriptionZh : route.description}
                       </p>
                       {route.images?.length > 0 && (
-                        <div className="mt-4 flex gap-3 overflow-x-auto pb-1">
+                        <div className="route-image-grid mt-4 flex gap-3 overflow-x-auto pb-1">
                           {route.images.map((image, imageIndex) => (
                             <button
-                              className={`shrink-0 overflow-hidden rounded-md border border-stone-200 bg-stone-200 transition hover:border-teal-700 ${
+                              className={`route-image-thumb shrink-0 overflow-hidden rounded-md border border-stone-200 bg-stone-200 transition hover:border-teal-700 ${
                                 route.imageLayout === "portrait"
                                   ? "h-56 w-36"
                                   : route.imageLayout === "mixed"
