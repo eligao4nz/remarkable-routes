@@ -39,6 +39,15 @@ function Plus(props) {
   );
 }
 
+function CheckCircle(props) {
+  return (
+    <Icon {...props}>
+      <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+      <path d="m9 12 2 2 4-4" />
+    </Icon>
+  );
+}
+
 function Mail(props) {
   return (
     <Icon {...props}>
@@ -786,7 +795,9 @@ const copy = {
         startDate: "Start Date",
         endDate: "End Date",
         messagePlaceholder: "Tell us what you'd like to see or experience.",
-        success: "Thank you. Your enquiry has been sent.",
+        successTitle: "Thank you for your enquiry.",
+        successBody: "We have received your message and will reply within 24 hours.",
+        successRedirect: "Redirecting you back to Routes...",
         error: "Sorry, something went wrong. Please email info@remarkableroutes.com.",
         dateError: "Please select your trip type and travel date.",
       },
@@ -841,7 +852,9 @@ const copy = {
         startDate: "开始日期",
         endDate: "结束日期",
         messagePlaceholder: "告诉我们您想去哪里、喜欢什么样的体验，剩下的交给我们。",
-        success: "感谢您的咨询，我们已收到。",
+        successTitle: "感谢您的咨询。",
+        successBody: "我们已经收到您的信息，并将在24小时内回复。",
+        successRedirect: "正在返回路线页面...",
         error: "提交失败，请发送邮件至 info@remarkableroutes.com。",
         dateError: "请选择行程类型和旅行日期。",
       },
@@ -946,7 +959,7 @@ function App() {
             season={selectedSeason}
             text={text}
           />
-          <Contact text={text.contact} />
+          <Contact onSuccess={openRoutes} text={text.contact} />
         </>
       )}
       {view === "service" && (
@@ -962,7 +975,7 @@ function App() {
             service={selectedService}
             text={text}
           />
-          <Contact text={text.contact} />
+          <Contact onSuccess={openRoutes} text={text.contact} />
         </>
       )}
       <ImageCredits />
@@ -1725,7 +1738,7 @@ function SeasonDetail({
   );
 }
 
-function Contact({ text }) {
+function Contact({ onSuccess, text }) {
   const wechatQrImage = "/gallery/WeChatQR.png";
   const [isEnquiryOpen, setIsEnquiryOpen] = React.useState(false);
 
@@ -1783,26 +1796,48 @@ function Contact({ text }) {
           </button>
         </div>
       </div>
-      {isEnquiryOpen && <EnquiryModal formText={text.form} onClose={() => setIsEnquiryOpen(false)} />}
+      {isEnquiryOpen && (
+        <EnquiryModal
+          formText={text.form}
+          onClose={() => setIsEnquiryOpen(false)}
+          onSuccess={() => {
+            setIsEnquiryOpen(false);
+            onSuccess?.();
+          }}
+        />
+      )}
     </section>
   );
 }
 
-function EnquiryModal({ formText, onClose }) {
+function EnquiryModal({ formText, onClose, onSuccess }) {
   const [status, setStatus] = React.useState("idle");
   const [statusMessage, setStatusMessage] = React.useState("");
   const [resetCount, setResetCount] = React.useState(0);
+  const isSuccess = status === "success";
 
   React.useEffect(() => {
     function handleKeyDown(event) {
-      if (event.key === "Escape") {
+      if (event.key === "Escape" && !isSuccess) {
         onClose();
       }
     }
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [onClose]);
+  }, [isSuccess, onClose]);
+
+  React.useEffect(() => {
+    if (!isSuccess) {
+      return undefined;
+    }
+
+    const redirectTimer = window.setTimeout(() => {
+      onSuccess();
+    }, 3000);
+
+    return () => window.clearTimeout(redirectTimer);
+  }, [isSuccess, onSuccess]);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -1819,6 +1854,7 @@ function EnquiryModal({ formText, onClose }) {
 
     formData.append("access_key", web3FormsAccessKey);
     formData.append("subject", "New Remarkable Routes enquiry");
+    formData.append("from_name", "Remarkable Routes");
 
     setStatus("submitting");
     setStatusMessage("");
@@ -1837,7 +1873,7 @@ function EnquiryModal({ formText, onClose }) {
       form.reset();
       setResetCount((count) => count + 1);
       setStatus("success");
-      setStatusMessage(formText.success);
+      setStatusMessage("");
     } catch (error) {
       setStatus("error");
       setStatusMessage(formText.error);
@@ -1856,27 +1892,46 @@ function EnquiryModal({ formText, onClose }) {
         position: "fixed",
         zIndex: 60,
       }}
-      onClick={onClose}
+      onClick={isSuccess ? undefined : onClose}
       role="presentation"
     >
       <div
-        className="w-full max-w-2xl rounded-lg border border-stone-200 bg-white p-5 shadow-xl sm:p-7"
+        className={`w-full rounded-lg border border-stone-200 bg-white shadow-xl ${
+          isSuccess ? "max-w-xl p-7 text-center sm:p-10" : "max-w-2xl p-5 sm:p-7"
+        }`}
         style={{ maxHeight: "90vh", overflowY: "auto" }}
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="flex items-center justify-between gap-4">
-          <h2 className="text-2xl font-semibold text-stone-950">{formText.send}</h2>
-          <button
-            className="grid size-10 place-items-center rounded-full border border-stone-200 bg-stone-50 text-sm font-bold text-stone-950 transition hover:border-teal-700 hover:text-teal-700"
-            onClick={onClose}
-            type="button"
-            aria-label="Close enquiry form"
-          >
-            X
-          </button>
-        </div>
+        {isSuccess ? (
+          <div className="grid justify-items-center gap-5">
+            <span className="grid size-16 place-items-center rounded-full bg-teal-50 text-teal-700 ring-1 ring-teal-200">
+              <CheckCircle className="size-9" aria-hidden="true" />
+            </span>
+            <div>
+              <h2 className="text-3xl font-semibold text-stone-950">{formText.successTitle}</h2>
+              <p className="mt-3 text-base font-medium leading-7 text-stone-600">
+                {formText.successBody}
+              </p>
+            </div>
+            <p className="rounded-full bg-stone-100 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-teal-800">
+              {formText.successRedirect}
+            </p>
+          </div>
+        ) : (
+          <>
+            <div className="flex items-center justify-between gap-4">
+              <h2 className="text-2xl font-semibold text-stone-950">{formText.send}</h2>
+              <button
+                className="grid size-10 place-items-center rounded-full border border-stone-200 bg-stone-50 text-sm font-bold text-stone-950 transition hover:border-teal-700 hover:text-teal-700"
+                onClick={onClose}
+                type="button"
+                aria-label="Close enquiry form"
+              >
+                X
+              </button>
+            </div>
 
-        <form className="mt-6 grid gap-4" onSubmit={handleSubmit}>
+            <form className="mt-6 grid gap-4" onSubmit={handleSubmit}>
           <input type="checkbox" name="botcheck" className="hidden" tabIndex="-1" autoComplete="off" />
           <FormField label={formText.name} name="name" required />
           <FormField label={formText.email} name="email" type="email" required />
@@ -1912,9 +1967,7 @@ function EnquiryModal({ formText, onClose }) {
 
           {statusMessage && (
             <p
-              className={`rounded-md px-4 py-3 text-sm font-semibold ${
-                status === "success" ? "bg-teal-50 text-teal-900" : "bg-stone-100 text-stone-700"
-              }`}
+              className="rounded-md bg-stone-100 px-4 py-3 text-sm font-semibold text-stone-700"
             >
               {statusMessage}
             </p>
@@ -1928,7 +1981,9 @@ function EnquiryModal({ formText, onClose }) {
             {formText.send}
             <ArrowRight className="size-4" aria-hidden="true" />
           </button>
-        </form>
+            </form>
+          </>
+        )}
       </div>
     </div>
   );
