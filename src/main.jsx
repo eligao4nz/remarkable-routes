@@ -665,6 +665,9 @@ const servicePages = [
     id: "airport-transfers",
     title: "Queenstown Airport Transfers",
     kicker: "Private Airport Transfers",
+    seoTitle: "Queenstown Airport Transfers | Remarkable Routes",
+    seoDescription:
+      "Book a private Queenstown Airport transfer with a local driver, flight-aware scheduling, door-to-door service, and a comfortable Mercedes people mover.",
     intro:
       "Door-to-door airport transfers between Queenstown Airport and your hotel, accommodation or holiday home.\n\nTimed around your flight and group pace, suitable for individuals, couples, families and small groups.\n\nRates are for a private 7-seat Mercedes people mover for up to 4 passengers. Luggage space may be limited for groups above 4; each extra passenger is $10, with a maximum of 6 passengers.",
     rates: [
@@ -678,9 +681,28 @@ const servicePages = [
     ],
     note:
       "Airport terminal pickup or drop-off incurs a $10 airport access fee. Check-in assistance is available for $5 per person.",
+    whyTitle: "Why Choose Our Airport Transfers",
+    why: [
+      ["Private door-to-door service", "Travel directly between Queenstown Airport and your accommodation without shared stops."],
+      ["Local drivers", "Ride with a local who understands Queenstown roads, accommodation locations, and airport access."],
+      ["Flight-aware scheduling", "Share your flight number and we will plan pickup timing around your arrival or departure."],
+      ["Comfortable vehicle", "Travel in a clean 7-seat Mercedes people mover with space planned around your group and luggage."],
+      ["Made for smaller groups", "A practical option for individuals, couples, families, and small groups of up to 6 passengers."],
+    ],
+    faqTitle: "Airport Transfer FAQs",
+    faqs: [
+      ["How much does a Queenstown airport transfer cost?", "Private transfer prices start from $28 and vary by destination. The pricing table above shows our current one-way local rates. Airport terminal pickup or drop-off has a $10 airport access fee."],
+      ["Can you accommodate delayed flights?", "Yes. Please include your flight number when booking so we can allow for schedule changes and adjust your pickup where possible."],
+      ["How many passengers can travel?", "Our Mercedes people mover can carry up to 6 passengers. Luggage space can be limited for groups above 4, so please tell us how many bags you will have."],
+      ["Do you provide child seats?", "Please include each child's age and seating needs in your enquiry. We will confirm suitable child-seat arrangements before your booking is finalised."],
+      ["Where will I meet my driver?", "Your pickup instructions will be confirmed before travel. For airport arrivals, your driver will meet you at the agreed terminal meeting point and stay in contact if plans change."],
+    ],
     zh: {
       title: "皇后镇机场接送服务",
       kicker: "机场接送服务",
+      seoTitle: "皇后镇机场接送服务 | Remarkable Routes",
+      seoDescription:
+        "预订皇后镇机场私人接送，本地司机按航班时间安排，提供点对点服务，并使用舒适的奔驰商务车接送。",
       intro:
         "提供皇后镇机场至酒店、民宿及度假屋的接送服务。\n\n根据您的航班时间与行程节奏安排，适合个人、情侣、家庭及小型团体。\n\n价格基于最多4位乘客的7座奔驰商务车。4位以上乘客每人加收 NZ$10，最多可乘坐6位乘客。",
       rates: [
@@ -694,13 +716,32 @@ const servicePages = [
       ],
       note:
         "机场航站楼接送需加收 NZ$10 机场通行费。如需协助办理机场值机或行李托运手续，可提供额外服务，每位 NZ$5。",
+      whyTitle: "为什么选择我们的机场接送",
+      why: [
+        ["私人点对点接送", "从皇后镇机场直接前往您的住宿地点，无需与其他乘客拼车或中途停靠。"],
+        ["本地司机", "熟悉皇后镇道路、住宿地点和机场接送流程，让抵达与离开都更顺畅。"],
+        ["配合航班时间", "提供航班号后，我们会根据抵达或出发时间安排接送，并留意行程变化。"],
+        ["舒适车辆", "使用整洁舒适的7座奔驰商务车，并根据同行人数与行李情况提前安排。"],
+        ["适合小型团队", "适合个人、情侣、家庭及小型团体，最多可乘坐6位客人。"],
+      ],
+      faqTitle: "机场接送常见问题",
+      faqs: [
+        ["皇后镇机场接送多少钱？", "私人接送价格由 $28 起，具体取决于目的地。上方价格表列出了目前常用地区的单程价格；机场航站楼接送另收 $10 机场通行费。"],
+        ["航班延误可以调整接送时间吗？", "可以。预订时请提供航班号，我们会预留时间关注航班变化，并在条件允许时调整接送安排。"],
+        ["最多可以乘坐多少人？", "奔驰商务车最多可乘坐6位客人。超过4位客人时，行李空间可能有限，请在咨询时告诉我们行李数量。"],
+        ["可以提供儿童安全座椅吗？", "请在咨询中填写儿童年龄和座椅需求，我们会在确认预订前回复合适的儿童座椅安排。"],
+        ["在哪里与司机会合？", "出行前会向您确认清楚的接送说明。机场抵达时，司机会在约定的航站楼会合点等候；如计划变化，也会与您保持联系。"],
+      ],
       cta: "咨询接送服务",
     },
   },
   {
     id: "private-day-tours",
-    title: "Queenstown Private Day Tours",
+    title: "Queenstown Private Charters",
     kicker: "Private touring rates",
+    seoTitle: "Queenstown Private Charters | Remarkable Routes",
+    seoDescription:
+      "Book a private Queenstown charter with a local driver-guide and a flexible itinerary to Glenorchy, Wanaka, Milford Sound, wineries, and scenic stops.",
     intro:
       "Flexible private touring from Queenstown for scenic routes, seasonal stops, food, wine, photography, and easy local planning. Tours use a 7-seat Mercedes people mover and can take up to 6 people. Rates include vehicle and driver-guide service; activities and meals are not included.",
     rates: [
@@ -708,9 +749,33 @@ const servicePages = [
       ["Half day", "$500 for 5 hours"],
       ["Full day", "$920 for 10 hours"],
     ],
+    destinationsTitle: "Popular Charter Destinations",
+    destinationsIntro:
+      "Start with a favourite destination or combine nearby stops into a private route shaped around your time and interests.",
+    destinations: ["Glenorchy", "Arrowtown", "Wanaka", "Cardrona", "Cromwell", "Te Anau", "Milford Sound"],
+    whyTitle: "Why Choose a Private Charter",
+    why: [
+      ["Flexible itinerary", "Shape the day around the places and experiences that matter most to you."],
+      ["Travel at your own pace", "Spend longer at favourite stops and move on when you are ready."],
+      ["Scenic stops", "Build in viewpoints, short walks, local food, and seasonal places along the way."],
+      ["Photography opportunities", "Allow time for changing light, quiet viewpoints, and unhurried photo stops."],
+      ["Local recommendations", "Use local knowledge to choose sensible routes, timing, and worthwhile detours."],
+      ["Small groups and families", "Enjoy a comfortable private day designed for couples, families, and groups of up to 6."],
+    ],
+    faqTitle: "Private Charter FAQs",
+    faqs: [
+      ["Can I customise my itinerary?", "Yes. Share your dates, interests, preferred pace, and must-see places, and we will shape a practical private route around them."],
+      ["How many stops can we make?", "There is no fixed number. The best plan depends on distance, road conditions, and how long you would like at each stop."],
+      ["Can we visit multiple destinations in one day?", "Yes, when the driving times work comfortably. Nearby places such as Arrowtown, Cardrona, and Wanaka can often be combined, while longer routes may need a full day or overnight plan."],
+      ["What vehicle is used?", "Private charters use a 7-seat Mercedes people mover for up to 6 passengers. Please tell us about larger luggage items when enquiring."],
+      ["Is a driver-guide included?", "Yes. The charter rate includes the vehicle and local driver-guide service. Activity tickets, meals, and other third-party costs are separate unless stated otherwise."],
+    ],
     zh: {
       title: "皇后镇私人包车一日游",
       kicker: "私人包车价格",
+      seoTitle: "皇后镇私人包车服务 | Remarkable Routes",
+      seoDescription:
+        "预订皇后镇私人包车，由本地司机向导灵活安排格林诺奇、瓦纳卡、米尔福德峡湾、酒庄与沿途风景停留。",
       intro:
         "从皇后镇出发，灵活安排风景路线、季节停留、美食、酒庄、摄影和本地轻松规划。行程使用7座奔驰商务车，最多可乘坐6位客人。价格包含车辆与司机向导服务；活动门票与餐食不包含在内。",
       rates: [
@@ -718,7 +783,113 @@ const servicePages = [
         ["半日行程", "5小时 $500"],
         ["一日行程", "10小时 $920"],
       ],
+      destinationsTitle: "热门包车目的地",
+      destinationsIntro: "可以从一个喜欢的目的地开始，也可以按时间与兴趣组合附近停留点，设计专属路线。",
+      destinations: ["格林诺奇", "箭镇", "瓦纳卡", "卡德罗纳", "Cromwell", "蒂阿瑙", "米尔福德峡湾"],
+      whyTitle: "为什么选择私人包车",
+      why: [
+        ["灵活安排行程", "围绕您真正想看的地方和体验设计当天路线。"],
+        ["按自己的节奏旅行", "喜欢的地方可以多停留一会儿，准备好后再继续出发。"],
+        ["沿途风景停留", "可加入观景点、短途散步、当地美食和季节限定地点。"],
+        ["摄影机会", "为光线变化、安静观景点和从容拍照留出时间。"],
+        ["本地建议", "根据本地经验选择合理路线、出发时间和值得停留的小绕路。"],
+        ["适合家庭与小型团体", "为情侣、家庭和最多6位客人的小团体安排舒适私人行程。"],
+      ],
+      faqTitle: "私人包车常见问题",
+      faqs: [
+        ["可以定制行程吗？", "可以。请告诉我们日期、兴趣、喜欢的节奏和必去地点，我们会据此设计合理的私人路线。"],
+        ["一天可以停留多少个地点？", "没有固定数量。合适的安排取决于行驶距离、路况，以及您希望在每个地点停留多久。"],
+        ["一天可以前往多个目的地吗？", "可以，只要整体车程保持舒适。箭镇、卡德罗纳和瓦纳卡等附近地点通常可以组合；较远路线可能需要完整一日或过夜安排。"],
+        ["使用什么车辆？", "私人包车使用7座奔驰商务车，最多可乘坐6位客人。如有大型行李，请在咨询时提前说明。"],
+        ["费用包含司机向导吗？", "包含。包车价格包含车辆与本地司机向导服务；活动门票、餐食及其他第三方费用需另行支付，除非特别说明。"],
+      ],
       cta: "咨询私人包车",
+    },
+  },
+  {
+    id: "queenstown-private-tours",
+    title: "Queenstown Private Tours",
+    kicker: "Private touring from Queenstown",
+    seoTitle: "Queenstown Private Tours | Remarkable Routes",
+    seoDescription:
+      "Plan a Queenstown private tour with a local driver-guide and a flexible itinerary to Glenorchy, Wanaka, Arrowtown, Milford Sound, and beyond.",
+    intro:
+      "Explore Queenstown and the South Island on a private tour shaped around your pace, interests, and available time. Choose an easy local half-day, a full scenic day, or a longer journey with a local driver-guide and a comfortable 7-seat Mercedes people mover.",
+    serviceLinksTitle: "Choose Your Private Travel Service",
+    serviceLinks: [
+      {
+        title: "Airport Transfers",
+        description: "Private door-to-door travel between Queenstown Airport and your accommodation, timed around your flight.",
+        href: "/airport-transfers",
+        serviceId: "airport-transfers",
+      },
+      {
+        title: "Private Charters",
+        description: "Flexible hourly, half-day, and full-day touring with scenic stops and practical local recommendations.",
+        href: "/private-charters",
+        serviceId: "private-day-tours",
+      },
+    ],
+    destinationsTitle: "Popular Queenstown Private Tour Routes",
+    destinationsIntro:
+      "Start with one destination or ask us to combine nearby places into a comfortable route for your group.",
+    destinations: ["Glenorchy", "Wanaka", "Arrowtown", "Milford Sound"],
+    whyTitle: "Private Touring, Planned Around You",
+    why: [
+      ["A route that fits your day", "Plan around your arrival time, must-see places, activity bookings, and preferred pace."],
+      ["Local driver-guide", "Use practical local knowledge for timing, scenic stops, weather changes, and worthwhile detours."],
+      ["Comfortable small-group travel", "Travel privately as an individual, couple, family, or group of up to 6 passengers."],
+      ["Time for the places you enjoy", "Pause for photography, short walks, food, lake views, or seasonal highlights without following a fixed coach schedule."],
+    ],
+    faqTitle: "Queenstown Private Tour FAQs",
+    faqs: [
+      ["What can I include in a Queenstown private tour?", "Your tour can include scenic drives, viewpoints, short walks, local food, wineries, activity connections, and destinations such as Glenorchy, Wanaka, Arrowtown, or Milford Sound."],
+      ["Can I customise the itinerary?", "Yes. Tell us your dates, group size, interests, and must-see places, and we will suggest a practical route with comfortable driving times."],
+      ["How long is a private tour?", "Private touring can be booked by the hour, as a half-day, or as a full day. Longer and multi-day plans can also be discussed."],
+      ["How many passengers can travel?", "Our 7-seat Mercedes people mover carries up to 6 passengers. Please include your luggage details when enquiring, especially for airport pickups or longer journeys."],
+      ["Can I combine an airport transfer with a tour?", "Yes. Depending on your flight time and luggage, we can plan a direct transfer or add suitable scenic stops before hotel check-in or departure."],
+    ],
+    cta: "Plan your private tour",
+    zh: {
+      title: "皇后镇私人旅行",
+      kicker: "从皇后镇出发的私人行程",
+      seoTitle: "皇后镇私人旅行 | Remarkable Routes",
+      seoDescription: "由本地司导为您安排皇后镇私人旅行，灵活前往格林诺奇、瓦纳卡、箭镇、米尔福德峡湾及南岛更多目的地。",
+      intro: "从皇后镇出发，按照您的时间、兴趣和旅行节奏安排私人行程。无论是轻松的半日路线、完整的一日风景行程，还是更远的南岛旅程，都可乘坐舒适的7座奔驰商务车，由本地司导陪同出发。",
+      serviceLinksTitle: "选择适合您的私人出行服务",
+      serviceLinks: [
+        {
+          title: "机场接送",
+          description: "皇后镇机场与住宿地点之间的私人点对点接送，并根据航班时间安排出发。",
+          href: "/airport-transfers",
+          serviceId: "airport-transfers",
+        },
+        {
+          title: "私人包车",
+          description: "可按小时、半日或一日安排，灵活加入沿途风景停留与实用本地建议。",
+          href: "/private-charters",
+          serviceId: "private-day-tours",
+        },
+      ],
+      destinationsTitle: "热门皇后镇私人路线",
+      destinationsIntro: "可以选择一个主要目的地，也可以告诉我们您的兴趣，由我们组合附近地点，安排节奏舒适的专属路线。",
+      destinations: ["格林诺奇", "瓦纳卡", "箭镇", "米尔福德峡湾"],
+      whyTitle: "围绕您的需要安排行程",
+      why: [
+        ["适合当天时间的路线", "根据抵达时间、必去地点、活动预订和喜欢的节奏来规划。"],
+        ["本地司导", "结合本地经验安排出发时间、风景停留、天气变化和值得前往的小绕路。"],
+        ["舒适的小团体出行", "适合个人、情侣、家庭及最多6位客人的私人小团体。"],
+        ["把时间留给喜欢的地方", "可从容安排摄影、短途散步、当地美食、湖景和季节限定体验，无需跟随固定大巴行程。"],
+      ],
+      faqTitle: "皇后镇私人旅行常见问题",
+      faqs: [
+        ["皇后镇私人旅行可以包含哪些内容？", "可安排风景公路、观景点、短途散步、当地美食、酒庄、活动接送，以及格林诺奇、瓦纳卡、箭镇或米尔福德峡湾等目的地。"],
+        ["可以定制行程吗？", "可以。请告诉我们日期、人数、兴趣和必去地点，我们会按照舒适的车程与停留时间建议合适路线。"],
+        ["私人行程通常多长？", "可按小时、半日或一日预订，也欢迎咨询更长时间或多日行程。"],
+        ["最多可以乘坐多少人？", "7座奔驰商务车最多可乘坐6位客人。如包含机场接送或长途行程，请在咨询时说明行李数量。"],
+        ["可以把机场接送和私人行程结合吗？", "可以。我们会根据航班时间和行李情况，安排直接接送，或在入住酒店、前往机场之前加入合适的风景停留。"],
+      ],
+      cta: "定制私人行程",
     },
   },
   {
@@ -772,11 +943,45 @@ const servicePages = [
 ];
 
 const serviceNavItems = [
-  { id: "airport-transfers", en: "Airport Transfers", zh: "机场接送" },
-  { id: "private-day-tours", en: "Private Charters", zh: "包车服务" },
+  { id: "airport-transfers", en: "Airport Transfers", zh: "机场接送", path: "/airport-transfers" },
+  { id: "private-day-tours", en: "Private Charters", zh: "包车服务", path: "/private-charters" },
   { id: "activity-bookings", en: "Activity Bookings", zh: "活动预订" },
   { id: "latest-deals", en: "Special Offers", zh: "特别优惠" },
 ];
+
+const servicePaths = {
+  "airport-transfers": "/airport-transfers",
+  "private-day-tours": "/private-charters",
+  "queenstown-private-tours": "/queenstown-private-tours",
+};
+
+const serviceIdsByPath = Object.fromEntries(
+  Object.entries(servicePaths).map(([serviceId, path]) => [path, serviceId]),
+);
+
+const defaultSeo = {
+  en: {
+    title: "Remarkable Routes | Queenstown Private Tours",
+    description:
+      "Remarkable Routes creates private luxury adventure tours from Queenstown to Milford Sound, Glenorchy, Wanaka, Lake Hawea, and custom South Island destinations.",
+  },
+  zh: {
+    title: "Remarkable Routes | 皇后镇私人旅行",
+    description: "从皇后镇出发的私人南岛旅行、风景路线、机场接送与定制包车服务。",
+  },
+};
+
+const siteUrl = "https://remarkableroutes.com";
+
+function normalisePath(pathname) {
+  if (pathname === "/") return pathname;
+  return pathname.replace(/\/+$/, "");
+}
+
+function getRouteFromPath(pathname) {
+  const serviceId = serviceIdsByPath[normalisePath(pathname)];
+  return serviceId ? { view: "service", serviceId } : { view: "home", serviceId: servicePages[0].id };
+}
 
 const copy = {
   en: {
@@ -901,14 +1106,56 @@ const copy = {
 };
 
 function App() {
+  const initialRoute = React.useRef(getRouteFromPath(window.location.pathname)).current;
   const [language, setLanguage] = React.useState("en");
-  const [view, setView] = React.useState("home");
+  const [view, setView] = React.useState(initialRoute.view);
   const [shouldOpenContact, setShouldOpenContact] = React.useState(false);
   const [selectedSeasonId, setSelectedSeasonId] = React.useState("spring");
-  const [selectedServiceId, setSelectedServiceId] = React.useState(servicePages[0].id);
+  const [selectedServiceId, setSelectedServiceId] = React.useState(initialRoute.serviceId);
   const text = copy[language];
   const selectedSeason = seasons.find((season) => season.id === selectedSeasonId);
   const selectedService = servicePages.find((service) => service.id === selectedServiceId);
+
+  React.useEffect(() => {
+    function handlePopState() {
+      const route = getRouteFromPath(window.location.pathname);
+      setView(route.view);
+      setSelectedServiceId(route.serviceId);
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
+  React.useEffect(() => {
+    const isStandaloneService = view === "service" && servicePaths[selectedServiceId];
+    const serviceContent =
+      language === "zh" && selectedService?.zh
+        ? { ...selectedService, ...selectedService.zh }
+        : selectedService;
+    const seo = isStandaloneService
+      ? {
+          title: serviceContent.seoTitle,
+          description: serviceContent.seoDescription,
+        }
+      : defaultSeo[language];
+
+    document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+    document.title = seo.title;
+    document.querySelector('meta[name="description"]')?.setAttribute("content", seo.description);
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute(
+      "href",
+      `${siteUrl}${isStandaloneService ? servicePaths[selectedServiceId] : "/"}`,
+    );
+  }, [language, selectedService, selectedServiceId, view]);
 
   React.useEffect(() => {
     if (!shouldOpenContact) {
@@ -921,7 +1168,10 @@ function App() {
     });
   }, [shouldOpenContact, view]);
 
-  function goTo(viewName) {
+  function goTo(viewName, path = "/") {
+    if (normalisePath(window.location.pathname) !== path) {
+      window.history.pushState({}, "", path);
+    }
     setView(viewName);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
@@ -941,7 +1191,7 @@ function App() {
 
   function openService(serviceId) {
     setSelectedServiceId(serviceId);
-    goTo("service");
+    goTo("service", servicePaths[serviceId] ?? "/");
   }
 
   function openContact() {
@@ -952,7 +1202,7 @@ function App() {
 
     setSelectedServiceId(servicePages[0].id);
     setShouldOpenContact(true);
-    setView("service");
+    openService(servicePages[0].id);
   }
 
   return (
@@ -1138,16 +1388,39 @@ function ServicesNavDropdown({ language, mobile = false, onSelectService }) {
         mobile ? "services-nav-dropdown-mobile" : ""
       }`}
     >
-      {serviceNavItems.map((item) => (
-        <button
-          className="services-nav-item block w-full text-left font-semibold text-stone-950 transition hover:bg-teal-50 hover:text-teal-800"
-          key={item.id}
-          onClick={() => onSelectService(item.id)}
-          type="button"
-        >
-          {language === "zh" ? item.zh : item.en}
-        </button>
-      ))}
+      {serviceNavItems.map((item) =>
+        item.path ? (
+          <a
+            className="services-nav-item block w-full text-left font-semibold text-stone-950 transition hover:bg-teal-50 hover:text-teal-800"
+            href={item.path}
+            key={item.id}
+            onClick={(event) => {
+              if (
+                event.button !== 0 ||
+                event.metaKey ||
+                event.ctrlKey ||
+                event.shiftKey ||
+                event.altKey
+              ) {
+                return;
+              }
+              event.preventDefault();
+              onSelectService(item.id);
+            }}
+          >
+            {language === "zh" ? item.zh : item.en}
+          </a>
+        ) : (
+          <button
+            className="services-nav-item block w-full text-left font-semibold text-stone-950 transition hover:bg-teal-50 hover:text-teal-800"
+            key={item.id}
+            onClick={() => onSelectService(item.id)}
+            type="button"
+          >
+            {language === "zh" ? item.zh : item.en}
+          </button>
+        ),
+      )}
     </div>
   );
 }
@@ -1418,6 +1691,37 @@ function ServicePage({
           </div>
 
           <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm sm:p-7">
+            {serviceContent.serviceLinks?.length > 0 && (
+              <div className="grid gap-3">
+                <h2 className="text-lg font-semibold text-stone-950">
+                  {serviceContent.serviceLinksTitle}
+                </h2>
+                {serviceContent.serviceLinks.map((option) => (
+                  <a
+                    className="rounded-md bg-stone-50 px-4 py-4 transition hover:bg-teal-50"
+                    href={option.href}
+                    key={option.serviceId}
+                    onClick={(event) => {
+                      if (
+                        event.button !== 0 ||
+                        event.metaKey ||
+                        event.ctrlKey ||
+                        event.shiftKey ||
+                        event.altKey
+                      ) {
+                        return;
+                      }
+                      event.preventDefault();
+                      onSelectService(option.serviceId);
+                    }}
+                  >
+                    <h3 className="font-semibold text-stone-950">{option.title}</h3>
+                    <p className="mt-1 text-sm leading-6 text-stone-600">{option.description}</p>
+                  </a>
+                ))}
+              </div>
+            )}
+
             {serviceContent.rates?.length > 0 && (
               <div className="grid gap-3">
                 {serviceContent.rates.map(([label, price]) => (
@@ -1457,6 +1761,73 @@ function ServicePage({
             </a>
           </div>
         </div>
+
+        {serviceContent.destinations?.length > 0 && (
+          <section className="mt-8 border-t border-stone-200 pt-8" aria-labelledby="charter-destinations">
+            <h2 className="text-3xl font-semibold text-stone-950" id="charter-destinations">
+              {serviceContent.destinationsTitle}
+            </h2>
+            <p className="mt-3 max-w-3xl leading-7 text-stone-600">
+              {serviceContent.destinationsIntro}
+            </p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              {serviceContent.destinations.map((destination) => (
+                <a
+                  className="rounded-md border border-stone-200 bg-white px-4 py-3 font-semibold text-stone-950 transition hover:border-teal-700 hover:text-teal-700"
+                  href="/"
+                  key={destination}
+                  onClick={(event) => {
+                    if (
+                      event.button !== 0 ||
+                      event.metaKey ||
+                      event.ctrlKey ||
+                      event.shiftKey ||
+                      event.altKey
+                    ) {
+                      return;
+                    }
+                    event.preventDefault();
+                    onRoutes();
+                  }}
+                >
+                  {destination}
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {serviceContent.why?.length > 0 && (
+          <section className="mt-8 border-t border-stone-200 pt-8" aria-labelledby="service-benefits">
+            <h2 className="text-3xl font-semibold text-stone-950" id="service-benefits">
+              {serviceContent.whyTitle}
+            </h2>
+            <div className="mt-5 grid gap-3">
+              {serviceContent.why.map(([title, description]) => (
+                <article className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm" key={title}>
+                  <h3 className="text-lg font-semibold text-stone-950">{title}</h3>
+                  <p className="mt-2 leading-7 text-stone-600">{description}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {serviceContent.faqs?.length > 0 && (
+          <section className="mt-8 border-t border-stone-200 pt-8" aria-labelledby="service-faqs">
+            <h2 className="text-3xl font-semibold text-stone-950" id="service-faqs">
+              {serviceContent.faqTitle}
+            </h2>
+            <div className="mt-5 grid gap-3">
+              {serviceContent.faqs.map(([question, answer]) => (
+                <article className="rounded-lg border border-stone-200 bg-white p-5" key={question}>
+                  <h3 className="text-lg font-semibold text-stone-950">{question}</h3>
+                  <p className="mt-2 leading-7 text-stone-600">{answer}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
     </section>
   );
