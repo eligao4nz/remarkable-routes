@@ -1506,19 +1506,15 @@ function SeasonSelection({
   const carouselRef = React.useRef(null);
   const activeSeason = seasons[activeIndex];
   const seasonChineseLabels = {
-    spring: { label: "春季", months: "9月 - 11月", action: "查看春季路线" },
-    summer: { label: "夏季", months: "12月 - 2月", action: "查看夏季路线" },
-    autumn: { label: "秋季", months: "3月 - 5月", action: "查看秋季路线" },
-    winter: { label: "冬季", months: "6月 - 8月", action: "查看冬季路线" },
+    spring: { label: "春季", months: "9月 - 11月" },
+    summer: { label: "夏季", months: "12月 - 2月" },
+    autumn: { label: "秋季", months: "3月 - 5月" },
+    winter: { label: "冬季", months: "6月 - 8月" },
   };
   const getSeasonLabel = (season) =>
     language === "zh" ? seasonChineseLabels[season.id]?.label ?? season.label : season.label;
   const getSeasonMonths = (season) =>
     language === "zh" ? seasonChineseLabels[season.id]?.months ?? season.months : season.months;
-  const getSeasonAction = (season) =>
-    language === "zh"
-      ? seasonChineseLabels[season.id]?.action ?? `查看${getSeasonLabel(season)}路线`
-      : `View ${season.label.toLowerCase()} routes`;
 
   React.useEffect(() => {
     const carousel = carouselRef.current;
@@ -1572,19 +1568,15 @@ function SeasonSelection({
           <div className="relative">
           <div className="season-carousel grid gap-4" ref={carouselRef}>
             {seasons.map((season, index) => (
-              <button
-                className={`group relative h-[420px] overflow-hidden rounded-md border bg-stone-200 transition focus:outline-none focus-visible:ring-4 focus-visible:ring-teal-300 sm:h-[520px] ${
-                  activeIndex === index
-                    ? "border-teal-700 shadow-lg"
-                    : "border-stone-200 opacity-80 hover:border-teal-500 hover:opacity-100"
+              <article
+                className={`relative h-[420px] overflow-hidden rounded-md border bg-stone-200 transition sm:h-[520px] ${
+                  activeIndex === index ? "border-teal-700 shadow-lg" : "border-stone-200 opacity-80"
                 }`}
                 key={season.id}
-                onClick={() => setActiveIndex(index)}
-                type="button"
-                aria-label={`Select ${getSeasonLabel(season)}`}
+                aria-current={activeIndex === index ? "true" : undefined}
               >
                 <img
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  className="h-full w-full object-cover"
                   src={season.image}
                   alt={`${getSeasonLabel(season)} in New Zealand`}
                 />
@@ -1592,9 +1584,17 @@ function SeasonSelection({
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-teal-100">
                     {getSeasonMonths(season)}
                   </p>
-                  <h3 className="mt-2 text-3xl font-semibold">{getSeasonLabel(season)}</h3>
+                  <h3 className="mt-2 text-3xl font-semibold">
+                    <button
+                      className="season-title-link focus:outline-none focus-visible:ring-4 focus-visible:ring-teal-300"
+                      onClick={() => onSelectSeason(season.id)}
+                      type="button"
+                    >
+                      {getSeasonLabel(season)}
+                    </button>
+                  </h3>
                 </div>
-              </button>
+              </article>
             ))}
           </div>
             <button
@@ -1621,20 +1621,18 @@ function SeasonSelection({
                 {getSeasonMonths(activeSeason)}
               </p>
               <h3 className="mt-1 text-3xl font-semibold text-stone-950">
-                {getSeasonLabel(activeSeason)}
+                <button
+                  className="season-title-link season-title-link-dark focus:outline-none focus-visible:ring-4 focus-visible:ring-teal-300"
+                  onClick={() => onSelectSeason(activeSeason.id)}
+                  type="button"
+                >
+                  {getSeasonLabel(activeSeason)}
+                </button>
               </h3>
               <p className="mt-2 max-w-2xl text-base leading-7 text-stone-600">
                 {language === "zh" ? activeSeason.themeZh : activeSeason.theme}
               </p>
             </div>
-            <button
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-teal-700 px-6 py-3 text-sm font-bold text-white transition hover:bg-teal-800"
-              onClick={() => onSelectSeason(activeSeason.id)}
-              type="button"
-            >
-              {getSeasonAction(activeSeason)}
-              <ArrowRight className="size-4" aria-hidden="true" />
-            </button>
           </div>
         </div>
       </div>

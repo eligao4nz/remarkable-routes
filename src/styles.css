@@ -150,8 +150,31 @@ a {
   padding-bottom: 8px;
 }
 
-.season-carousel > button {
+.season-carousel > * {
   scroll-snap-align: center;
+}
+
+.season-title-link {
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-decoration-color: transparent;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+  transition:
+    color 160ms ease,
+    text-decoration-color 160ms ease;
+}
+
+.season-title-link:hover,
+.season-title-link:focus-visible {
+  color: #99f6e4;
+  text-decoration-color: currentcolor;
+}
+
+.season-title-link-dark:hover,
+.season-title-link-dark:focus-visible {
+  color: #0f766e;
 }
 
 .site-nav,
