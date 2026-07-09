@@ -94,6 +94,11 @@ a {
   width: auto;
 }
 
+.footer-logo {
+  height: 3rem;
+  width: auto;
+}
+
 .hero-title {
   text-shadow: 0 18px 50px rgb(0 0 0 / 0.35);
 }
@@ -290,6 +295,15 @@ a {
 }
 
 @media (min-width: 1024px) {
+  .site-nav {
+    min-height: 6.25rem;
+    position: relative;
+  }
+
+  .brand-logo {
+    height: 4rem;
+  }
+
   .hero-section {
     min-height: 75vh;
     min-height: 75svh;
@@ -299,11 +313,25 @@ a {
     display: flex;
   }
 
+  .desktop-nav-primary {
+    gap: clamp(2rem, 3vw, 3.5rem);
+    left: min(61%, calc(100% - 25rem));
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+
   .desktop-nav-hero {
     font-size: 0.95rem;
     font-weight: 700;
     letter-spacing: 0.12em;
-    transform: translateX(5rem);
+  }
+
+  .language-switcher {
+    margin-left: auto;
+    min-width: 7rem;
+    justify-content: flex-end;
   }
 
   .mobile-services-nav {

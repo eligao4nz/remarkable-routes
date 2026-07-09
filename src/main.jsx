@@ -1299,7 +1299,7 @@ function BrandNav({
         />
       </button>
       <div
-        className={`desktop-nav ${isLight ? "desktop-nav-hero" : ""} items-center gap-4 text-sm font-semibold uppercase tracking-[0.18em] ${
+        className={`desktop-nav desktop-nav-primary ${isLight ? "desktop-nav-hero" : ""} items-center text-sm font-semibold uppercase tracking-[0.18em] ${
           isLight ? "text-white" : "text-stone-950"
         }`}
       >
@@ -1321,7 +1321,7 @@ function BrandNav({
         </button>
       </div>
       <div
-        className={`flex items-center gap-2 text-sm font-semibold ${
+        className={`language-switcher flex items-center gap-2 text-sm font-semibold ${
           isLight ? "text-white" : "text-stone-950"
         }`}
         aria-label="Language selection"
@@ -2588,8 +2588,13 @@ function ContactLink({ icon: LinkIcon, label, value, href, target }) {
 function ImageCredits() {
   return (
     <footer className="bg-white px-5 py-7 text-xs leading-6 text-stone-500 sm:px-8">
-      <div className="mx-auto max-w-7xl">
-        Images are from the uploaded Queenstown and South Island photo set.
+      <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <img
+          className="footer-logo"
+          src={logoDarkNav}
+          alt="Remarkable Routes"
+        />
+        <p>Images are from the uploaded Queenstown and South Island photo set.</p>
       </div>
     </footer>
   );
