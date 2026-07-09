@@ -87,15 +87,6 @@ function MessageCircle(props) {
   );
 }
 
-function Mountain(props) {
-  return (
-    <Icon {...props}>
-      <path d="m3 20 7.5-14 4.2 7.8 2-3.8L21 20H3Z" />
-      <path d="m10.5 6 1.8 4h-3.9" />
-    </Icon>
-  );
-}
-
 function Sparkles(props) {
   return (
     <Icon {...props}>
@@ -1293,24 +1284,17 @@ function BrandNav({
 
   return (
     <nav className="site-nav relative z-20 mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8">
-      <button className="site-brand flex items-center gap-3" onClick={onHome} type="button">
-        <span
-          className={`grid size-10 place-items-center rounded-full border backdrop-blur ${
-            isLight ? "border-white/30 bg-white/16" : "border-stone-950/15 bg-white/60"
-          }`}
-        >
-          <Mountain
-            className={`size-5 ${isLight ? "text-white" : "text-stone-950"}`}
-            aria-hidden="true"
-          />
-        </span>
-        <span
-          className={`text-sm font-semibold uppercase tracking-[0.28em] ${
-            isLight ? "text-white" : "text-stone-950"
-          }`}
-        >
-          Remarkable Routes
-        </span>
+      <button
+        className={`site-brand logo-brand ${isLight ? "logo-brand-light" : "logo-brand-dark"}`}
+        onClick={onHome}
+        type="button"
+        aria-label="Remarkable Routes home"
+      >
+        <img
+          className="brand-logo"
+          src={isLight ? "/gallery/logo-light-nav.png" : "/gallery/logo-dark-nav.png"}
+          alt="Remarkable Routes"
+        />
       </button>
       <div
         className={`desktop-nav ${isLight ? "desktop-nav-hero" : ""} items-center gap-4 text-sm font-semibold uppercase tracking-[0.18em] ${
