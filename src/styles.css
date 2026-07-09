@@ -154,6 +154,19 @@ a {
   scroll-snap-align: center;
 }
 
+.season-panel-selector {
+  cursor: pointer;
+  z-index: 1;
+}
+
+.season-card-copy {
+  pointer-events: none;
+}
+
+.season-card-copy .season-title-link {
+  pointer-events: auto;
+}
+
 .season-title-link {
   border-radius: 0.25rem;
   cursor: pointer;

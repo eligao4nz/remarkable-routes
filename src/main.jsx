@@ -1569,18 +1569,27 @@ function SeasonSelection({
           <div className="season-carousel grid gap-4" ref={carouselRef}>
             {seasons.map((season, index) => (
               <article
-                className={`relative h-[420px] overflow-hidden rounded-md border bg-stone-200 transition sm:h-[520px] ${
-                  activeIndex === index ? "border-teal-700 shadow-lg" : "border-stone-200 opacity-80"
+                className={`group relative h-[420px] overflow-hidden rounded-md border bg-stone-200 transition sm:h-[520px] ${
+                  activeIndex === index
+                    ? "border-teal-700 shadow-lg"
+                    : "border-stone-200 opacity-80 hover:border-teal-500 hover:opacity-100"
                 }`}
                 key={season.id}
                 aria-current={activeIndex === index ? "true" : undefined}
               >
                 <img
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   src={season.image}
                   alt={`${getSeasonLabel(season)} in New Zealand`}
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-stone-950/70 to-transparent p-5 text-left text-white">
+                <button
+                  className="season-panel-selector absolute inset-0 focus:outline-none focus-visible:ring-4 focus-visible:ring-teal-300"
+                  onClick={() => setActiveIndex(index)}
+                  type="button"
+                  aria-label={`Show ${getSeasonLabel(season)} details`}
+                  aria-pressed={activeIndex === index}
+                />
+                <div className="season-card-copy absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-stone-950/70 to-transparent p-5 text-left text-white">
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-teal-100">
                     {getSeasonMonths(season)}
                   </p>
