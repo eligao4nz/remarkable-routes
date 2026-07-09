@@ -3,6 +3,8 @@ import { createRoot } from "react-dom/client";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 import "./styles.css";
+import logoDarkNav from "./assets/logo-dark-nav.png";
+import logoLightNav from "./assets/logo-light-nav.png";
 
 function Icon({ children, className = "", ...props }) {
   return (
@@ -1292,7 +1294,7 @@ function BrandNav({
       >
         <img
           className="brand-logo"
-          src={isLight ? "/gallery/logo-light-nav.png" : "/gallery/logo-dark-nav.png"}
+          src={isLight ? logoLightNav : logoDarkNav}
           alt="Remarkable Routes"
         />
       </button>
