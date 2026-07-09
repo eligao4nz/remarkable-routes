@@ -1928,7 +1928,7 @@ function SeasonDetail({
           </button>
         }
       />
-      <div className="season-detail-container mx-auto max-w-7xl px-5 pb-20 pt-8 sm:px-8 lg:pb-28">
+      <div className="season-detail-container mx-auto max-w-7xl px-5 pb-10 pt-8 sm:px-8">
         <div className="season-detail-grid grid min-w-0 grid-cols-1 overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div className="min-w-0">
           <div
@@ -2105,13 +2105,6 @@ function SeasonDetail({
               </div>
             </div>
 
-            <a
-              className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-teal-700 px-6 py-3 text-sm font-bold text-white transition hover:bg-teal-800"
-              href="#contact"
-            >
-              {isChinese ? "联系我们定制行程" : "Contact us to customise"}
-              <ArrowRight className="size-4" aria-hidden="true" />
-            </a>
           </div>
         </div>
       </div>
