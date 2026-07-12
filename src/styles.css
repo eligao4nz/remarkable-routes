@@ -313,27 +313,27 @@ a {
   transform: translateY(-1px);
 }
 
-.team-grid {
+.team-profile-layout {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
 }
 
-.team-card {
-  box-shadow: 0 18px 42px -34px rgb(12 10 9 / 0.55);
+.team-profile-media {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 22px 54px -34px rgb(12 10 9 / 0.58);
 }
 
-.team-mark {
-  align-items: center;
-  background: #f0fdfa;
-  border: 1px solid rgb(15 118 110 / 0.18);
-  border-radius: 9999px;
-  color: #0f766e;
-  display: inline-flex;
-  font-size: 1.125rem;
-  font-weight: 800;
-  height: 3rem;
-  justify-content: center;
-  width: 3rem;
+.team-profile-image {
+  aspect-ratio: 4 / 5;
+  height: 100%;
+  object-fit: cover;
+  object-position: 58% 50%;
+  width: 100%;
+}
+
+.team-credentials {
+  box-shadow: 0 18px 42px -34px rgb(12 10 9 / 0.42);
 }
 
 .site-nav,
@@ -463,8 +463,10 @@ a {
     align-items: start;
   }
 
-  .team-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .team-profile-layout {
+    align-items: start;
+    grid-template-columns: minmax(22rem, 0.82fr) minmax(0, 1.18fr);
+    gap: clamp(3rem, 5vw, 5rem);
   }
 }
 

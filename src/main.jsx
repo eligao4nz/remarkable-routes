@@ -976,12 +976,12 @@ const teamSeo = {
   en: {
     title: "Our Team | Remarkable Routes",
     description:
-      "Meet the local Remarkable Routes team behind Queenstown private tours, transfers, custom charters, and South Island activity planning.",
+      "Meet Eli Gao, the Remarkable Routes founder and private driver-guide with more than a decade of New Zealand tourism experience.",
   },
   zh: {
     title: "Our Team | Remarkable Routes",
     description:
-      "\u4e86\u89e3 Remarkable Routes \u672c\u5730\u56e2\u961f\uff0c\u4ee5\u53ca\u6211\u4eec\u5982\u4f55\u5b89\u6392\u7687\u540e\u9547\u79c1\u4eba\u6e38\u3001\u63a5\u9001\u3001\u5b9a\u5236\u5305\u8f66\u548c\u5357\u5c9b\u6d3b\u52a8\u89c4\u5212\u3002",
+      "\u8ba4\u8bc6 Remarkable Routes \u521b\u59cb\u4eba\u4e0e\u79c1\u4eba\u53f8\u5bfc Eli Gao\uff0c\u4e86\u89e3\u4ed6\u5341\u591a\u5e74\u7684\u65b0\u897f\u5170\u65c5\u6e38\u7ecf\u9a8c\u3002",
   },
 };
 
@@ -1254,55 +1254,55 @@ const reviewFormCopy = {
 
 const teamIntro = {
   en: {
-    kicker: "Our Team",
-    title: "Local planning, calm driving, and practical South Island knowledge.",
+    kicker: "Meet the Team",
+    title: "Meet Eli Gao",
+    subtitle: "Founder and private driver-guide",
+    image: "/gallery/eli-gao-glacier.jpg",
+    imageAlt: "Eli Gao standing on a New Zealand glacier",
     intro:
-      "Remarkable Routes is built around a small local team that helps guests move through Queenstown and the South Island with confidence.",
-    members: [
-      {
-        name: "Local driver-guides",
-        role: "Private touring and transfers",
-        body:
-          "Road-aware, weather-aware hosts who keep the journey comfortable while leaving room for scenic stops and real-time changes.",
-      },
-      {
-        name: "Trip planning support",
-        role: "Custom route design",
-        body:
-          "Practical itinerary help for families, couples, and small groups who want the route to match their pace.",
-      },
-      {
-        name: "Activity booking support",
-        role: "Experiences and seasonal options",
-        body:
-          "Advice on what pairs well together, what needs advance booking, and how to shape the day around weather and availability.",
-      },
+      "More than a driver, Eli brings more than a decade of tourism experience, local South Island knowledge, and calm, practical guiding to every private journey.",
+    paragraphs: [
+      "In 2014, Eli first visited New Zealand as a Chinese tour leader, leading groups across the country and quickly falling in love with its landscapes and people. Four years later, he returned on a Working Holiday Visa and decided to make New Zealand his home.",
+      "Since then, tourism has never just been a job - it has been his career.",
+      "Eli has worked as a Chinese-speaking guide for some of New Zealand's best-known tourism operators, including Dart River Adventures in Glenorchy, Shamarra Alpaca Farm in Akaroa, and Milford Sound day tours with Southern Discoveries and RealNZ.",
+      "Since 2019, he has worked full-time as a private driver-guide, travelling extensively throughout the South Island and exploring not only the iconic destinations, but also countless hidden gems that most visitors never discover.",
+      "With more than a decade of tourism experience, Eli combines local knowledge, professional guiding skills, and calm problem-solving to deliver journeys that are both seamless and memorable.",
+      "Before entering the tourism industry, he was also a travel radio presenter in China, giving him a natural ability to bring each destination to life through engaging storytelling rather than simply reciting facts.",
+      "Whether you're visiting New Zealand for the first time or returning to explore beyond the usual attractions, Eli believes every itinerary should feel personal, flexible, and unforgettable.",
+    ],
+    credentialsTitle: "Professional qualifications",
+    credentials: [
+      "New Zealand 100% Pure Tourism Specialist certification",
+      "New Zealand First Aid certification",
+      "New Zealand ADS Driver Guide qualification",
+      "Chinese National Tour Guide Licence",
+      "Chinese Tour Leader Certificate",
     ],
   },
   zh: {
-    kicker: "\u6211\u4eec\u7684\u56e2\u961f",
-    title: "\u672c\u5730\u89c4\u5212\u3001\u5b89\u5fc3\u884c\u8f66\uff0c\u4ee5\u53ca\u5bf9\u5357\u5c9b\u8282\u594f\u7684\u719f\u6089\u3002",
+    kicker: "\u8ba4\u8bc6\u6211\u4eec\u7684\u56e2\u961f",
+    title: "Eli Gao",
+    subtitle: "\u521b\u59cb\u4eba\u4e0e\u79c1\u4eba\u53f8\u5bfc",
+    image: "/gallery/eli-gao-glacier.jpg",
+    imageAlt: "Eli Gao \u7ad9\u5728\u65b0\u897f\u5170\u51b0\u5ddd\u4e0a",
     intro:
-      "Remarkable Routes \u7531\u672c\u5730\u5c0f\u56e2\u961f\u8fd0\u8425\uff0c\u5e2e\u52a9\u5ba2\u4eba\u66f4\u8f7b\u677e\u5730\u5b89\u6392\u7687\u540e\u9547\u548c\u5357\u5c9b\u7684\u79c1\u4eba\u884c\u7a0b\u3002",
-    members: [
-      {
-        name: "\u672c\u5730\u53f8\u5bfc",
-        role: "\u79c1\u4eba\u6e38\u89c8\u4e0e\u63a5\u9001",
-        body:
-          "\u719f\u6089\u8def\u51b5\u548c\u5929\u6c14\uff0c\u4fdd\u6301\u884c\u7a0b\u8212\u9002\uff0c\u4e5f\u4f1a\u4e3a\u98ce\u666f\u505c\u7559\u548c\u4e34\u65f6\u8c03\u6574\u7559\u51fa\u7a7a\u95f4\u3002",
-      },
-      {
-        name: "\u884c\u7a0b\u89c4\u5212\u652f\u6301",
-        role: "\u5b9a\u5236\u8def\u7ebf\u8bbe\u8ba1",
-        body:
-          "\u9488\u5bf9\u5bb6\u5ead\u3001\u60c5\u4fa3\u548c\u5c0f\u56e2\u4f53\u63d0\u4f9b\u5b9e\u7528\u5efa\u8bae\uff0c\u8ba9\u8def\u7ebf\u66f4\u7b26\u5408\u4f60\u4eec\u7684\u8282\u594f\u3002",
-      },
-      {
-        name: "\u6d3b\u52a8\u9884\u8ba2\u652f\u6301",
-        role: "\u4f53\u9a8c\u4e0e\u5b63\u8282\u9009\u9879",
-        body:
-          "\u534f\u52a9\u5224\u65ad\u54ea\u4e9b\u4f53\u9a8c\u9002\u5408\u642d\u914d\uff0c\u54ea\u4e9b\u9700\u8981\u63d0\u524d\u9884\u8ba2\uff0c\u4ee5\u53ca\u5982\u4f55\u6839\u636e\u5929\u6c14\u548c\u540d\u989d\u8c03\u6574\u3002",
-      },
+      "\u4e0d\u53ea\u662f\u53f8\u673a\uff0cEli \u4ee5\u5341\u591a\u5e74\u65c5\u6e38\u884c\u4e1a\u7ecf\u9a8c\u3001\u5bf9\u5357\u5c9b\u7684\u672c\u5730\u4e86\u89e3\uff0c\u4ee5\u53ca\u7a33\u5b9a\u7ec6\u81f4\u7684\u5e26\u56e2\u65b9\u5f0f\uff0c\u4e3a\u6bcf\u4e00\u6bb5\u79c1\u4eba\u65c5\u7a0b\u63d0\u4f9b\u652f\u6301\u3002",
+    paragraphs: [
+      "2014\u5e74\uff0cEli \u9996\u6b21\u4ee5\u4e2d\u56fd\u51fa\u5883\u9886\u961f\u7684\u8eab\u4efd\u6765\u5230\u65b0\u897f\u5170\u5e26\u56e2\uff0c\u4ece\u90a3\u65f6\u8d77\u4fbf\u7231\u4e0a\u4e86\u8fd9\u91cc\u7684\u81ea\u7136\u98ce\u5149\u4e0e\u65c5\u884c\u6587\u5316\u3002",
+      "2018\u5e74\uff0c\u4ed6\u4ee5\u6253\u5de5\u5ea6\u5047\u7b7e\u8bc1\u518d\u6b21\u6765\u5230\u65b0\u897f\u5170\uff0c\u5e76\u6700\u7ec8\u9009\u62e9\u957f\u671f\u7559\u5728\u8fd9\u91cc\uff0c\u4ece\u6b64\u4e00\u76f4\u6df1\u8015\u4e8e\u65b0\u897f\u5170\u65c5\u6e38\u884c\u4e1a\u3002",
+      "\u5728\u6253\u5de5\u5ea6\u5047\u671f\u95f4\uff0cEli \u66fe\u62c5\u4efb Glenorchy Dart River Adventures \u4e2d\u6587\u8bb2\u89e3\u5458\u3001Akaroa Shamarra Alpaca Farm \u4e2d\u6587\u8bb2\u89e3\u5458\uff0c\u4ee5\u53ca Southern Discoveries \u4e0e RealNZ \u7c73\u5c14\u798f\u5fb7\u5ce1\u6e7e\u4e00\u65e5\u6e38\u4e2d\u6587\u5bfc\u6e38\u3002",
+      "\u81ea2019\u5e74\u4ee5\u6765\uff0cEli \u4e00\u76f4\u62c5\u4efb\u5168\u804c\u79c1\u4eba\u53f8\u5bfc\uff0c\u957f\u671f\u5e26\u9886\u6e38\u5ba2\u6df1\u5ea6\u63a2\u7d22\u65b0\u897f\u5170\u5357\u5c9b\u3002",
+      "\u4ece\u7687\u540e\u9547\u3001\u74e6\u7eb3\u5361\u3001\u8482\u5361\u6ce2\u5230\u897f\u6d77\u5cb8\u3001\u5361\u7279\u6797\u65af\u7b49\u70ed\u95e8\u7ebf\u8def\uff0c\u518d\u5230\u8bb8\u591a\u53ea\u6709\u5f53\u5730\u4eba\u624d\u719f\u6089\u7684\u5c0f\u4f17\u79d8\u5883\uff0c\u4ed6\u90fd\u975e\u5e38\u719f\u6089\uff0c\u5e76\u80fd\u591f\u6839\u636e\u5ba2\u4eba\u7684\u5174\u8da3\u7075\u6d3b\u8c03\u6574\u884c\u7a0b\u3002",
+      "\u8d85\u8fc7\u5341\u5e74\u7684\u65c5\u6e38\u884c\u4e1a\u7ecf\u9a8c\uff0c\u4e5f\u8ba9\u4ed6\u5177\u5907\u4e86\u4f18\u79c0\u7684\u5e94\u6025\u5904\u7406\u80fd\u529b\u548c\u884c\u7a0b\u89c4\u5212\u80fd\u529b\u3002\u4f5c\u4e3a\u66fe\u7ecf\u7684\u4e2d\u56fd\u5e7f\u64ad\u7535\u53f0\u65c5\u6e38\u8282\u76ee\u4e3b\u6301\u4eba\uff0c\u4ed6\u4e0d\u4ec5\u719f\u6089\u666f\u70b9\uff0c\u66f4\u64c5\u957f\u901a\u8fc7\u6545\u4e8b\u3001\u5386\u53f2\u4e0e\u6587\u5316\uff0c\u8ba9\u6bcf\u4e00\u4e2a\u76ee\u7684\u5730\u53d8\u5f97\u751f\u52a8\u6709\u8da3\u3002",
+      "\u4ed6\u59cb\u7ec8\u76f8\u4fe1\uff0c\u4e00\u6b21\u771f\u6b63\u96be\u5fd8\u7684\u65c5\u884c\uff0c\u4e0d\u53ea\u662f\u5230\u8fbe\u666f\u70b9\uff0c\u800c\u662f\u901a\u8fc7\u5f53\u5730\u4eba\u7684\u89c6\u89d2\uff0c\u53d1\u73b0\u90a3\u4e9b\u503c\u5f97\u73cd\u85cf\u7684\u98ce\u666f\u4e0e\u6545\u4e8b\u3002",
+    ],
+    credentialsTitle: "\u4e13\u4e1a\u8d44\u8d28",
+    credentials: [
+      "100% Pure New Zealand Specialist \u8ba4\u8bc1",
+      "\u65b0\u897f\u5170\u6025\u6551\u8bc1\u4e66\uff08First Aid\uff09",
+      "ADS Driver Guide \u8d44\u683c",
+      "\u4e2d\u56fd\u56fd\u5bb6\u5bfc\u6e38\u8bc1",
+      "\u4e2d\u56fd\u51fa\u5883\u9886\u961f\u8bc1",
     ],
   },
 };
@@ -1977,32 +1977,44 @@ function OurTeam({ language }) {
   return (
     <section id="our-team" className="bg-stone-50 px-5 py-16 text-stone-950 sm:px-8 lg:py-20">
       <div className="mx-auto max-w-7xl">
-        <div className="home-section-heading">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal-700">
-            {content.kicker}
-          </p>
-          <div>
-            <h2 className="brand-display text-4xl leading-tight text-stone-950 sm:text-5xl">
+        <div className="team-profile-layout">
+          <div className="team-profile-media">
+            <img className="team-profile-image" src={content.image} alt={content.imageAlt} />
+          </div>
+          <div className="team-profile-copy">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal-700">
+              {content.kicker}
+            </p>
+            <h1 className="brand-display mt-4 text-4xl leading-tight text-stone-950 sm:text-5xl">
               {content.title}
-            </h2>
-            <p className="mt-4 max-w-3xl text-base leading-8 text-stone-600">
+            </h1>
+            <p className="mt-3 text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">
+              {content.subtitle}
+            </p>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">
               {content.intro}
             </p>
-          </div>
-        </div>
-        <div className="team-grid mt-8">
-          {content.members.map((member) => (
-            <article className="team-card rounded-md border border-stone-200 bg-white p-6" key={member.name}>
-              <div className="team-mark" aria-hidden="true">
-                {member.name.slice(0, 1)}
+            <div className="mt-8 grid gap-5">
+              {content.paragraphs.map((paragraph) => (
+                <p className="text-base leading-8 text-stone-600" key={paragraph}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            <div className="team-credentials mt-8 rounded-md border border-stone-200 bg-white p-6">
+              <h2 className="text-lg font-bold text-stone-950">{content.credentialsTitle}</h2>
+              <div className="mt-4 flex flex-wrap gap-3">
+                {content.credentials.map((credential) => (
+                  <span
+                    className="rounded-full border border-teal-700/25 bg-teal-50 px-4 py-2 text-sm font-semibold text-teal-900"
+                    key={credential}
+                  >
+                    {credential}
+                  </span>
+                ))}
               </div>
-              <h3 className="mt-5 text-lg font-bold text-stone-950">{member.name}</h3>
-              <p className="mt-2 text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">
-                {member.role}
-              </p>
-              <p className="mt-5 leading-7 text-stone-600">{member.body}</p>
-            </article>
-          ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
