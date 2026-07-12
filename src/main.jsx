@@ -1683,10 +1683,10 @@ function ServicePage({
         right={
           <button
             className="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-sm font-semibold text-stone-950 transition hover:border-teal-700 hover:text-teal-700"
-            onClick={onServices}
+            onClick={onHome}
             type="button"
           >
-            {text.nav.services}
+            {text.nav.home}
           </button>
         }
       />
