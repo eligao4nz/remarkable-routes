@@ -8,6 +8,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
+        routes: resolve(__dirname, "routes/index.html"),
+        spring: resolve(__dirname, "spring/index.html"),
+        summer: resolve(__dirname, "summer/index.html"),
+        autumn: resolve(__dirname, "autumn/index.html"),
+        winter: resolve(__dirname, "winter/index.html"),
         airportTransfers: resolve(__dirname, "airport-transfers/index.html"),
         privateCharters: resolve(__dirname, "private-charters/index.html"),
         queenstownPrivateTours: resolve(__dirname, "queenstown-private-tours/index.html"),

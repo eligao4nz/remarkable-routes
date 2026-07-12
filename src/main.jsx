@@ -960,6 +960,17 @@ const serviceIdsByPath = Object.fromEntries(
   Object.entries(servicePaths).map(([serviceId, path]) => [path, serviceId]),
 );
 
+const seasonPaths = {
+  spring: "/spring",
+  summer: "/summer",
+  autumn: "/autumn",
+  winter: "/winter",
+};
+
+const seasonIdsByPath = Object.fromEntries(
+  Object.entries(seasonPaths).map(([seasonId, path]) => [path, seasonId]),
+);
+
 const defaultSeo = {
   en: {
     title: "Remarkable Routes | Queenstown Private Tours",
@@ -985,6 +996,19 @@ const teamSeo = {
   },
 };
 
+const routesSeo = {
+  en: {
+    title: "South Island Routes by Season | Remarkable Routes",
+    description:
+      "Explore Remarkable Routes seasonal South Island route ideas from Queenstown, including spring, summer, autumn, and winter private tour inspiration.",
+  },
+  zh: {
+    title: "South Island Routes by Season | Remarkable Routes",
+    description:
+      "\u6309\u5b63\u8282\u63a2\u7d22 Remarkable Routes \u5357\u5c9b\u79c1\u4eba\u65c5\u884c\u8def\u7ebf\uff0c\u5305\u62ec\u6625\u3001\u590f\u3001\u79cb\u3001\u51ac\u4e0d\u540c\u65f6\u8282\u7684\u884c\u7a0b\u7075\u611f\u3002",
+  },
+};
+
 const siteUrl = "https://remarkableroutes.com";
 
 function normalisePath(pathname) {
@@ -994,6 +1018,13 @@ function normalisePath(pathname) {
 
 function getRouteFromPath(pathname) {
   const path = normalisePath(pathname);
+  if (path === "/routes") {
+    return { view: "routes", serviceId: servicePages[0].id };
+  }
+  const seasonId = seasonIdsByPath[path];
+  if (seasonId) {
+    return { view: "season", seasonId, serviceId: servicePages[0].id };
+  }
   if (path === "/our-team") {
     return { view: "team", serviceId: servicePages[0].id };
   }
@@ -1312,7 +1343,7 @@ function App() {
   const [language, setLanguage] = React.useState("en");
   const [view, setView] = React.useState(initialRoute.view);
   const [shouldOpenContact, setShouldOpenContact] = React.useState(false);
-  const [selectedSeasonId, setSelectedSeasonId] = React.useState("spring");
+  const [selectedSeasonId, setSelectedSeasonId] = React.useState(initialRoute.seasonId ?? "spring");
   const [selectedServiceId, setSelectedServiceId] = React.useState(initialRoute.serviceId);
   const text = copy[language];
   const selectedSeason = seasons.find((season) => season.id === selectedSeasonId);
@@ -1323,6 +1354,9 @@ function App() {
       const route = getRouteFromPath(window.location.pathname);
       setView(route.view);
       setSelectedServiceId(route.serviceId);
+      if (route.seasonId) {
+        setSelectedSeasonId(route.seasonId);
+      }
       window.scrollTo({ top: 0, behavior: "auto" });
     }
 
@@ -1337,15 +1371,26 @@ function App() {
       language === "zh" && selectedService?.zh
         ? { ...selectedService, ...selectedService.zh }
         : selectedService;
+    const seasonLabel =
+      language === "zh" ? selectedSeason?.labelZh ?? selectedSeason?.label : selectedSeason?.label;
+    const seasonIntro =
+      language === "zh" ? selectedSeason?.introZh ?? selectedSeason?.intro : selectedSeason?.intro;
     const seo =
       view === "team"
         ? teamSeo[language]
-        : isStandaloneService
-          ? {
-              title: serviceContent.seoTitle ?? baseServiceContent.seoTitle,
-              description: serviceContent.seoDescription ?? baseServiceContent.seoDescription,
-            }
-          : defaultSeo[language];
+        : view === "routes"
+          ? routesSeo[language]
+          : view === "season" && selectedSeason
+            ? {
+                title: `${seasonLabel} Routes | Remarkable Routes`,
+                description: seasonIntro,
+              }
+            : isStandaloneService
+              ? {
+                  title: serviceContent.seoTitle ?? baseServiceContent.seoTitle,
+                  description: serviceContent.seoDescription ?? baseServiceContent.seoDescription,
+                }
+              : defaultSeo[language];
 
     document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
     document.title = seo.title;
@@ -1359,9 +1404,19 @@ function App() {
     }
     canonical.setAttribute(
       "href",
-      `${siteUrl}${view === "team" ? "/our-team" : isStandaloneService ? servicePaths[selectedServiceId] : "/"}`,
+      `${siteUrl}${
+        view === "team"
+          ? "/our-team"
+          : view === "routes"
+            ? "/routes"
+            : view === "season" && seasonPaths[selectedSeasonId]
+              ? seasonPaths[selectedSeasonId]
+              : isStandaloneService
+                ? servicePaths[selectedServiceId]
+                : "/"
+      }`,
     );
-  }, [language, selectedService, selectedServiceId, view]);
+  }, [language, selectedSeason, selectedSeasonId, selectedService, selectedServiceId, view]);
 
   React.useEffect(() => {
     if (!shouldOpenContact) {
@@ -1383,7 +1438,7 @@ function App() {
   }
 
   function openRoutes() {
-    goTo("routes");
+    goTo("routes", "/routes");
   }
 
   function openServices() {
@@ -1392,7 +1447,7 @@ function App() {
 
   function openSeason(seasonId) {
     setSelectedSeasonId(seasonId);
-    goTo("season");
+    goTo("season", seasonPaths[seasonId] ?? "/routes");
   }
 
   function openService(serviceId) {
