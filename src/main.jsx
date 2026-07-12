@@ -2612,7 +2612,7 @@ function ImageCredits() {
       <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <img
           className="footer-logo"
-          src={logoDarkNav}
+          src="/gallery/logo深色.png"
           alt="Remarkable Routes"
         />
         <p>Images are from the uploaded Queenstown and South Island photo set.</p>
