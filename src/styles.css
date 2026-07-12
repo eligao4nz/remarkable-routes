@@ -126,6 +126,32 @@ a {
   display: block;
 }
 
+.mobile-services-button-light {
+  color: #fff;
+}
+
+.mobile-services-button-dark {
+  color: #0c0a09;
+}
+
+.mobile-services-button-open.mobile-services-button-light {
+  color: #ccfbf1;
+}
+
+.mobile-services-button-open.mobile-services-button-dark {
+  color: #0f766e;
+}
+
+@media (hover: hover) {
+  .mobile-services-button-light:hover {
+    color: #ccfbf1;
+  }
+
+  .mobile-services-button-dark:hover {
+    color: #0f766e;
+  }
+}
+
 .services-nav {
   align-self: stretch;
   display: flex;

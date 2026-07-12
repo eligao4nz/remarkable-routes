@@ -1278,6 +1278,26 @@ function BrandNav({
 }) {
   const isLight = tone === "light";
   const [isMobileServicesOpen, setIsMobileServicesOpen] = React.useState(false);
+  const mobileServicesRef = React.useRef(null);
+
+  React.useEffect(() => {
+    if (!isMobileServicesOpen) {
+      return undefined;
+    }
+
+    function closeMobileServicesOnOutsideClick(event) {
+      if (mobileServicesRef.current?.contains(event.target)) {
+        return;
+      }
+
+      setIsMobileServicesOpen(false);
+    }
+
+    document.addEventListener("pointerdown", closeMobileServicesOnOutsideClick);
+    return () => {
+      document.removeEventListener("pointerdown", closeMobileServicesOnOutsideClick);
+    };
+  }, [isMobileServicesOpen]);
 
   function openServiceFromNav(serviceId) {
     setIsMobileServicesOpen(false);
@@ -1342,10 +1362,11 @@ function BrandNav({
           中文
         </button>
       </div>
-      <div className="mobile-services-nav relative">
+      <div className="mobile-services-nav relative" ref={mobileServicesRef}>
         <button
-          className={`text-sm font-semibold uppercase tracking-[0.18em] transition hover:text-teal-700 ${
-            isLight ? "text-white" : "text-stone-950"
+          className={`mobile-services-button text-sm font-semibold uppercase tracking-[0.18em] transition ${
+            isMobileServicesOpen ? "mobile-services-button-open" : ""
+          } ${isLight ? "mobile-services-button-light" : "mobile-services-button-dark"
           }`}
           onClick={() => setIsMobileServicesOpen((open) => !open)}
           type="button"
