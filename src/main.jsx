@@ -889,6 +889,9 @@ const servicePages = [
     id: "activity-bookings",
     title: "Activity Bookings",
     kicker: "Limited-time activity offer",
+    seoTitle: "Queenstown Activity Bookings | Remarkable Routes",
+    seoDescription:
+      "Book Queenstown and New Zealand activities through Remarkable Routes, including Skyline Gondola, TSS Earnslaw, helicopter experiences, and seasonal activity offers.",
     intro:
       "Most New Zealand activities can be booked at 5% off, including Queenstown Skyline Gondola, the TSS Earnslaw steamship, helicopter experiences, and more.",
     details: [
@@ -913,6 +916,9 @@ const servicePages = [
     id: "latest-deals",
     title: "Latest Discounts",
     kicker: "Seasonal specials",
+    seoTitle: "Queenstown Special Offers | Remarkable Routes",
+    seoDescription:
+      "Ask Remarkable Routes for current Queenstown special offers across private tours, transfers, activity bookings, snow days, wine routes, and lake experiences.",
     intro:
       "Ask us for the current seasonal offers across private tours, transfers, activity bookings, snow days, wine routes, and lake experiences.",
     details: [
@@ -938,13 +944,15 @@ const servicePages = [
 const serviceNavItems = [
   { id: "airport-transfers", en: "Airport Transfers", zh: "机场接送", path: "/airport-transfers" },
   { id: "private-day-tours", en: "Private Charters", zh: "包车服务", path: "/private-charters" },
-  { id: "activity-bookings", en: "Activity Bookings", zh: "活动预订" },
-  { id: "latest-deals", en: "Special Offers", zh: "特别优惠" },
+  { id: "activity-bookings", en: "Activity Bookings", zh: "活动预订", path: "/activities" },
+  { id: "latest-deals", en: "Special Offers", zh: "特别优惠", path: "/special-offers" },
 ];
 
 const servicePaths = {
   "airport-transfers": "/airport-transfers",
   "private-day-tours": "/private-charters",
+  "activity-bookings": "/activities",
+  "latest-deals": "/special-offers",
   "queenstown-private-tours": "/queenstown-private-tours",
 };
 
@@ -1123,14 +1131,15 @@ function App() {
 
   React.useEffect(() => {
     const isStandaloneService = view === "service" && servicePaths[selectedServiceId];
+    const baseServiceContent = selectedService;
     const serviceContent =
       language === "zh" && selectedService?.zh
         ? { ...selectedService, ...selectedService.zh }
         : selectedService;
     const seo = isStandaloneService
       ? {
-          title: serviceContent.seoTitle,
-          description: serviceContent.seoDescription,
+          title: serviceContent.seoTitle ?? baseServiceContent.seoTitle,
+          description: serviceContent.seoDescription ?? baseServiceContent.seoDescription,
         }
       : defaultSeo[language];
 
@@ -1766,13 +1775,14 @@ function ServicePage({
               </p>
             )}
 
-            <a
+            <button
               className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-teal-700 px-6 py-3 text-sm font-bold text-white transition hover:bg-teal-800"
-              href="#contact"
+              onClick={onContact}
+              type="button"
             >
               {serviceContent.cta ?? (language === "zh" ? "立即咨询" : "Enquire now")}
               <ArrowRight className="size-4" aria-hidden="true" />
-            </a>
+            </button>
           </div>
         </div>
 

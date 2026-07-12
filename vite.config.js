@@ -11,6 +11,8 @@ export default defineConfig({
         airportTransfers: resolve(__dirname, "airport-transfers/index.html"),
         privateCharters: resolve(__dirname, "private-charters/index.html"),
         queenstownPrivateTours: resolve(__dirname, "queenstown-private-tours/index.html"),
+        activities: resolve(__dirname, "activities/index.html"),
+        specialOffers: resolve(__dirname, "special-offers/index.html"),
       },
     },
   },
