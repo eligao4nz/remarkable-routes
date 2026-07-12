@@ -13,6 +13,7 @@ export default defineConfig({
         queenstownPrivateTours: resolve(__dirname, "queenstown-private-tours/index.html"),
         activities: resolve(__dirname, "activities/index.html"),
         specialOffers: resolve(__dirname, "special-offers/index.html"),
+        ourTeam: resolve(__dirname, "our-team/index.html"),
       },
     },
   },

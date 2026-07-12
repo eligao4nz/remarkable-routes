@@ -972,6 +972,19 @@ const defaultSeo = {
   },
 };
 
+const teamSeo = {
+  en: {
+    title: "Our Team | Remarkable Routes",
+    description:
+      "Meet the local Remarkable Routes team behind Queenstown private tours, transfers, custom charters, and South Island activity planning.",
+  },
+  zh: {
+    title: "Our Team | Remarkable Routes",
+    description:
+      "\u4e86\u89e3 Remarkable Routes \u672c\u5730\u56e2\u961f\uff0c\u4ee5\u53ca\u6211\u4eec\u5982\u4f55\u5b89\u6392\u7687\u540e\u9547\u79c1\u4eba\u6e38\u3001\u63a5\u9001\u3001\u5b9a\u5236\u5305\u8f66\u548c\u5357\u5c9b\u6d3b\u52a8\u89c4\u5212\u3002",
+  },
+};
+
 const siteUrl = "https://remarkableroutes.com";
 
 function normalisePath(pathname) {
@@ -980,7 +993,11 @@ function normalisePath(pathname) {
 }
 
 function getRouteFromPath(pathname) {
-  const serviceId = serviceIdsByPath[normalisePath(pathname)];
+  const path = normalisePath(pathname);
+  if (path === "/our-team") {
+    return { view: "team", serviceId: servicePages[0].id };
+  }
+  const serviceId = serviceIdsByPath[path];
   return serviceId ? { view: "service", serviceId } : { view: "home", serviceId: servicePages[0].id };
 }
 
@@ -990,6 +1007,7 @@ const copy = {
       home: "Home",
       routes: "Routes",
       services: "Services",
+      team: "Our Team",
       contact: "Contact",
     },
     routes: {
@@ -1106,6 +1124,189 @@ const copy = {
   },
 };
 
+const homeReviews = {
+  en: {
+    kicker: "Guest Reviews",
+    title: "The details guests remember after the road opens up.",
+    intro:
+      "A few recurring notes from private transfers, day trips, activity bookings, and custom South Island routes.",
+    items: [
+      {
+        title: "Like travelling with a local friend",
+        quote:
+          "This felt more like travelling with a local friend than hiring a driver. Eli shared lots of local knowledge without making it feel like a tour. The whole trip was relaxed and enjoyable.",
+        name: "Sukorn",
+      },
+      {
+        title: "An incredible experience",
+        quote:
+          "Queenstown is beautiful and reminded me so much of Patagonia. I felt at home. This trip was an incredible experience and I enjoyed every moment.",
+        name: "Catalina",
+        note: "Translated from Spanish",
+      },
+      {
+        title: "Never felt like ordinary tourists",
+        quote:
+          "We never once felt like ordinary tourists. The whole journey was calm and unhurried, and the route easily adjusted to what we wanted to see.",
+        name: "Iakov",
+        note: "Translated from Russian",
+      },
+      {
+        title: "A highlight of our South Island trip",
+        quote:
+          "Honestly one of the highlights of our South Island trip. Eli was friendly, knowledgeable and incredibly easy to travel with. The itinerary never felt fixed.",
+        name: "Alexander",
+      },
+      {
+        title: "Safe, thoughtful and easy",
+        quote:
+          "It was my first trip to Queenstown, but thanks to Eli I felt safe and enjoyed it. The driving was careful, the schedule was relaxed, and he paid attention to photo stops and rest breaks.",
+        name: "Tomonita",
+        note: "Translated from Japanese",
+      },
+    ],
+  },
+  zh: {
+    kicker: "\u6e38\u5ba2\u53cd\u9988",
+    title: "\u5ba2\u4eba\u5728\u65c5\u7a0b\u7ed3\u675f\u540e\u5e38\u5e38\u4f1a\u8bb0\u5f97\u7684\u7ec6\u8282\u3002",
+    intro:
+      "\u6765\u81ea\u79c1\u4eba\u63a5\u9001\u3001\u4e00\u65e5\u6e38\u3001\u6d3b\u52a8\u9884\u8ba2\u548c\u5b9a\u5236\u5357\u5c9b\u8def\u7ebf\u7684\u5e38\u89c1\u53cd\u9988\u3002",
+    items: [
+      {
+        title: "\u50cf\u548c\u672c\u5730\u670b\u53cb\u4e00\u8d77\u65c5\u884c",
+        quote:
+          "\u8fd9\u66f4\u50cf\u662f\u548c\u4e00\u4f4d\u672c\u5730\u670b\u53cb\u4e00\u8d77\u65c5\u884c\uff0c\u800c\u4e0d\u662f\u5355\u7eaf\u96c7\u4e00\u4f4d\u53f8\u673a\u3002Eli \u5206\u4eab\u4e86\u5f88\u591a\u672c\u5730\u77e5\u8bc6\uff0c\u4f46\u6574\u4e2a\u8fc7\u7a0b\u4e0d\u4f1a\u50cf\u5728\u8ddf\u56e2\uff0c\u5f88\u653e\u677e\u4e5f\u5f88\u6109\u5feb\u3002",
+        name: "Sukorn",
+      },
+      {
+        title: "\u4e00\u6b21\u975e\u5e38\u68d2\u7684\u4f53\u9a8c",
+        quote:
+          "\u7687\u540e\u9547\u5f88\u7f8e\uff0c\u8ba9\u6211\u60f3\u8d77\u5df4\u5854\u54e5\u5c3c\u4e9a\uff0c\u4e5f\u8ba9\u6211\u6709\u4e00\u79cd\u56de\u5230\u5bb6\u7684\u611f\u89c9\u3002\u8fd9\u6b21\u65c5\u884c\u662f\u4e00\u6b21\u4e0d\u53ef\u601d\u8bae\u7684\u4f53\u9a8c\uff0c\u6bcf\u4e00\u4e2a\u77ac\u95f4\u90fd\u5f88\u4eab\u53d7\u3002",
+        name: "Catalina",
+        note: "\u7531\u897f\u73ed\u7259\u8bed\u7ffb\u8bd1",
+      },
+      {
+        title: "\u4ece\u6ca1\u6709\u89c9\u5f97\u81ea\u5df1\u662f\u666e\u901a\u6e38\u5ba2",
+        quote:
+          "\u6211\u4eec\u4ece\u6765\u6ca1\u6709\u89c9\u5f97\u81ea\u5df1\u662f\u666e\u901a\u6e38\u5ba2\u3002\u6574\u4e2a\u65c5\u7a0b\u5f88\u5e73\u7a33\u3001\u4e0d\u8d76\u65f6\u95f4\uff0c\u8def\u7ebf\u4e5f\u80fd\u5f88\u81ea\u7136\u5730\u6839\u636e\u6211\u4eec\u7684\u60f3\u6cd5\u8c03\u6574\u3002",
+        name: "Iakov",
+        note: "\u7531\u4fc4\u8bed\u7ffb\u8bd1",
+      },
+      {
+        title: "\u5357\u5c9b\u65c5\u884c\u7684\u4eae\u70b9\u4e4b\u4e00",
+        quote:
+          "\u8fd9\u7edd\u5bf9\u662f\u6211\u4eec\u5357\u5c9b\u65c5\u884c\u7684\u4eae\u70b9\u4e4b\u4e00\u3002Eli \u53cb\u597d\u3001\u4e13\u4e1a\uff0c\u76f8\u5904\u8d77\u6765\u975e\u5e38\u8f7b\u677e\u3002\u884c\u7a0b\u4ece\u6765\u4e0d\u50cf\u56fa\u5b9a\u6a21\u677f\uff0c\u6211\u4eec\u53ef\u4ee5\u968f\u65f6\u505c\u4e0b\u6765\u770b\u559c\u6b22\u7684\u98ce\u666f\u3002",
+        name: "Alexander",
+      },
+      {
+        title: "\u5b89\u5fc3\u3001\u5468\u5230\u3001\u5f88\u8f7b\u677e",
+        quote:
+          "\u8fd9\u662f\u6211\u7b2c\u4e00\u6b21\u6765\u7687\u540e\u9547\uff0c\u4f46\u56e0\u4e3a Eli \u7684\u5b89\u6392\uff0c\u6574\u4e2a\u8fc7\u7a0b\u5f88\u5b89\u5fc3\u4e5f\u5f88\u5f00\u5fc3\u3002\u5f00\u8f66\u5f88\u7a33\uff0c\u884c\u7a0b\u4e0d\u8d76\uff0c\u8fd8\u4f1a\u8003\u8651\u62cd\u7167\u70b9\u548c\u4f11\u606f\u65f6\u95f4\u3002",
+        name: "Tomonita",
+        note: "\u7531\u65e5\u8bed\u7ffb\u8bd1",
+      },
+    ],
+  },
+};
+
+const reviewFormCopy = {
+  en: {
+    cta: "Write a review",
+    title: "Share your Remarkable Routes experience",
+    body:
+      "Thank you for travelling with us. Reviews are checked before they appear on the website.",
+    name: "Name",
+    email: "Email",
+    bookingReference: "Booking reference",
+    rating: "Rating",
+    reviewTitle: "Review title",
+    review: "Review",
+    consent:
+      "I am happy for Remarkable Routes to use this review on the website or in marketing materials.",
+    send: "Send review",
+    submitting: "Sending...",
+    successTitle: "Thank you for your review.",
+    successBody: "We have received it and will read it before publishing anything publicly.",
+    error: "Sorry, something went wrong. Please email info@remarkableroutes.com.",
+    close: "Close review form",
+  },
+  zh: {
+    cta: "\u5199\u4e00\u6761\u8bc4\u4ef7",
+    title: "\u5206\u4eab\u4f60\u7684 Remarkable Routes \u4f53\u9a8c",
+    body:
+      "\u611f\u8c22\u4f60\u548c\u6211\u4eec\u4e00\u8d77\u65c5\u884c\u3002\u8bc4\u4ef7\u4f1a\u5148\u7531\u6211\u4eec\u786e\u8ba4\uff0c\u4e0d\u4f1a\u81ea\u52a8\u516c\u5f00\u663e\u793a\u5728\u7f51\u7ad9\u4e0a\u3002",
+    name: "\u59d3\u540d",
+    email: "\u90ae\u7bb1",
+    bookingReference: "\u8ba2\u5355\u53f7",
+    rating: "\u8bc4\u5206",
+    reviewTitle: "\u8bc4\u4ef7\u6807\u9898",
+    review: "\u8bc4\u4ef7\u5185\u5bb9",
+    consent:
+      "\u6211\u540c\u610f Remarkable Routes \u5c06\u8fd9\u6761\u8bc4\u4ef7\u7528\u4e8e\u7f51\u7ad9\u6216\u5ba3\u4f20\u5185\u5bb9\u3002",
+    send: "\u63d0\u4ea4\u8bc4\u4ef7",
+    submitting: "\u6b63\u5728\u53d1\u9001...",
+    successTitle: "\u611f\u8c22\u4f60\u7684\u8bc4\u4ef7\u3002",
+    successBody: "\u6211\u4eec\u5df2\u7ecf\u6536\u5230\uff0c\u5e76\u4f1a\u5728\u516c\u5f00\u53d1\u5e03\u524d\u5148\u786e\u8ba4\u5185\u5bb9\u3002",
+    error: "\u63d0\u4ea4\u5931\u8d25\uff0c\u8bf7\u53d1\u9001\u90ae\u4ef6\u81f3 info@remarkableroutes.com\u3002",
+    close: "\u5173\u95ed\u8bc4\u4ef7\u8868\u683c",
+  },
+};
+
+const teamIntro = {
+  en: {
+    kicker: "Our Team",
+    title: "Local planning, calm driving, and practical South Island knowledge.",
+    intro:
+      "Remarkable Routes is built around a small local team that helps guests move through Queenstown and the South Island with confidence.",
+    members: [
+      {
+        name: "Local driver-guides",
+        role: "Private touring and transfers",
+        body:
+          "Road-aware, weather-aware hosts who keep the journey comfortable while leaving room for scenic stops and real-time changes.",
+      },
+      {
+        name: "Trip planning support",
+        role: "Custom route design",
+        body:
+          "Practical itinerary help for families, couples, and small groups who want the route to match their pace.",
+      },
+      {
+        name: "Activity booking support",
+        role: "Experiences and seasonal options",
+        body:
+          "Advice on what pairs well together, what needs advance booking, and how to shape the day around weather and availability.",
+      },
+    ],
+  },
+  zh: {
+    kicker: "\u6211\u4eec\u7684\u56e2\u961f",
+    title: "\u672c\u5730\u89c4\u5212\u3001\u5b89\u5fc3\u884c\u8f66\uff0c\u4ee5\u53ca\u5bf9\u5357\u5c9b\u8282\u594f\u7684\u719f\u6089\u3002",
+    intro:
+      "Remarkable Routes \u7531\u672c\u5730\u5c0f\u56e2\u961f\u8fd0\u8425\uff0c\u5e2e\u52a9\u5ba2\u4eba\u66f4\u8f7b\u677e\u5730\u5b89\u6392\u7687\u540e\u9547\u548c\u5357\u5c9b\u7684\u79c1\u4eba\u884c\u7a0b\u3002",
+    members: [
+      {
+        name: "\u672c\u5730\u53f8\u5bfc",
+        role: "\u79c1\u4eba\u6e38\u89c8\u4e0e\u63a5\u9001",
+        body:
+          "\u719f\u6089\u8def\u51b5\u548c\u5929\u6c14\uff0c\u4fdd\u6301\u884c\u7a0b\u8212\u9002\uff0c\u4e5f\u4f1a\u4e3a\u98ce\u666f\u505c\u7559\u548c\u4e34\u65f6\u8c03\u6574\u7559\u51fa\u7a7a\u95f4\u3002",
+      },
+      {
+        name: "\u884c\u7a0b\u89c4\u5212\u652f\u6301",
+        role: "\u5b9a\u5236\u8def\u7ebf\u8bbe\u8ba1",
+        body:
+          "\u9488\u5bf9\u5bb6\u5ead\u3001\u60c5\u4fa3\u548c\u5c0f\u56e2\u4f53\u63d0\u4f9b\u5b9e\u7528\u5efa\u8bae\uff0c\u8ba9\u8def\u7ebf\u66f4\u7b26\u5408\u4f60\u4eec\u7684\u8282\u594f\u3002",
+      },
+      {
+        name: "\u6d3b\u52a8\u9884\u8ba2\u652f\u6301",
+        role: "\u4f53\u9a8c\u4e0e\u5b63\u8282\u9009\u9879",
+        body:
+          "\u534f\u52a9\u5224\u65ad\u54ea\u4e9b\u4f53\u9a8c\u9002\u5408\u642d\u914d\uff0c\u54ea\u4e9b\u9700\u8981\u63d0\u524d\u9884\u8ba2\uff0c\u4ee5\u53ca\u5982\u4f55\u6839\u636e\u5929\u6c14\u548c\u540d\u989d\u8c03\u6574\u3002",
+      },
+    ],
+  },
+};
+
 function App() {
   const initialRoute = React.useRef(getRouteFromPath(window.location.pathname)).current;
   const [language, setLanguage] = React.useState("en");
@@ -1136,12 +1337,15 @@ function App() {
       language === "zh" && selectedService?.zh
         ? { ...selectedService, ...selectedService.zh }
         : selectedService;
-    const seo = isStandaloneService
-      ? {
-          title: serviceContent.seoTitle ?? baseServiceContent.seoTitle,
-          description: serviceContent.seoDescription ?? baseServiceContent.seoDescription,
-        }
-      : defaultSeo[language];
+    const seo =
+      view === "team"
+        ? teamSeo[language]
+        : isStandaloneService
+          ? {
+              title: serviceContent.seoTitle ?? baseServiceContent.seoTitle,
+              description: serviceContent.seoDescription ?? baseServiceContent.seoDescription,
+            }
+          : defaultSeo[language];
 
     document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
     document.title = seo.title;
@@ -1155,7 +1359,7 @@ function App() {
     }
     canonical.setAttribute(
       "href",
-      `${siteUrl}${isStandaloneService ? servicePaths[selectedServiceId] : "/"}`,
+      `${siteUrl}${view === "team" ? "/our-team" : isStandaloneService ? servicePaths[selectedServiceId] : "/"}`,
     );
   }, [language, selectedService, selectedServiceId, view]);
 
@@ -1207,6 +1411,10 @@ function App() {
     openService(servicePages[0].id);
   }
 
+  function openTeam() {
+    goTo("team", "/our-team");
+  }
+
   return (
     <main className="min-h-screen bg-stone-100 text-stone-950">
       {view === "home" && (
@@ -1218,6 +1426,7 @@ function App() {
           onRoutes={openRoutes}
           onSelectService={openService}
           onServices={openServices}
+          onTeam={openTeam}
           text={text}
         />
       )}
@@ -1233,6 +1442,7 @@ function App() {
           }}
           onRoutes={openRoutes}
           onServices={openServices}
+          onTeam={openTeam}
           text={text}
         />
       )}
@@ -1246,6 +1456,7 @@ function App() {
             onRoutes={openRoutes}
             onSelectService={openService}
             onServices={openServices}
+            onTeam={openTeam}
             season={selectedSeason}
             text={text}
           />
@@ -1262,11 +1473,25 @@ function App() {
             onRoutes={openRoutes}
             onSelectService={openService}
             onServices={openServices}
+            onTeam={openTeam}
             service={selectedService}
             text={text}
           />
           <Contact onSuccess={openRoutes} text={text.contact} />
         </>
+      )}
+      {view === "team" && (
+        <TeamPage
+          language={language}
+          onContact={openContact}
+          onHome={() => goTo("home")}
+          onLanguageChange={setLanguage}
+          onRoutes={openRoutes}
+          onSelectService={openService}
+          onServices={openServices}
+          onTeam={openTeam}
+          text={text}
+        />
       )}
       <ImageCredits />
     </main>
@@ -1281,6 +1506,7 @@ function BrandNav({
   onRoutes,
   onSelectService,
   onServices,
+  onTeam,
   right,
   text,
   tone = "dark",
@@ -1345,6 +1571,9 @@ function BrandNav({
           </button>
           <ServicesNavDropdown language={language} onSelectService={openServiceFromNav} />
         </div>
+        <button className="transition hover:text-teal-700" onClick={onTeam} type="button">
+          {text.nav.team || "Our Team"}
+        </button>
         <button className="transition hover:text-teal-700" onClick={onContact} type="button">
           {text.nav.contact}
         </button>
@@ -1449,6 +1678,7 @@ function HomePage({
   onRoutes,
   onSelectService,
   onServices,
+  onTeam,
   text,
 }) {
   return (
@@ -1472,6 +1702,7 @@ function HomePage({
           onRoutes={onRoutes}
           onSelectService={onSelectService}
           onServices={onServices}
+          onTeam={onTeam}
           text={text}
           tone="light"
         />
@@ -1503,7 +1734,316 @@ function HomePage({
           </div>
         </div>
       </section>
+      <HomeReviews language={language} />
     </>
+  );
+}
+
+function HomeReviews({ language }) {
+  const content = homeReviews[language] ?? homeReviews.en;
+  const formText = reviewFormCopy[language] ?? reviewFormCopy.en;
+  const [isReviewOpen, setIsReviewOpen] = React.useState(false);
+
+  return (
+    <section className="home-reviews bg-white px-5 py-16 text-stone-950 sm:px-8 lg:py-20">
+      <div className="mx-auto max-w-7xl">
+        <div className="home-section-heading">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal-700">
+            {content.kicker}
+          </p>
+          <div>
+            <h2 className="brand-display text-4xl leading-tight text-stone-950 sm:text-5xl">
+              {content.title}
+            </h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-stone-600">
+              {content.intro}
+            </p>
+            <button
+              className="mt-6 inline-flex items-center justify-center gap-2 rounded-full border border-teal-700 bg-white px-5 py-2.5 text-sm font-bold text-teal-800 transition hover:bg-teal-50"
+              onClick={() => setIsReviewOpen(true)}
+              type="button"
+            >
+              {formText.cta}
+              <ArrowRight className="size-4" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+        <div className="reviews-strip mt-8" aria-label={content.kicker}>
+          {content.items.map((review) => (
+            <article className="review-card rounded-md bg-white p-6" key={review.title}>
+              <div className="review-stars" aria-label="5 star review">
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <span aria-hidden="true" key={index}>
+                    {"\u2605"}
+                  </span>
+                ))}
+              </div>
+              <h3 className="mt-5 text-lg font-bold text-stone-950">{review.title}</h3>
+              <p className="mt-4 text-base leading-7 text-stone-700">{review.quote}</p>
+              <div className="review-name mt-8">
+                <p className="text-sm font-bold text-stone-950">{review.name}</p>
+                {review.note && (
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-stone-500">
+                    {review.note}
+                  </p>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+      {isReviewOpen && (
+        <ReviewModal
+          formText={formText}
+          onClose={() => setIsReviewOpen(false)}
+        />
+      )}
+    </section>
+  );
+}
+
+function ReviewModal({ formText, onClose }) {
+  const [rating, setRating] = React.useState(5);
+  const [status, setStatus] = React.useState("idle");
+  const [statusMessage, setStatusMessage] = React.useState("");
+  const isSuccess = status === "success";
+
+  React.useEffect(() => {
+    function handleKeyDown(event) {
+      if (event.key === "Escape" && !isSuccess) {
+        onClose();
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isSuccess, onClose]);
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    formData.append("access_key", web3FormsAccessKey);
+    formData.append("subject", "New Remarkable Routes review");
+    formData.append("from_name", "Remarkable Routes");
+    formData.set("rating", `${rating} stars`);
+
+    setStatus("submitting");
+    setStatusMessage("");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Unable to send review");
+      }
+
+      form.reset();
+      setRating(5);
+      setStatus("success");
+    } catch (error) {
+      setStatus("error");
+      setStatusMessage(formText.error);
+    }
+  }
+
+  return (
+    <div
+      style={{
+        alignItems: "center",
+        background: "rgba(12, 10, 9, 0.72)",
+        display: "grid",
+        inset: 0,
+        justifyItems: "center",
+        padding: "1.25rem",
+        position: "fixed",
+        zIndex: 60,
+      }}
+      onClick={isSuccess ? undefined : onClose}
+      role="presentation"
+    >
+      <div
+        className={`w-full rounded-lg border border-stone-200 bg-white shadow-xl ${
+          isSuccess ? "max-w-xl p-7 text-center sm:p-10" : "max-w-2xl p-5 sm:p-7"
+        }`}
+        style={{ maxHeight: "90vh", overflowY: "auto" }}
+        onClick={(event) => event.stopPropagation()}
+      >
+        {isSuccess ? (
+          <div className="grid justify-items-center gap-5">
+            <span className="grid size-16 place-items-center rounded-full bg-teal-50 text-teal-700 ring-1 ring-teal-200">
+              <CheckCircle className="size-9" aria-hidden="true" />
+            </span>
+            <div>
+              <h2 className="text-3xl font-semibold text-stone-950">{formText.successTitle}</h2>
+              <p className="mt-3 text-base font-medium leading-7 text-stone-600">
+                {formText.successBody}
+              </p>
+            </div>
+            <button
+              className="rounded-full bg-teal-700 px-6 py-3 text-sm font-bold text-white transition hover:bg-teal-800"
+              onClick={onClose}
+              type="button"
+            >
+              OK
+            </button>
+          </div>
+        ) : (
+          <>
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <h2 className="text-2xl font-semibold text-stone-950">{formText.title}</h2>
+                <p className="mt-2 text-sm leading-6 text-stone-600">{formText.body}</p>
+              </div>
+              <button
+                className="grid size-10 place-items-center rounded-full border border-stone-200 bg-stone-50 text-sm font-bold text-stone-950 transition hover:border-teal-700 hover:text-teal-700"
+                onClick={onClose}
+                type="button"
+                aria-label={formText.close}
+              >
+                X
+              </button>
+            </div>
+
+            <form className="mt-6 grid gap-4" onSubmit={handleSubmit}>
+              <input type="checkbox" name="botcheck" className="hidden" tabIndex="-1" autoComplete="off" />
+              <FormField label={formText.name} name="name" required />
+              <FormField label={formText.email} name="email" type="email" required />
+              <FormField label={formText.bookingReference} name="booking_reference" />
+
+              <fieldset className="grid gap-2 text-sm font-semibold text-stone-950">
+                <legend>{formText.rating}</legend>
+                <div className="review-rating-group" role="radiogroup" aria-label={formText.rating}>
+                  {[1, 2, 3, 4, 5].map((value) => (
+                    <button
+                      className={`review-rating-button ${value <= rating ? "review-rating-button-active" : ""}`}
+                      key={value}
+                      onClick={() => setRating(value)}
+                      type="button"
+                      aria-checked={rating === value}
+                      role="radio"
+                    >
+                      {"\u2605"}
+                    </button>
+                  ))}
+                </div>
+                <input type="hidden" name="rating" value={`${rating} stars`} />
+              </fieldset>
+
+              <FormField label={formText.reviewTitle} name="review_title" required />
+              <label className="grid gap-2 text-sm font-semibold text-stone-950">
+                {formText.review}
+                <textarea
+                  className="min-h-[140px] rounded-md border border-stone-200 bg-white px-4 py-3 text-base font-normal leading-7 text-stone-700 outline-none transition focus:border-teal-700"
+                  name="review"
+                  required
+                />
+              </label>
+
+              <label className="flex items-start gap-3 rounded-md border border-stone-200 bg-stone-50 px-4 py-3 text-sm leading-6 text-stone-700">
+                <input className="mt-1" name="permission_to_publish" required type="checkbox" value="yes" />
+                <span>{formText.consent}</span>
+              </label>
+
+              {statusMessage && (
+                <p className="rounded-md bg-stone-100 px-4 py-3 text-sm font-semibold text-stone-700">
+                  {statusMessage}
+                </p>
+              )}
+
+              <button
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-teal-700 px-6 py-3 text-sm font-bold text-white transition hover:bg-teal-800"
+                disabled={status === "submitting"}
+                type="submit"
+              >
+                {status === "submitting" ? formText.submitting : formText.send}
+                <ArrowRight className="size-4" aria-hidden="true" />
+              </button>
+            </form>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function OurTeam({ language }) {
+  const content = teamIntro[language] ?? teamIntro.en;
+
+  return (
+    <section id="our-team" className="bg-stone-50 px-5 py-16 text-stone-950 sm:px-8 lg:py-20">
+      <div className="mx-auto max-w-7xl">
+        <div className="home-section-heading">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal-700">
+            {content.kicker}
+          </p>
+          <div>
+            <h2 className="brand-display text-4xl leading-tight text-stone-950 sm:text-5xl">
+              {content.title}
+            </h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-stone-600">
+              {content.intro}
+            </p>
+          </div>
+        </div>
+        <div className="team-grid mt-8">
+          {content.members.map((member) => (
+            <article className="team-card rounded-md border border-stone-200 bg-white p-6" key={member.name}>
+              <div className="team-mark" aria-hidden="true">
+                {member.name.slice(0, 1)}
+              </div>
+              <h3 className="mt-5 text-lg font-bold text-stone-950">{member.name}</h3>
+              <p className="mt-2 text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">
+                {member.role}
+              </p>
+              <p className="mt-5 leading-7 text-stone-600">{member.body}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function TeamPage({
+  language,
+  onContact,
+  onHome,
+  onLanguageChange,
+  onRoutes,
+  onSelectService,
+  onServices,
+  onTeam,
+  text,
+}) {
+  return (
+    <section className="min-h-screen bg-stone-50 text-stone-950">
+      <BrandNav
+        language={language}
+        onContact={onContact}
+        onHome={onHome}
+        onLanguageChange={onLanguageChange}
+        onRoutes={onRoutes}
+        onSelectService={onSelectService}
+        onServices={onServices}
+        onTeam={onTeam}
+        text={text}
+        right={
+          <button
+            className="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-sm font-semibold text-stone-950 transition hover:border-teal-700 hover:text-teal-700"
+            onClick={onHome}
+            type="button"
+          >
+            {text.nav.home}
+          </button>
+        }
+      />
+      <OurTeam language={language} />
+    </section>
   );
 }
 
@@ -1516,6 +2056,7 @@ function SeasonSelection({
   onServices,
   onSelectSeason,
   onSelectService,
+  onTeam,
   text,
 }) {
   const [activeIndex, setActiveIndex] = React.useState(0);
@@ -1556,6 +2097,7 @@ function SeasonSelection({
         onRoutes={onRoutes}
         onSelectService={onSelectService}
         onServices={onServices}
+        onTeam={onTeam}
         text={text}
         right={
           <button
@@ -1673,6 +2215,7 @@ function ServicePage({
   onRoutes,
   onSelectService,
   onServices,
+  onTeam,
   service,
   text,
 }) {
@@ -1688,6 +2231,7 @@ function ServicePage({
         onRoutes={onRoutes}
         onSelectService={onSelectService}
         onServices={onServices}
+        onTeam={onTeam}
         text={text}
         right={
           <button
@@ -1865,6 +2409,7 @@ function SeasonDetail({
   onRoutes,
   onSelectService,
   onServices,
+  onTeam,
   season,
   text,
 }) {
@@ -1934,6 +2479,7 @@ function SeasonDetail({
         onRoutes={onRoutes}
         onSelectService={onSelectService}
         onServices={onServices}
+        onTeam={onTeam}
         text={text}
         right={
           <button
