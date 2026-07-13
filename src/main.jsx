@@ -1655,26 +1655,37 @@ function BrandNav({
           中文
         </button>
       </div>
-      <div className="mobile-services-nav relative" ref={mobileServicesRef}>
-        <button
-          className={`mobile-services-button text-sm font-semibold uppercase tracking-[0.18em] transition ${
-            isMobileServicesOpen ? "mobile-services-button-open" : ""
-          } ${isLight ? "mobile-services-button-light" : "mobile-services-button-dark"
-          }`}
-          onClick={() => setIsMobileServicesOpen((open) => !open)}
-          type="button"
-          aria-expanded={isMobileServicesOpen}
-          aria-haspopup="true"
-        >
-          {text.nav.services}
+      <div
+        className={`mobile-nav items-center text-sm font-semibold uppercase tracking-[0.16em] ${
+          isLight ? "mobile-nav-light" : "mobile-nav-dark"
+        }`}
+      >
+        <button className="mobile-nav-link transition" onClick={onRoutes} type="button">
+          {text.nav.routes}
         </button>
-        {isMobileServicesOpen && (
-          <ServicesNavDropdown
-            language={language}
-            mobile
-            onSelectService={openServiceFromNav}
-          />
-        )}
+        <div className="mobile-services-nav relative" ref={mobileServicesRef}>
+          <button
+            className={`mobile-services-button transition ${
+              isMobileServicesOpen ? "mobile-services-button-open" : ""
+            }`}
+            onClick={() => setIsMobileServicesOpen((open) => !open)}
+            type="button"
+            aria-expanded={isMobileServicesOpen}
+            aria-haspopup="true"
+          >
+            {text.nav.services}
+          </button>
+          {isMobileServicesOpen && (
+            <ServicesNavDropdown
+              language={language}
+              mobile
+              onSelectService={openServiceFromNav}
+            />
+          )}
+        </div>
+        <button className="mobile-nav-link transition" onClick={onTeam} type="button">
+          {text.nav.team || "Our Team"}
+        </button>
       </div>
       {right}
     </nav>

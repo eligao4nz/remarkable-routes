@@ -125,32 +125,43 @@ a {
   display: none;
 }
 
-.mobile-services-nav {
-  display: block;
+.mobile-nav {
+  display: flex;
+  gap: clamp(0.85rem, 2.8vw, 1.6rem);
+  margin-left: auto;
+  white-space: nowrap;
 }
 
-.mobile-services-button-light {
+.mobile-nav-light,
+.mobile-nav-light .mobile-services-button {
   color: #fff;
 }
 
-.mobile-services-button-dark {
+.mobile-nav-dark,
+.mobile-nav-dark .mobile-services-button {
   color: #0c0a09;
 }
 
-.mobile-services-button-open.mobile-services-button-light {
+.mobile-nav-light .mobile-nav-link:hover,
+.mobile-nav-light .mobile-services-button:hover,
+.mobile-nav-light .mobile-services-button-open {
   color: #ccfbf1;
 }
 
-.mobile-services-button-open.mobile-services-button-dark {
+.mobile-nav-dark .mobile-nav-link:hover,
+.mobile-nav-dark .mobile-services-button:hover,
+.mobile-nav-dark .mobile-services-button-open {
   color: #0f766e;
 }
 
 @media (hover: hover) {
-  .mobile-services-button-light:hover {
+  .mobile-nav-light .mobile-nav-link:hover,
+  .mobile-nav-light .mobile-services-button:hover {
     color: #ccfbf1;
   }
 
-  .mobile-services-button-dark:hover {
+  .mobile-nav-dark .mobile-nav-link:hover,
+  .mobile-nav-dark .mobile-services-button:hover {
     color: #0f766e;
   }
 }
@@ -364,6 +375,8 @@ a {
 
 @media (max-width: 767px) {
   .site-nav {
+    flex-wrap: wrap;
+    row-gap: 0.9rem;
     width: 100%;
   }
 
@@ -373,6 +386,18 @@ a {
 
   .brand-logo {
     height: 2.5rem;
+  }
+
+  .language-switcher {
+    margin-left: auto;
+  }
+
+  .mobile-nav {
+    font-size: 0.82rem;
+    gap: clamp(0.85rem, 5.6vw, 1.8rem);
+    justify-content: flex-end;
+    order: 3;
+    width: 100%;
   }
 
   .season-detail-container,
@@ -454,7 +479,7 @@ a {
     justify-content: flex-end;
   }
 
-  .mobile-services-nav {
+  .mobile-nav {
     display: none;
   }
 
