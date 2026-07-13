@@ -1286,57 +1286,83 @@ const reviewFormCopy = {
 const teamIntro = {
   en: {
     kicker: "Meet the Team",
-    title: "Meet Eli Gao",
-    subtitle: "Founder and private driver-guide",
-    image: "/gallery/eli-gao-glacier.jpg",
-    imageAlt: "Eli Gao standing on a New Zealand glacier",
+    title: "Meet the Team",
     intro:
-      "More than a driver, Eli brings more than a decade of tourism experience, local South Island knowledge, and calm, practical guiding to every private journey.",
-    paragraphs: [
-      "In 2014, Eli first visited New Zealand as a Chinese tour leader, leading groups across the country and quickly falling in love with its landscapes and people. Four years later, he returned on a Working Holiday Visa and decided to make New Zealand his home.",
-      "Since then, tourism has never just been a job - it has been his career.",
-      "Eli has worked as a Chinese-speaking guide for some of New Zealand's best-known tourism operators, including Dart River Adventures in Glenorchy, Shamarra Alpaca Farm in Akaroa, and Milford Sound day tours with Southern Discoveries and RealNZ.",
-      "Since 2019, he has worked full-time as a private driver-guide, travelling extensively throughout the South Island and exploring not only the iconic destinations, but also countless hidden gems that most visitors never discover.",
-      "With more than a decade of tourism experience, Eli combines local knowledge, professional guiding skills, and calm problem-solving to deliver journeys that are both seamless and memorable.",
-      "Before entering the tourism industry, he was also a travel radio presenter in China, giving him a natural ability to bring each destination to life through engaging storytelling rather than simply reciting facts.",
-      "Whether you're visiting New Zealand for the first time or returning to explore beyond the usual attractions, Eli believes every itinerary should feel personal, flexible, and unforgettable.",
-    ],
-    credentialsTitle: "Professional qualifications",
-    credentials: [
-      "New Zealand 100% Pure Tourism Specialist certification",
-      "New Zealand First Aid certification",
-      "New Zealand ADS Driver Guide qualification",
-      "Chinese National Tour Guide Licence",
-      "Chinese Tour Leader Certificate",
-    ],
+      "Remarkable Routes is guided by a small local team with different strengths across multi-day touring, hiking, cycling, food, culture, and relaxed Queenstown day trips.",
   },
   zh: {
-    kicker: "\u8ba4\u8bc6\u6211\u4eec\u7684\u56e2\u961f",
-    title: "Eli Gao",
-    subtitle: "\u521b\u59cb\u4eba\u4e0e\u79c1\u4eba\u53f8\u5bfc",
-    image: "/gallery/eli-gao-glacier.jpg",
-    imageAlt: "Eli Gao \u7ad9\u5728\u65b0\u897f\u5170\u51b0\u5ddd\u4e0a",
+    kicker: "认识我们的团队",
+    title: "Meet the Team",
     intro:
-      "\u4e0d\u53ea\u662f\u53f8\u673a\uff0cEli \u4ee5\u5341\u591a\u5e74\u65c5\u6e38\u884c\u4e1a\u7ecf\u9a8c\u3001\u5bf9\u5357\u5c9b\u7684\u672c\u5730\u4e86\u89e3\uff0c\u4ee5\u53ca\u7a33\u5b9a\u7ec6\u81f4\u7684\u5e26\u56e2\u65b9\u5f0f\uff0c\u4e3a\u6bcf\u4e00\u6bb5\u79c1\u4eba\u65c5\u7a0b\u63d0\u4f9b\u652f\u6301\u3002",
-    paragraphs: [
-      "2014\u5e74\uff0cEli \u9996\u6b21\u4ee5\u4e2d\u56fd\u51fa\u5883\u9886\u961f\u7684\u8eab\u4efd\u6765\u5230\u65b0\u897f\u5170\u5e26\u56e2\uff0c\u4ece\u90a3\u65f6\u8d77\u4fbf\u7231\u4e0a\u4e86\u8fd9\u91cc\u7684\u81ea\u7136\u98ce\u5149\u4e0e\u65c5\u884c\u6587\u5316\u3002",
-      "2018\u5e74\uff0c\u4ed6\u4ee5\u6253\u5de5\u5ea6\u5047\u7b7e\u8bc1\u518d\u6b21\u6765\u5230\u65b0\u897f\u5170\uff0c\u5e76\u6700\u7ec8\u9009\u62e9\u957f\u671f\u7559\u5728\u8fd9\u91cc\uff0c\u4ece\u6b64\u4e00\u76f4\u6df1\u8015\u4e8e\u65b0\u897f\u5170\u65c5\u6e38\u884c\u4e1a\u3002",
-      "\u5728\u6253\u5de5\u5ea6\u5047\u671f\u95f4\uff0cEli \u66fe\u62c5\u4efb Glenorchy Dart River Adventures \u4e2d\u6587\u8bb2\u89e3\u5458\u3001Akaroa Shamarra Alpaca Farm \u4e2d\u6587\u8bb2\u89e3\u5458\uff0c\u4ee5\u53ca Southern Discoveries \u4e0e RealNZ \u7c73\u5c14\u798f\u5fb7\u5ce1\u6e7e\u4e00\u65e5\u6e38\u4e2d\u6587\u5bfc\u6e38\u3002",
-      "\u81ea2019\u5e74\u4ee5\u6765\uff0cEli \u4e00\u76f4\u62c5\u4efb\u5168\u804c\u79c1\u4eba\u53f8\u5bfc\uff0c\u957f\u671f\u5e26\u9886\u6e38\u5ba2\u6df1\u5ea6\u63a2\u7d22\u65b0\u897f\u5170\u5357\u5c9b\u3002",
-      "\u4ece\u7687\u540e\u9547\u3001\u74e6\u7eb3\u5361\u3001\u8482\u5361\u6ce2\u5230\u897f\u6d77\u5cb8\u3001\u5361\u7279\u6797\u65af\u7b49\u70ed\u95e8\u7ebf\u8def\uff0c\u518d\u5230\u8bb8\u591a\u53ea\u6709\u5f53\u5730\u4eba\u624d\u719f\u6089\u7684\u5c0f\u4f17\u79d8\u5883\uff0c\u4ed6\u90fd\u975e\u5e38\u719f\u6089\uff0c\u5e76\u80fd\u591f\u6839\u636e\u5ba2\u4eba\u7684\u5174\u8da3\u7075\u6d3b\u8c03\u6574\u884c\u7a0b\u3002",
-      "\u8d85\u8fc7\u5341\u5e74\u7684\u65c5\u6e38\u884c\u4e1a\u7ecf\u9a8c\uff0c\u4e5f\u8ba9\u4ed6\u5177\u5907\u4e86\u4f18\u79c0\u7684\u5e94\u6025\u5904\u7406\u80fd\u529b\u548c\u884c\u7a0b\u89c4\u5212\u80fd\u529b\u3002\u4f5c\u4e3a\u66fe\u7ecf\u7684\u4e2d\u56fd\u5e7f\u64ad\u7535\u53f0\u65c5\u6e38\u8282\u76ee\u4e3b\u6301\u4eba\uff0c\u4ed6\u4e0d\u4ec5\u719f\u6089\u666f\u70b9\uff0c\u66f4\u64c5\u957f\u901a\u8fc7\u6545\u4e8b\u3001\u5386\u53f2\u4e0e\u6587\u5316\uff0c\u8ba9\u6bcf\u4e00\u4e2a\u76ee\u7684\u5730\u53d8\u5f97\u751f\u52a8\u6709\u8da3\u3002",
-      "\u4ed6\u59cb\u7ec8\u76f8\u4fe1\uff0c\u4e00\u6b21\u771f\u6b63\u96be\u5fd8\u7684\u65c5\u884c\uff0c\u4e0d\u53ea\u662f\u5230\u8fbe\u666f\u70b9\uff0c\u800c\u662f\u901a\u8fc7\u5f53\u5730\u4eba\u7684\u89c6\u89d2\uff0c\u53d1\u73b0\u90a3\u4e9b\u503c\u5f97\u73cd\u85cf\u7684\u98ce\u666f\u4e0e\u6545\u4e8b\u3002",
-    ],
-    credentialsTitle: "\u4e13\u4e1a\u8d44\u8d28",
-    credentials: [
-      "100% Pure New Zealand Specialist \u8ba4\u8bc1",
-      "\u65b0\u897f\u5170\u6025\u6551\u8bc1\u4e66\uff08First Aid\uff09",
-      "ADS Driver Guide \u8d44\u683c",
-      "\u4e2d\u56fd\u56fd\u5bb6\u5bfc\u6e38\u8bc1",
-      "\u4e2d\u56fd\u51fa\u5883\u9886\u961f\u8bc1",
-    ],
+      "Remarkable Routes 由一支本地小团队组成，每位向导都有不同专长：多日南岛旅行、徒步、骑行、美食文化，以及轻松灵活的皇后镇一日游。",
   },
 };
+
+const teamMembers = [
+  {
+    id: "eli",
+    image: "/gallery/eli-gao-glacier.jpg",
+    imageAlt: "Eli Gao standing on a New Zealand glacier",
+    en: {
+      name: "Eli Gao",
+      role: "Multi-Day Driver Guide | English & 中文",
+      paragraphs: [
+        "With over a decade of experience in tourism and nearly ten years living in New Zealand, Eli specialises in multi-day private tours across the South Island. From the iconic highlights to hidden local gems, he loves sharing the places that made him fall in love with New Zealand.",
+        "Long-distance driving, storytelling, photography and flexible itineraries are where Eli shines. Whether you're planning a classic South Island road trip or a completely customised journey, he'll make sure every day is relaxed, memorable and uniquely yours.",
+      ],
+    },
+    zh: {
+      name: "Eli Gao",
+      role: "多日私人司导 | English & 中文",
+      paragraphs: [
+        "拥有十多年旅游行业经验，并在新西兰生活近十年，Eli 专注于南岛多日私人定制旅行。从世界闻名的经典景点，到只有本地人才知道的小众秘境，他希望带客人看到真正的新西兰。",
+        "长途驾驶、行程规划、景点讲解和旅行摄影都是 Eli 的专长。无论是第一次来到南岛，还是想体验更深度、更自由的旅行方式，他都会让每一天都轻松、充实且值得回忆。",
+      ],
+    },
+  },
+  {
+    id: "cynthia",
+    image: "/gallery/cynthia.jpg",
+    imageAlt: "Cynthia smiling in the snow in the mountains",
+    en: {
+      name: "Cynthia",
+      role: "Hiking, Cycling & Day Tour Guide | English & Español",
+      paragraphs: [
+        "Originally from Chile, Cynthia is happiest outdoors. She knows the walking tracks around Queenstown, Wānaka and Te Anau like the back of her hand, and when she's not guiding guests, she's usually out exploring another trail herself.",
+        "She is also Remarkable Routes' cycling specialist and loves sharing scenic rides through Glenorchy and the Lake Dunstan Trail. If wine is more your style, Cynthia can also introduce you to the world-class wineries of Central Otago.",
+      ],
+    },
+    zh: {
+      name: "Cynthia",
+      role: "徒步、骑行与一日游向导 | English & Español",
+      paragraphs: [
+        "来自智利的 Cynthia 是一位真正的户外爱好者。皇后镇、瓦纳卡以及蒂阿瑙周边的步道，她几乎都走过。带客人时，她会陪大家探索最美的徒步路线；休息时，她依然会背起背包继续走进山野。对她来说，徒步不仅是一项运动，更是与自然连接、与自己对话的方式。",
+        "除了徒步，Cynthia 也是 Remarkable Routes 最专业的骑行向导，无论是 Glenorchy 还是 Lake Dunstan Trail，她都知道最佳骑行路线和最值得停留的风景。如果你喜欢葡萄酒，她也很乐意带你探索 Central Otago 世界级酒庄，体验这里闻名全球的 Pinot Noir。",
+      ],
+    },
+  },
+  {
+    id: "fernando",
+    image: "/gallery/fernando.jpg",
+    imageAlt: "Fernando smiling outdoors at a cafe",
+    en: {
+      name: "Fernando",
+      role: "Food, Culture & Day Tour Guide | English & Português",
+      paragraphs: [
+        "Originally from Brazil, Fernando believes the best travel experiences happen through people, food and conversation. Friendly, outgoing and full of local recommendations, he has a talent for helping guests feel like they're exploring New Zealand with an old friend.",
+        "If you're looking for amazing restaurants, hidden local favourites or a great night out, Fernando's recommendations are based on genuine local experience-not guidebooks.",
+      ],
+    },
+    zh: {
+      name: "Fernando",
+      role: "美食、文化与一日游向导 | English & Português",
+      paragraphs: [
+        "来自巴西的 Fernando 热情开朗，特别擅长与人交流。他相信，一座城市最真实的魅力，往往藏在人与人之间、美食之中，以及那些只有当地人才知道的生活方式里。",
+        "如果你喜欢探索美食、体验当地文化，或是想感受皇后镇丰富的夜生活，Fernando 一定不会让你失望。他推荐的餐厅和酒吧，来自多年生活积累的真实体验，而不是旅游攻略或排行榜。",
+      ],
+    },
+  },
+];
 
 function App() {
   const initialRoute = React.useRef(getRouteFromPath(window.location.pathname)).current;
@@ -2043,44 +2069,44 @@ function OurTeam({ language }) {
   return (
     <section id="our-team" className="bg-stone-50 px-5 py-16 text-stone-950 sm:px-8 lg:py-20">
       <div className="mx-auto max-w-7xl">
-        <div className="team-profile-layout">
-          <div className="team-profile-media">
-            <img className="team-profile-image" src={content.image} alt={content.imageAlt} />
-          </div>
-          <div className="team-profile-copy">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal-700">
-              {content.kicker}
-            </p>
-            <h1 className="brand-display mt-4 text-4xl leading-tight text-stone-950 sm:text-5xl">
-              {content.title}
-            </h1>
-            <p className="mt-3 text-sm font-semibold uppercase tracking-[0.16em] text-teal-700">
-              {content.subtitle}
-            </p>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">
-              {content.intro}
-            </p>
-            <div className="mt-8 grid gap-5">
-              {content.paragraphs.map((paragraph) => (
-                <p className="text-base leading-8 text-stone-600" key={paragraph}>
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-            <div className="team-credentials mt-8 rounded-md border border-stone-200 bg-white p-6">
-              <h2 className="text-lg font-bold text-stone-950">{content.credentialsTitle}</h2>
-              <div className="mt-4 flex flex-wrap gap-3">
-                {content.credentials.map((credential) => (
-                  <span
-                    className="rounded-full border border-teal-700/25 bg-teal-50 px-4 py-2 text-sm font-semibold text-teal-900"
-                    key={credential}
-                  >
-                    {credential}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
+        <div className="max-w-3xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal-700">
+            {content.kicker}
+          </p>
+          <h1 className="brand-display mt-4 text-4xl leading-tight text-stone-950 sm:text-5xl">
+            {content.title}
+          </h1>
+          <p className="mt-5 text-lg leading-8 text-stone-700">{content.intro}</p>
+        </div>
+        <div className="team-grid mt-10">
+          {teamMembers.map((member) => {
+            const memberContent = member[language] ?? member.en;
+
+            return (
+              <article className="team-member-card" key={member.id}>
+                <div className="team-member-media">
+                  <img
+                    className={`team-member-image team-member-image-${member.id}`}
+                    src={member.image}
+                    alt={member.imageAlt}
+                  />
+                </div>
+                <div className="team-member-copy">
+                  <h2 className="text-2xl font-semibold text-stone-950">{memberContent.name}</h2>
+                  <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-teal-700">
+                    {memberContent.role}
+                  </p>
+                  <div className="mt-5 grid gap-4">
+                    {memberContent.paragraphs.map((paragraph) => (
+                      <p className="text-base leading-7 text-stone-600" key={paragraph}>
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
