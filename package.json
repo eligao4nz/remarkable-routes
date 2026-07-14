@@ -1,6 +1,8 @@
 {
   "scripts": {
     "dev": "vite --host 127.0.0.1",
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "prebuild": "npm run sitemap",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1"
   },

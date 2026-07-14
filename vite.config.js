@@ -1,25 +1,17 @@
 import { resolve } from "node:path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { publicRoutes } from "./scripts/public-routes.mjs";
+
+const input = Object.fromEntries(
+  publicRoutes.map(({ inputName, inputFile }) => [inputName, resolve(__dirname, inputFile)]),
+);
 
 export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      input: {
-        main: resolve(__dirname, "index.html"),
-        routes: resolve(__dirname, "routes/index.html"),
-        spring: resolve(__dirname, "spring/index.html"),
-        summer: resolve(__dirname, "summer/index.html"),
-        autumn: resolve(__dirname, "autumn/index.html"),
-        winter: resolve(__dirname, "winter/index.html"),
-        airportTransfers: resolve(__dirname, "airport-transfers/index.html"),
-        privateCharters: resolve(__dirname, "private-charters/index.html"),
-        queenstownPrivateTours: resolve(__dirname, "queenstown-private-tours/index.html"),
-        activities: resolve(__dirname, "activities/index.html"),
-        specialOffers: resolve(__dirname, "special-offers/index.html"),
-        ourTeam: resolve(__dirname, "our-team/index.html"),
-      },
+      input,
     },
   },
 });
