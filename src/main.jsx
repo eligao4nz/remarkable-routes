@@ -813,13 +813,13 @@ const servicePages = [
       {
         title: "Airport Transfers",
         description: "Private door-to-door travel between Queenstown Airport and your accommodation, timed around your flight.",
-        href: "/airport-transfers",
+        href: "/airport-transfers/",
         serviceId: "airport-transfers",
       },
       {
         title: "Private Charters",
         description: "Flexible hourly, half-day, and full-day touring with scenic stops and practical local recommendations.",
-        href: "/private-charters",
+        href: "/private-charters/",
         serviceId: "private-day-tours",
       },
     ],
@@ -854,13 +854,13 @@ const servicePages = [
         {
           title: "机场接送",
           description: "皇后镇机场与住宿地点之间的私人点对点接送，并根据航班时间安排出发。",
-          href: "/airport-transfers",
+          href: "/airport-transfers/",
           serviceId: "airport-transfers",
         },
         {
           title: "私人包车",
           description: "可按小时、半日或一日安排，灵活加入沿途风景停留与实用本地建议。",
-          href: "/private-charters",
+          href: "/private-charters/",
           serviceId: "private-day-tours",
         },
       ],
@@ -942,33 +942,33 @@ const servicePages = [
 ];
 
 const serviceNavItems = [
-  { id: "airport-transfers", en: "Airport Transfers", zh: "机场接送", path: "/airport-transfers" },
-  { id: "private-day-tours", en: "Private Charters", zh: "包车服务", path: "/private-charters" },
-  { id: "activity-bookings", en: "Activity Bookings", zh: "活动预订", path: "/activities" },
-  { id: "latest-deals", en: "Special Offers", zh: "特别优惠", path: "/special-offers" },
+  { id: "airport-transfers", en: "Airport Transfers", zh: "机场接送", path: "/airport-transfers/" },
+  { id: "private-day-tours", en: "Private Charters", zh: "包车服务", path: "/private-charters/" },
+  { id: "activity-bookings", en: "Activity Bookings", zh: "活动预订", path: "/activities/" },
+  { id: "latest-deals", en: "Special Offers", zh: "特别优惠", path: "/special-offers/" },
 ];
 
 const servicePaths = {
-  "airport-transfers": "/airport-transfers",
-  "private-day-tours": "/private-charters",
-  "activity-bookings": "/activities",
-  "latest-deals": "/special-offers",
-  "queenstown-private-tours": "/queenstown-private-tours",
+  "airport-transfers": "/airport-transfers/",
+  "private-day-tours": "/private-charters/",
+  "activity-bookings": "/activities/",
+  "latest-deals": "/special-offers/",
+  "queenstown-private-tours": "/queenstown-private-tours/",
 };
 
 const serviceIdsByPath = Object.fromEntries(
-  Object.entries(servicePaths).map(([serviceId, path]) => [path, serviceId]),
+  Object.entries(servicePaths).map(([serviceId, path]) => [path.replace(/\/+$/, ""), serviceId]),
 );
 
 const seasonPaths = {
-  spring: "/spring",
-  summer: "/summer",
-  autumn: "/autumn",
-  winter: "/winter",
+  spring: "/spring/",
+  summer: "/summer/",
+  autumn: "/autumn/",
+  winter: "/winter/",
 };
 
 const seasonIdsByPath = Object.fromEntries(
-  Object.entries(seasonPaths).map(([seasonId, path]) => [path, seasonId]),
+  Object.entries(seasonPaths).map(([seasonId, path]) => [path.replace(/\/+$/, ""), seasonId]),
 );
 
 const defaultSeo = {
@@ -1464,7 +1464,7 @@ function App() {
   }
 
   function openRoutes() {
-    goTo("routes", "/routes");
+    goTo("routes", "/routes/");
   }
 
   function openServices() {
@@ -1473,7 +1473,7 @@ function App() {
 
   function openSeason(seasonId) {
     setSelectedSeasonId(seasonId);
-    goTo("season", seasonPaths[seasonId] ?? "/routes");
+    goTo("season", seasonPaths[seasonId] ?? "/routes/");
   }
 
   function openService(serviceId) {
@@ -1493,7 +1493,7 @@ function App() {
   }
 
   function openTeam() {
-    goTo("team", "/our-team");
+    goTo("team", "/our-team/");
   }
 
   return (
