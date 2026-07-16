@@ -1,10 +1,13 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 import "./styles.css";
 import logoDarkNav from "./assets/logo-dark-nav.png";
 import logoLightNav from "./assets/logo-light-nav.png";
+
+const LazyDayPicker = React.lazy(() =>
+  import("react-day-picker").then((module) => ({ default: module.DayPicker })),
+);
 
 function Icon({ children, className = "", ...props }) {
   return (
@@ -942,6 +945,7 @@ const servicePages = [
 ];
 
 const serviceNavItems = [
+  { id: "queenstown-private-tours", en: "Queenstown Private Tours", zh: "皇后镇私人旅行", path: "/queenstown-private-tours/" },
   { id: "airport-transfers", en: "Airport Transfers", zh: "机场接送", path: "/airport-transfers/" },
   { id: "private-day-tours", en: "Private Charters", zh: "包车服务", path: "/private-charters/" },
   { id: "activity-bookings", en: "Activity Bookings", zh: "活动预订", path: "/activities/" },
@@ -1010,6 +1014,27 @@ const routesSeo = {
 };
 
 const siteUrl = "https://remarkableroutes.com";
+const defaultSocialImage = `${siteUrl}/gallery/rrhomepagepic2.png`;
+
+function getCanonicalPath({ view, selectedSeasonId, selectedServiceId }) {
+  if (view === "team") return "/our-team/";
+  if (view === "routes") return "/routes/";
+  if (view === "season" && seasonPaths[selectedSeasonId]) return seasonPaths[selectedSeasonId];
+  if (view === "service" && servicePaths[selectedServiceId]) return servicePaths[selectedServiceId];
+  return "/";
+}
+
+function setMetaAttribute(selector, attribute, value, createConfig) {
+  let element = document.querySelector(selector);
+  if (!element && createConfig) {
+    element = document.createElement("meta");
+    Object.entries(createConfig).forEach(([key, configValue]) => {
+      element.setAttribute(key, configValue);
+    });
+    document.head.appendChild(element);
+  }
+  element?.setAttribute(attribute, value);
+}
 
 function normalisePath(pathname) {
   if (pathname === "/") return pathname;
@@ -1056,8 +1081,7 @@ const copy = {
     },
     intro: {
       kicker: "Private South Island journeys",
-      title:
-        "Local private journeys from Queenstown, built by people who know where to go, when to move, and how to turn each season into a different South Island story.",
+      title: "Queenstown Private Tours and South Island Journeys",
       body:
         "Remarkable Routes is a Queenstown-based private tour company run by locals who love the outdoors, good food, quiet viewpoints, snow days, lake days, and the hidden corners that rarely make it into standard itineraries.",
     },
@@ -1302,7 +1326,7 @@ const teamMembers = [
   {
     id: "eli",
     image: "/gallery/eli-gao-glacier.jpg",
-    imageAlt: "Eli Gao standing on a New Zealand glacier",
+    imageAlt: "Eli Gao",
     en: {
       name: "Eli Gao",
       role: "Multi-Day Driver Guide | English & 中文",
@@ -1323,7 +1347,7 @@ const teamMembers = [
   {
     id: "cynthia",
     image: "/gallery/cynthia.jpg",
-    imageAlt: "Cynthia smiling in the snow in the mountains",
+    imageAlt: "Cynthia",
     en: {
       name: "Cynthia",
       role: "Hiking, Cycling & Day Tour Guide | English & Español",
@@ -1344,7 +1368,7 @@ const teamMembers = [
   {
     id: "fernando",
     image: "/gallery/fernando.jpg",
-    imageAlt: "Fernando smiling outdoors at a cafe",
+    imageAlt: "Fernando",
     en: {
       name: "Fernando",
       role: "Food, Culture & Day Tour Guide | English & Português",
@@ -1428,20 +1452,35 @@ function App() {
       canonical.setAttribute("rel", "canonical");
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute(
-      "href",
-      `${siteUrl}${
-        view === "team"
-          ? "/our-team"
-          : view === "routes"
-            ? "/routes"
-            : view === "season" && seasonPaths[selectedSeasonId]
-              ? seasonPaths[selectedSeasonId]
-              : isStandaloneService
-                ? servicePaths[selectedServiceId]
-                : "/"
-      }`,
-    );
+    const canonicalUrl = `${siteUrl}${getCanonicalPath({ view, selectedSeasonId, selectedServiceId })}`;
+    canonical.setAttribute("href", canonicalUrl);
+    setMetaAttribute('meta[property="og:title"]', "content", seo.title, {
+      property: "og:title",
+    });
+    setMetaAttribute('meta[property="og:description"]', "content", seo.description, {
+      property: "og:description",
+    });
+    setMetaAttribute('meta[property="og:image"]', "content", defaultSocialImage, {
+      property: "og:image",
+    });
+    setMetaAttribute('meta[property="og:url"]', "content", canonicalUrl, {
+      property: "og:url",
+    });
+    setMetaAttribute('meta[property="og:type"]', "content", "website", {
+      property: "og:type",
+    });
+    setMetaAttribute('meta[name="twitter:card"]', "content", "summary_large_image", {
+      name: "twitter:card",
+    });
+    setMetaAttribute('meta[name="twitter:title"]', "content", seo.title, {
+      name: "twitter:title",
+    });
+    setMetaAttribute('meta[name="twitter:description"]', "content", seo.description, {
+      name: "twitter:description",
+    });
+    setMetaAttribute('meta[name="twitter:image"]', "content", defaultSocialImage, {
+      name: "twitter:image",
+    });
   }, [language, selectedSeason, selectedSeasonId, selectedService, selectedServiceId, view]);
 
   React.useEffect(() => {
@@ -1631,7 +1670,11 @@ function BrandNav({
         <img
           className="brand-logo"
           src={isLight ? logoLightNav : logoDarkNav}
-          alt="Remarkable Routes"
+          alt=""
+          aria-hidden="true"
+          decoding="async"
+          width="1908"
+          height="1661"
         />
       </button>
       <div
@@ -1782,6 +1825,8 @@ function HomePage({
             className="hero-image absolute inset-0 h-full w-full object-cover"
             src={mobileHeroImage}
             alt="Aerial arrival over Queenstown, Lake Wakatipu, and the Remarkables"
+            decoding="async"
+            fetchPriority="high"
           />
         </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-stone-950/8 via-stone-950/8 to-stone-950/72" />
@@ -1817,9 +1862,9 @@ function HomePage({
             {text.intro.kicker}
           </p>
           <div>
-            <p className="brand-display max-w-5xl text-4xl leading-tight text-stone-950 sm:text-5xl">
+            <h1 className="brand-display max-w-5xl text-4xl leading-tight text-stone-950 sm:text-5xl">
               {text.intro.title}
-            </p>
+            </h1>
             <p className="mt-7 max-w-3xl text-base leading-8 text-stone-600 sm:text-lg">
               {text.intro.body}
             </p>
@@ -2089,6 +2134,8 @@ function OurTeam({ language }) {
                     className={`team-member-image team-member-image-${member.id}`}
                     src={member.image}
                     alt={member.imageAlt}
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="team-member-copy">
@@ -2218,9 +2265,9 @@ function SeasonSelection({
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-teal-700">
             {text.routes.kicker}
           </p>
-          <h2 className="mt-3 text-3xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+          <h1 className="mt-3 text-3xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
             {text.routes.heading}
-          </h2>
+          </h1>
           <p className="mt-4 max-w-2xl text-base leading-7 text-stone-600 sm:text-lg">
             {text.routes.subtitle}
           </p>
@@ -2242,7 +2289,10 @@ function SeasonSelection({
                 <img
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   src={season.image}
-                  alt={`${getSeasonLabel(season)} in New Zealand`}
+                  alt={`${getSeasonLabel(season)} seasonal route preview`}
+                  loading={index === 0 ? undefined : "lazy"}
+                  decoding="async"
+                  fetchPriority={index === 0 ? "high" : undefined}
                 />
                 <button
                   className="season-panel-selector absolute inset-0 focus:outline-none focus-visible:ring-4 focus-visible:ring-teal-300"
@@ -2606,7 +2656,9 @@ function SeasonDetail({
             <img
               className={`absolute inset-0 h-full w-full ${featureImageFit} ${featureImagePosition}`}
               src={featureImages[featureImageIndex]}
-              alt={`${activeRouteName} route highlight`}
+              alt={`${activeRouteName} route scenery`}
+              decoding="async"
+              fetchPriority="high"
               onError={(event) => {
                 event.currentTarget.src = season.image;
               }}
@@ -2742,9 +2794,10 @@ function SeasonDetail({
                                   route.imageLayout === "mixed" ? "object-contain" : "object-cover"
                                 }`}
                                 src={image}
-                                alt={`${
-                                  isChinese ? route.nameZh ?? route.name : route.name
-                                } thumbnail ${imageIndex + 1}`}
+                                alt=""
+                                aria-hidden="true"
+                                loading="lazy"
+                                decoding="async"
                                 onError={(event) => {
                                   event.currentTarget.src = season.image;
                                 }}
@@ -2808,7 +2861,8 @@ function SeasonDetail({
               maxWidth: "94vw",
             }}
             src={lightboxImage}
-            alt="Route preview"
+            alt={`${activeRouteName} route preview`}
+            decoding="async"
             onClick={(event) => event.stopPropagation()}
           />
         </div>
@@ -2862,7 +2916,14 @@ function Contact({ onSuccess, text }) {
               </span>
             </div>
             <div className="mt-4 rounded-md border border-stone-200 bg-stone-50 p-4">
-              <img src={wechatQrImage} alt="WeChat QR code" />
+              <img
+                src={wechatQrImage}
+                alt="WeChat QR code for Remarkable Routes"
+                loading="lazy"
+                decoding="async"
+                width="434"
+                height="175"
+              />
             </div>
           </div>
           <button
@@ -3129,18 +3190,20 @@ function TravelDatePicker({ formText, resetCount }) {
           onToggle={() => setIsCalendarOpen((open) => !open)}
           value={formattedTravelDates}
         >
-          <DayPicker
-            className="enquiry-calendar"
-            mode="single"
-            onSelect={(date) => {
-              setSelectedDate(date);
-              if (date) {
-                setIsCalendarOpen(false);
-              }
-            }}
-            required={false}
-            selected={selectedDate}
-          />
+          <React.Suspense fallback={null}>
+            <LazyDayPicker
+              className="enquiry-calendar"
+              mode="single"
+              onSelect={(date) => {
+                setSelectedDate(date);
+                if (date) {
+                  setIsCalendarOpen(false);
+                }
+              }}
+              required={false}
+              selected={selectedDate}
+            />
+          </React.Suspense>
         </CalendarPopover>
       )}
 
@@ -3151,17 +3214,19 @@ function TravelDatePicker({ formText, resetCount }) {
           onToggle={() => setIsCalendarOpen((open) => !open)}
           value={formattedTravelDates || `${formText.startDate} - ${formText.endDate}`}
         >
-          <DayPicker
-            className="enquiry-calendar"
-            mode="range"
-            onSelect={(range) => {
-              setSelectedRange(range);
-              if (range?.from && range?.to) {
-                setIsCalendarOpen(false);
-              }
-            }}
-            selected={selectedRange}
-          />
+          <React.Suspense fallback={null}>
+            <LazyDayPicker
+              className="enquiry-calendar"
+              mode="range"
+              onSelect={(range) => {
+                setSelectedRange(range);
+                if (range?.from && range?.to) {
+                  setIsCalendarOpen(false);
+                }
+              }}
+              selected={selectedRange}
+            />
+          </React.Suspense>
         </CalendarPopover>
       )}
 
@@ -3274,6 +3339,10 @@ function ImageCredits() {
           className="footer-logo"
           src="/gallery/logo深色.png"
           alt="Remarkable Routes"
+          loading="lazy"
+          decoding="async"
+          width="4725"
+          height="4725"
         />
         <p>Images are from the uploaded Queenstown and South Island photo set.</p>
       </div>
