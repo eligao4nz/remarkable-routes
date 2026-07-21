@@ -253,11 +253,6 @@ const pageSeo = {
     intro:
       "Flexible private touring from Queenstown for scenic routes, seasonal stops, food, wine, photography, and easy local planning.",
     sections: [
-      {
-        h2: "Travel in Comfort",
-        text:
-          "Your journey is just as important as the destination. Private charters use a premium Mercedes-Benz private vehicle with comfortable seating for up to 6 passengers, spacious luggage capacity, air conditioning, phone charging, and a clean, modern, professionally maintained interior.",
-      },
       { h2: "Popular Charter Destinations", text: "Glenorchy, Arrowtown, Wanaka, Cardrona, Cromwell, Te Anau, and Milford Sound." },
       { h2: "Why Choose a Private Charter", text: "Flexible itineraries, scenic stops, photography opportunities, local recommendations, and private small-group travel." },
     ],
@@ -488,32 +483,30 @@ ${renderJsonForHtml(buildSchemaGraph(path, page))}
     </script>`;
 }
 
-function renderNavigationItem(item, isChild = false) {
+function renderNavigationItem(item) {
   const label = escapeHtml(item.label);
   const link = item.path
-    ? `<a class="${isChild ? "rounded-full border border-stone-200 bg-stone-50 px-3 py-1.5 text-sm font-semibold text-stone-700" : "rounded-full border border-stone-200 bg-white px-4 py-2 text-sm font-semibold text-stone-950"} transition hover:border-teal-700 hover:text-teal-700" href="${item.path}">${label}</a>`
-    : `<span class="text-xs font-bold uppercase tracking-[0.18em] text-stone-500">${label}</span>`;
+    ? `<a class="font-semibold text-stone-950 transition hover:text-teal-700" href="${item.path}">${label}</a>`
+    : `<span class="font-semibold text-stone-950">${label}</span>`;
   const children = item.children
-    ?.map((child) => `            <li style="list-style: none;">${renderNavigationItem(child, true)}</li>`)
+    ?.map((child) => `          <li>${renderNavigationItem(child)}</li>`)
     .join("\n");
 
   if (!children) return link;
 
-  return `<div class="rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
-          ${link}
-          <ul class="mt-3 flex flex-wrap gap-2" style="list-style: none; margin-bottom: 0; padding-left: 0;">
+  return `${link}
+        <ul class="mt-1 grid gap-1">
 ${children}
-          </ul>
-        </div>`;
+        </ul>`;
 }
 
 function renderFallbackNavigation() {
   const items = fallbackNavigation
-    .map((item) => `        <li style="list-style: none;">${renderNavigationItem(item)}</li>`)
+    .map((item) => `        <li>${renderNavigationItem(item)}</li>`)
     .join("\n");
 
-  return `      <nav class="mt-8" aria-label="Site navigation">
-        <ul class="flex flex-wrap items-start gap-3" style="list-style: none; margin: 0; padding-left: 0;">
+  return `      <nav class="mt-8 text-sm leading-7" aria-label="Site navigation">
+        <ul class="grid gap-2">
 ${items}
         </ul>
       </nav>`;
