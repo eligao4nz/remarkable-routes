@@ -253,6 +253,11 @@ const pageSeo = {
     intro:
       "Flexible private touring from Queenstown for scenic routes, seasonal stops, food, wine, photography, and easy local planning.",
     sections: [
+      {
+        h2: "Travel in Comfort",
+        text:
+          "Your journey is just as important as the destination. Private charters use a premium Mercedes-Benz private vehicle with comfortable seating for up to 6 passengers, spacious luggage capacity, air conditioning, phone charging, and a clean, modern, professionally maintained interior.",
+      },
       { h2: "Popular Charter Destinations", text: "Glenorchy, Arrowtown, Wanaka, Cardrona, Cromwell, Te Anau, and Milford Sound." },
       { h2: "Why Choose a Private Charter", text: "Flexible itineraries, scenic stops, photography opportunities, local recommendations, and private small-group travel." },
     ],

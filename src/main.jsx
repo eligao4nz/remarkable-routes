@@ -740,6 +740,20 @@ const servicePages = [
       "Book a private Queenstown charter with a local driver-guide and a flexible itinerary to Glenorchy, Wanaka, Milford Sound, wineries, and scenic stops.",
     intro:
       "Flexible private touring from Queenstown for scenic routes, seasonal stops, food, wine, photography, and easy local planning. Tours use a 7-seat Mercedes people mover and can take up to 6 people. Rates include vehicle and driver-guide service; activities and meals are not included.",
+    vehicleFeature: {
+      title: "Travel in Comfort",
+      subtitle: "Your journey is just as important as the destination.",
+      image: "/gallery/uploaded-41.jpg",
+      imageAlt: "Mercedes-Benz private vehicle for Remarkable Routes charters",
+      points: [
+        "Premium Mercedes-Benz private vehicle",
+        "Comfortable seating for up to 6 passengers",
+        "Spacious luggage capacity",
+        "Air-conditioned interior",
+        "Complimentary phone charging",
+        "Clean, modern and professionally maintained",
+      ],
+    },
     rates: [
       ["Hourly private touring", "$120 per hour"],
       ["Half day", "$500 for 5 hours"],
@@ -2398,7 +2412,13 @@ function ServicePage({
         }
       />
       <div className="mx-auto max-w-7xl px-5 pb-20 pt-8 sm:px-8 lg:pb-28">
-        <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+        <div
+          className={
+            serviceContent.vehicleFeature
+              ? "grid gap-8 lg:items-start"
+              : "grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start"
+          }
+        >
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-teal-700">
               {serviceContent.kicker}
@@ -2410,6 +2430,39 @@ function ServicePage({
               {serviceContent.intro}
             </p>
           </div>
+
+          {serviceContent.vehicleFeature && (
+            <section className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm sm:p-7" aria-labelledby="service-vehicle">
+              <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+                <div className="overflow-hidden rounded-lg shadow-lg shadow-stone-950/5">
+                  <img
+                    className="service-vehicle-image"
+                    src={serviceContent.vehicleFeature.image}
+                    alt={serviceContent.vehicleFeature.imageAlt}
+                    loading="lazy"
+                    decoding="async"
+                    width="4080"
+                    height="3060"
+                  />
+                </div>
+                <div>
+                  <h2 className="text-3xl font-semibold text-stone-950" id="service-vehicle">
+                    {serviceContent.vehicleFeature.title}
+                  </h2>
+                  <p className="mt-3 max-w-2xl leading-7 text-stone-600">
+                    {serviceContent.vehicleFeature.subtitle}
+                  </p>
+                  <ul className="mt-5 grid gap-3">
+                    {serviceContent.vehicleFeature.points.map((point) => (
+                      <li className="rounded-md bg-stone-50 px-4 py-3 font-semibold text-stone-700" key={point}>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </section>
+          )}
 
           <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm sm:p-7">
             {serviceContent.serviceLinks?.length > 0 && (

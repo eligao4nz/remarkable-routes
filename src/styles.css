@@ -364,6 +364,14 @@ a {
   object-position: 58% 50%;
 }
 
+.service-vehicle-image {
+  aspect-ratio: 4 / 3;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
 .team-member-copy {
   padding: 1.5rem;
 }
