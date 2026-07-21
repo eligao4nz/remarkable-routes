@@ -488,30 +488,32 @@ ${renderJsonForHtml(buildSchemaGraph(path, page))}
     </script>`;
 }
 
-function renderNavigationItem(item) {
+function renderNavigationItem(item, isChild = false) {
   const label = escapeHtml(item.label);
   const link = item.path
-    ? `<a class="font-semibold text-stone-950 transition hover:text-teal-700" href="${item.path}">${label}</a>`
-    : `<span class="font-semibold text-stone-950">${label}</span>`;
+    ? `<a class="${isChild ? "rounded-full border border-stone-200 bg-stone-50 px-3 py-1.5 text-sm font-semibold text-stone-700" : "rounded-full border border-stone-200 bg-white px-4 py-2 text-sm font-semibold text-stone-950"} transition hover:border-teal-700 hover:text-teal-700" href="${item.path}">${label}</a>`
+    : `<span class="text-xs font-bold uppercase tracking-[0.18em] text-stone-500">${label}</span>`;
   const children = item.children
-    ?.map((child) => `          <li>${renderNavigationItem(child)}</li>`)
+    ?.map((child) => `            <li style="list-style: none;">${renderNavigationItem(child, true)}</li>`)
     .join("\n");
 
   if (!children) return link;
 
-  return `${link}
-        <ul class="mt-1 grid gap-1">
+  return `<div class="rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+          ${link}
+          <ul class="mt-3 flex flex-wrap gap-2" style="list-style: none; margin-bottom: 0; padding-left: 0;">
 ${children}
-        </ul>`;
+          </ul>
+        </div>`;
 }
 
 function renderFallbackNavigation() {
   const items = fallbackNavigation
-    .map((item) => `        <li>${renderNavigationItem(item)}</li>`)
+    .map((item) => `        <li style="list-style: none;">${renderNavigationItem(item)}</li>`)
     .join("\n");
 
-  return `      <nav class="mt-8 text-sm leading-7" aria-label="Site navigation">
-        <ul class="grid gap-2">
+  return `      <nav class="mt-8" aria-label="Site navigation">
+        <ul class="flex flex-wrap items-start gap-3" style="list-style: none; margin: 0; padding-left: 0;">
 ${items}
         </ul>
       </nav>`;
