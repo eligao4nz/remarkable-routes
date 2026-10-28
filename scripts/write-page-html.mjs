@@ -21,9 +21,10 @@ const routeLabels = {
   "/our-team/": "Our Team",
   "/airport-transfers/": "Airport Transfers",
   "/private-charters/": "Private Charters",
-  "/queenstown-private-tours/": "Queenstown Private Tours",
+  "/queenstown-private-tours/": "Multi-Day Tours",
   "/activities/": "Activity Bookings",
   "/special-offers/": "Special Offers",
+  "/terms-and-conditions": "Terms & Conditions",
 };
 
 const pageSchema = {
@@ -102,8 +103,8 @@ const pageSchema = {
     pageType: "WebPage",
     breadcrumbs: ["/", "Services", "/queenstown-private-tours/"],
     service: {
-      name: "Queenstown Private Tours",
-      serviceType: "Queenstown Private Tours",
+      name: "Multi-Day South Island Tours",
+      serviceType: "Private Multi-Day Sightseeing Tours",
       areaServed: "Queenstown and the South Island, New Zealand",
     },
   },
@@ -119,6 +120,10 @@ const pageSchema = {
   "/special-offers/": {
     pageType: "WebPage",
     breadcrumbs: ["/", "/special-offers/"],
+  },
+  "/terms-and-conditions": {
+    pageType: "WebPage",
+    breadcrumbs: ["/", "/terms-and-conditions"],
   },
 };
 
@@ -139,12 +144,13 @@ const fallbackNavigation = [
     children: [
       { label: "Airport Transfers", path: "/airport-transfers/" },
       { label: "Private Charters", path: "/private-charters/" },
-      { label: "Queenstown Private Tours", path: "/queenstown-private-tours/" },
+      { label: "Multi-Day Tours", path: "/queenstown-private-tours/" },
       { label: "Activity Bookings", path: "/activities/" },
       { label: "Special Offers", path: "/special-offers/" },
     ],
   },
   { label: "Our Team", path: "/our-team/" },
+  { label: "Terms & Conditions", path: "/terms-and-conditions" },
 ];
 
 const pageSeo = {
@@ -258,15 +264,15 @@ const pageSeo = {
     ],
   },
   "/queenstown-private-tours/": {
-    title: "Queenstown Private Tours | Remarkable Routes",
+    title: "Multi-Day South Island Tours | Remarkable Routes",
     description:
-      "Plan a Queenstown private tour with a local driver-guide and a flexible itinerary to Glenorchy, Wanaka, Arrowtown, Milford Sound, and beyond.",
-    h1: "Queenstown Private Tours",
+      "Explore the South Island over several days with a private local driver-guide, a dedicated vehicle and an itinerary shaped around your interests.",
+    h1: "Multi-Day South Island Tours",
     intro:
-      "Explore Queenstown and the South Island on a private tour shaped around your pace, interests, and available time.",
+      "See more of Te Waipounamu over several days with your own local driver-guide and private vehicle. Shape a flexible route from Queenstown, Christchurch or the West Coast, with time for scenic detours and overnight stops.",
     sections: [
-      { h2: "Popular Queenstown Private Tour Routes", text: "Glenorchy, Wanaka, Arrowtown, and Milford Sound can be planned as private routes from Queenstown." },
-      { h2: "Private Touring, Planned Around You", text: "Plan around arrival time, must-see places, activity bookings, weather changes, and preferred pace." },
+      { h2: "A South Island journey, your way", text: "Plan routes across Fiordland, Milford Sound, Stewart Island, Tekapo, Aoraki / Mt Cook, the glaciers, West Coast, Nelson, Marlborough, Kaikōura, Dunedin and more." },
+      { h2: "A private guide for the whole journey", text: "Shape a multi-day itinerary around your available time, interests and preferred pace, with stops for scenery, food, wine and activities." },
     ],
   },
   "/activities/": {
@@ -289,6 +295,19 @@ const pageSeo = {
       "Ask us for the current seasonal offers across private tours, transfers, activity bookings, snow days, wine routes, and lake experiences.",
     sections: [
       { h2: "Seasonal Specials", text: "Offers change with weather, partner availability, and travel dates." },
+    ],
+  },
+  "/terms-and-conditions": {
+    title: "Terms & Conditions | Remarkable Routes",
+    description:
+      "Read the Remarkable Routes booking terms for payment, cancellations, additional charges, transportation, safety and third-party activities.",
+    h1: "Terms & Conditions",
+    intro:
+      "Booking terms for Remarkable Routes private tours, private charters, airport transfers, hiking transfers and multi-day transportation services.",
+    sections: [
+      { h2: "Payment, cancellations and refunds", text: "Read payment deadlines, deposit terms, standard cancellation periods and multi-day booking cancellation terms." },
+      { h2: "Additional charges and transportation", text: "Review waiting time, service extension and late-night charges, flight changes, road access, safety and third-party activity terms." },
+      { h2: "Last updated", text: "28 October 2026" },
     ],
   },
 };

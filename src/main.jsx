@@ -4,6 +4,8 @@ import "react-day-picker/style.css";
 import "./styles.css";
 import logoDarkNav from "./assets/logo-dark-nav.png";
 import logoLightNav from "./assets/logo-light-nav.png";
+import termsMarkdown from "./terms-and-conditions.md?raw";
+import termsChineseText from "./terms-and-conditions.zh.txt?raw";
 
 const LazyDayPicker = React.lazy(() =>
   import("react-day-picker").then((module) => ({ default: module.DayPicker })),
@@ -676,7 +678,7 @@ const servicePages = [
       ["Arrowtown & Sunshine Bay", "$68"],
     ],
     note:
-      "Airport terminal pickup or drop-off incurs a $10 airport access fee. Check-in assistance is available for $5 per person.",
+      "Airport terminal pickup or drop-off incurs a $15 airport access fee. Check-in assistance is available for $5 per person.",
     whyTitle: "Why Choose Our Airport Transfers",
     why: [
       ["Private door-to-door service", "Travel directly between Queenstown Airport and your accommodation without shared stops."],
@@ -687,7 +689,7 @@ const servicePages = [
     ],
     faqTitle: "Airport Transfer FAQs",
     faqs: [
-      ["How much does a Queenstown airport transfer cost?", "Private transfer prices start from $28 and vary by destination. The pricing table above shows our current one-way local rates. Airport terminal pickup or drop-off has a $10 airport access fee."],
+      ["How much does a Queenstown airport transfer cost?", "Private transfer prices start from $28 and vary by destination. The pricing table above shows our current one-way local rates. Airport terminal pickup or drop-off has a $15 airport access fee."],
       ["Can you accommodate delayed flights?", "Yes. Please include your flight number when booking so we can allow for schedule changes and adjust your pickup where possible."],
       ["How many passengers can travel?", "Our Mercedes people mover can carry up to 6 passengers. Luggage space can be limited for groups above 4, so please tell us how many bags you will have."],
       ["Do you provide child seats?", "Please include each child's age and seating needs in your enquiry. We will confirm suitable child-seat arrangements before your booking is finalised."],
@@ -711,7 +713,7 @@ const servicePages = [
         ["箭镇 & Sunshine Bay", "$68"],
       ],
       note:
-        "机场航站楼接送需加收 NZ$10 机场通行费。如需协助办理机场值机或行李托运手续，可提供额外服务，每位 NZ$5。",
+        "机场航站楼接送需加收 NZ$15 机场通行费。如需协助办理机场值机或行李托运手续，可提供额外服务，每位 NZ$5。",
       whyTitle: "为什么选择我们的机场接送",
       why: [
         ["私人点对点接送", "从皇后镇机场直接前往您的住宿地点，无需与其他乘客拼车或中途停靠。"],
@@ -722,7 +724,7 @@ const servicePages = [
       ],
       faqTitle: "机场接送常见问题",
       faqs: [
-        ["皇后镇机场接送多少钱？", "私人接送价格由 $28 起，具体取决于目的地。上方价格表列出了目前常用地区的单程价格；机场航站楼接送另收 $10 机场通行费。"],
+        ["皇后镇机场接送多少钱？", "私人接送价格由 $28 起，具体取决于目的地。上方价格表列出了目前常用地区的单程价格；机场航站楼接送另收 $15 机场通行费。"],
         ["航班延误可以调整接送时间吗？", "可以。预订时请提供航班号，我们会预留时间关注航班变化，并在条件允许时调整接送安排。"],
         ["最多可以乘坐多少人？", "奔驰商务车最多可乘坐6位客人。超过4位客人时，行李空间可能有限，请在咨询时告诉我们行李数量。"],
         ["可以提供儿童安全座椅吗？", "请在咨询中填写儿童年龄和座椅需求，我们会在确认预订前回复合适的儿童座椅安排。"],
@@ -816,88 +818,172 @@ const servicePages = [
   },
   {
     id: "queenstown-private-tours",
-    title: "Queenstown Private Tours",
-    kicker: "Private touring from Queenstown",
-    seoTitle: "Queenstown Private Tours | Remarkable Routes",
+    title: "Multi-Day South Island Tours",
+    kicker: "Private journeys across Te Waipounamu",
+    seoTitle: "Multi-Day South Island Tours | Remarkable Routes",
     seoDescription:
-      "Plan a Queenstown private tour with a local driver-guide and a flexible itinerary to Glenorchy, Wanaka, Arrowtown, Milford Sound, and beyond.",
+      "Explore the South Island over several days with a private local driver-guide, a dedicated vehicle and an itinerary shaped around your interests.",
     intro:
-      "Explore Queenstown and the South Island on a private tour shaped around your pace, interests, and available time. Choose an easy local half-day, a full scenic day, or a longer journey with a local driver-guide and a comfortable 7-seat Mercedes people mover.",
-    serviceLinksTitle: "Choose Your Private Travel Service",
-    serviceLinks: [
-      {
-        title: "Airport Transfers",
-        description: "Private door-to-door travel between Queenstown Airport and your accommodation, timed around your flight.",
-        href: "/airport-transfers/",
-        serviceId: "airport-transfers",
-      },
-      {
-        title: "Private Charters",
-        description: "Flexible hourly, half-day, and full-day touring with scenic stops and practical local recommendations.",
-        href: "/private-charters/",
-        serviceId: "private-day-tours",
-      },
+      "See more of Te Waipounamu over several days with your own local driver-guide and private vehicle. Shape a flexible route from Queenstown, Christchurch or the West Coast, with time for scenic detours, overnight stops and the experiences that matter to you.",
+    recommendedRoutesTitle: "Suggested South Island routes",
+    recommendedRoutes: [
+      { title: "Classic Alpine Route", duration: "Approx. 4 days", stops: ["Queenstown", "Lake Tekapo", "Christchurch"] },
+      { title: "Southern Heritage & East Coast Loop", duration: "Approx. 3 days", stops: ["Queenstown", "Invercargill", "The Catlins", "Dunedin", "Central Otago", "Queenstown"] },
+      { title: "Wild West Coast Journey", duration: "Approx. 7 days", stops: ["Queenstown", "Wānaka", "Haast", "Glacier Country", "Hokitika", "Arthur’s Pass", "Christchurch"] },
     ],
-    destinationsTitle: "Popular Queenstown Private Tour Routes",
+    destinationsTitle: "A South Island journey, your way",
     destinationsIntro:
-      "Start with one destination or ask us to combine nearby places into a comfortable route for your group.",
-    destinations: ["Glenorchy", "Wanaka", "Arrowtown", "Milford Sound"],
-    whyTitle: "Private Touring, Planned Around You",
+      "Link alpine lakes, fiords, glaciers, wine regions and coastal towns into a private itinerary. Select a marker to explore an area. Overnight stops can be planned in places such as Tekapo, Aoraki / Mt Cook, Franz Josef or Fox Glacier.",
+    mapDestinations: [
+      {
+        id: "nelson", name: "Nelson", shortName: "Nelson", x: 72.5, y: 11.8,
+        description: "Nelson is known for its sunny climate, creative community and access to the beaches and walking tracks of Abel Tasman National Park.",
+        nameZh: "纳尔逊", shortNameZh: "Nelson",
+        descriptionZh: "纳尔逊以阳光充足、艺术氛围浓厚而闻名，也是前往亚伯塔斯曼国家公园海滩和步道的门户。",
+      },
+      {
+        id: "picton", name: "Picton", shortName: "Picton", x: 83.9, y: 15.4,
+        description: "Picton sits at the head of the Marlborough Sounds and is a natural gateway for ferry journeys, sheltered waterways and coastal walks.",
+        nameZh: "皮克顿", shortNameZh: "Picton",
+        descriptionZh: "皮克顿位于马尔堡峡湾入口，是搭乘渡轮、探索宁静海湾水道和海岸步道的门户。",
+      },
+      {
+        id: "hanmer-springs", name: "Hanmer Springs", shortName: "Hanmer Springs", x: 63.3, y: 28,
+        description: "Hanmer Springs is an alpine village known for its thermal pools, forest walks and mountain scenery.",
+        nameZh: "汉默温泉", shortNameZh: "Hanmer Springs",
+        descriptionZh: "汉默温泉是一座高山小镇，以温泉浴场、森林步道和周边山景而闻名。",
+      },
+      {
+        id: "hokitika", name: "Hokitika", shortName: "Hokitika", x: 55, y: 25,
+        description: "A characterful West Coast town known for its wild shoreline, river mouth and local pounamu (greenstone) heritage.",
+        nameZh: "霍基蒂卡", shortNameZh: "Hokitika",
+        descriptionZh: "这座西海岸小镇以粗犷的海岸线、河口景色和当地的绿玉文化闻名。",
+      },
+      {
+        id: "franz-josef", name: "Franz Josef Glacier", shortName: "Franz Josef", x: 50.8, y: 30,
+        description: "Franz Josef / Waiau is a West Coast village set among rainforest and glacier country. Track access and views can change with weather and conditions.",
+        nameZh: "弗朗茨约瑟夫冰川", shortNameZh: "Franz Josef",
+        descriptionZh: "弗朗茨约瑟夫（Waiau）小镇位于西海岸雨林与冰川地区。步道开放和观景条件会随天气及环境变化。",
+      },
+      {
+        id: "christchurch", name: "Christchurch", shortName: "Christchurch", x: 72, y: 40.5,
+        description: "Christchurch combines a lively city centre with gardens, heritage architecture and easy access to the Canterbury region.",
+        nameZh: "基督城", shortNameZh: "Christchurch",
+        descriptionZh: "基督城融合了活力市中心、花园和历史建筑，也是探索坎特伯雷地区的便捷起点。",
+      },
+      {
+        id: "fox-glacier", name: "Fox Glacier", shortName: "Fox Glacier", x: 49.5, y: 34.1,
+        description: "Fox Glacier / Te Moeka o Tuawe is a small West Coast settlement surrounded by glacier-carved landscapes, rainforest and mountain views. Access and walks can vary with conditions.",
+        nameZh: "福克斯冰川", shortNameZh: "Fox Glacier",
+        descriptionZh: "福克斯冰川（Te Moeka o Tuawe）小镇坐落于冰川塑造的山地、雨林与群峰之间。步道和景点开放情况会随环境条件变化。",
+      },
+      {
+        id: "tekapo", name: "Lake Tekapo", shortName: "Tekapo", x: 51.7, y: 49.8,
+        description: "Lake Tekapo is known for its vivid turquoise water, wide Mackenzie Basin views and dark-sky stargazing.",
+        nameZh: "特卡波湖", shortNameZh: "Tekapo",
+        descriptionZh: "特卡波湖以蓝绿色湖水、开阔的麦肯齐盆地景色和暗夜观星体验而闻名。",
+      },
+      {
+        id: "akaroa", name: "Akaroa", shortName: "Akaroa", x: 78, y: 48,
+        description: "A harbour town on Banks Peninsula, known for its French heritage, historic streets and sheltered volcanic coastline.",
+        nameZh: "阿卡罗阿", shortNameZh: "Akaroa",
+        descriptionZh: "阿卡罗阿位于班克斯半岛，是一座港湾小镇，以法式历史风情、古老街道和火山海岸闻名。",
+      },
+      {
+        id: "milford-sound", name: "Milford Sound / Piopiotahi", shortName: "Milford Sound", x: 19.2, y: 57.1,
+        description: "Milford Sound / Piopiotahi is a dramatic fiord of steep peaks, waterfalls and deep water, often explored by boat.",
+        nameZh: "米尔福德峡湾（Piopiotahi）", shortNameZh: "Milford Sound",
+        descriptionZh: "米尔福德峡湾（Piopiotahi）以陡峭山峰、瀑布和深邃海水构成的壮丽景色闻名，常可乘船游览。",
+      },
+      {
+        id: "queenstown", name: "Queenstown", shortName: "Queenstown", x: 25.3, y: 66.6,
+        description: "A popular starting point for South Island journeys, with Lake Wakatipu, mountain scenery and routes leading toward Fiordland, Wānaka and the Mackenzie region.",
+        nameZh: "皇后镇", shortNameZh: "皇后镇",
+        descriptionZh: "南岛多日旅行的热门出发地，坐拥瓦卡蒂普湖与高山景色，并可向峡湾地区、瓦纳卡和麦肯齐地区延伸。",
+      },
+      {
+        id: "wanaka", name: "Wānaka", shortName: "Wānaka", x: 40.5, y: 61.1,
+        description: "Wānaka is a lakeside town framed by mountains, with a relaxed pace and access to walks, viewpoints and outdoor activities.",
+        nameZh: "瓦纳卡", shortNameZh: "Wānaka",
+        descriptionZh: "瓦纳卡是一座被群山环绕的湖畔小镇，氛围悠闲，可体验步道、观景点和户外活动。",
+      },
+      {
+        id: "cromwell", name: "Cromwell", shortName: "Cromwell", x: 40.1, y: 66.5,
+        description: "Cromwell sits beside Lake Dunstan in Central Otago, close to vineyards, orchards and historic gold-mining sites.",
+        nameZh: "克伦威尔", shortNameZh: "Cromwell",
+        descriptionZh: "克伦威尔位于中奥塔哥的邓斯坦湖畔，周边有葡萄园、果园和历史淘金遗址。",
+      },
+      {
+        id: "oamaru", name: "Oamaru", shortName: "Oamaru", x: 63.1, y: 63.7,
+        description: "Oamaru is known for its beautifully preserved Victorian precinct, heritage buildings and nearby penguin colonies.",
+        nameZh: "奥马鲁", shortNameZh: "Oamaru",
+        descriptionZh: "奥马鲁以保存完好的维多利亚式历史街区、古建筑和附近的企鹅栖息地而闻名。",
+      },
+      {
+        id: "te-anau", name: "Te Anau", shortName: "Te Anau", x: 21, y: 74,
+        description: "Te Anau is a lakeside town and a convenient base for Fiordland, with access to walking tracks, lake cruises and onward journeys to Milford Sound.",
+        nameZh: "蒂阿瑙", shortNameZh: "Te Anau",
+        descriptionZh: "蒂阿瑙坐落在湖畔，是探索峡湾地区的便利落脚点，可安排步道、湖上游览及前往米尔福德峡湾的行程。",
+      },
+      {
+        id: "dunedin", name: "Dunedin", shortName: "Dunedin", x: 54.1, y: 78.3,
+        description: "Dunedin pairs distinctive Scottish-influenced heritage with a dramatic peninsula, coastal wildlife and memorable architecture.",
+        nameZh: "但尼丁", shortNameZh: "Dunedin",
+        descriptionZh: "但尼丁将鲜明的苏格兰风格历史风貌、壮丽半岛海岸、野生动物和特色建筑融为一体。",
+      },
+      {
+        id: "bluff", name: "Bluff", shortName: "Bluff", x: 39.6, y: 91.9,
+        description: "Bluff is the southern port of mainland New Zealand, with views across Foveaux Strait and a proud maritime and seafood heritage.",
+        nameZh: "布拉夫", shortNameZh: "Bluff",
+        descriptionZh: "布拉夫是新西兰本岛最南端的港口，可眺望福沃海峡，也以海事传统和海鲜闻名。",
+      },
+    ],
+    whyTitle: "A private guide for the whole journey",
     why: [
-      ["A route that fits your day", "Plan around your arrival time, must-see places, activity bookings, and preferred pace."],
-      ["Local driver-guide", "Use practical local knowledge for timing, scenic stops, weather changes, and worthwhile detours."],
-      ["Comfortable small-group travel", "Travel privately as an individual, couple, family, or group of up to 6 passengers."],
-      ["Time for the places you enjoy", "Pause for photography, short walks, food, lake views, or seasonal highlights without following a fixed coach schedule."],
+      ["Your own local driver-guide", "Travel with one friendly local guide who stays with your tour and shares insight into the places along the way."],
+      ["A flexible pace", "Build the route around your available days, interests and preferred rhythm, with room for worthwhile stops along the way."],
+      ["Make it your kind of trip", "Add wine regions, local dining, photography, short walks, a Milford Sound cruise, a scenic flight or other experiences."],
+      ["Designed together", "We can recommend a route or help shape a bespoke itinerary for a few days or a longer South Island escape."],
     ],
-    faqTitle: "Queenstown Private Tour FAQs",
+    faqTitle: "Multi-Day Tour FAQs",
     faqs: [
-      ["What can I include in a Queenstown private tour?", "Your tour can include scenic drives, viewpoints, short walks, local food, wineries, activity connections, and destinations such as Glenorchy, Wanaka, Arrowtown, or Milford Sound."],
-      ["Can I customise the itinerary?", "Yes. Tell us your dates, group size, interests, and must-see places, and we will suggest a practical route with comfortable driving times."],
-      ["How long is a private tour?", "Private touring can be booked by the hour, as a half-day, or as a full day. Longer and multi-day plans can also be discussed."],
-      ["How many passengers can travel?", "Our 7-seat Mercedes people mover carries up to 6 passengers. Please include your luggage details when enquiring, especially for airport pickups or longer journeys."],
-      ["Can I combine an airport transfer with a tour?", "Yes. Depending on your flight time and luggage, we can plan a direct transfer or add suitable scenic stops before hotel check-in or departure."],
+      ["Where can a multi-day tour start?", "Tours can be planned from Queenstown, Christchurch or the West Coast, subject to your itinerary and vehicle availability."],
+      ["Can you help plan overnight stops?", "Yes. We can shape a route with overnight stops in places such as Tekapo, Aoraki / Mt Cook, Franz Josef or Fox Glacier. Accommodation arrangements can be discussed as part of your enquiry."],
+      ["Can I customise the itinerary?", "Yes. Share your dates, group size, interests and must-see places, and we can recommend a practical route for the time you have."],
+      ["Can we add activities along the way?", "You can discuss options such as wineries, local restaurants, photography stops, short walks, a Milford Sound cruise or scenic flights. Third-party activities are subject to their own availability and terms."],
+      ["Are accommodation, meals and activity tickets included?", "These are not included unless they are specifically listed in your quotation or booking confirmation."],
     ],
-    cta: "Plan your private tour",
+    cta: "Plan your multi-day tour",
     zh: {
-      title: "皇后镇私人旅行",
-      kicker: "从皇后镇出发的私人行程",
-      seoTitle: "皇后镇私人旅行 | Remarkable Routes",
-      seoDescription: "由本地司导为您安排皇后镇私人旅行，灵活前往格林诺奇、瓦纳卡、箭镇、米尔福德峡湾及南岛更多目的地。",
-      intro: "从皇后镇出发，按照您的时间、兴趣和旅行节奏安排私人行程。无论是轻松的半日路线、完整的一日风景行程，还是更远的南岛旅程，都可乘坐舒适的7座奔驰商务车，由本地司导陪同出发。",
-      serviceLinksTitle: "选择适合您的私人出行服务",
-      serviceLinks: [
-        {
-          title: "机场接送",
-          description: "皇后镇机场与住宿地点之间的私人点对点接送，并根据航班时间安排出发。",
-          href: "/airport-transfers/",
-          serviceId: "airport-transfers",
-        },
-        {
-          title: "私人包车",
-          description: "可按小时、半日或一日安排，灵活加入沿途风景停留与实用本地建议。",
-          href: "/private-charters/",
-          serviceId: "private-day-tours",
-        },
+      title: "南岛多日私人旅行",
+      kicker: "探索 Te Waipounamu 南岛",
+      seoTitle: "南岛多日私人旅行 | Remarkable Routes",
+      seoDescription: "与本地司导和专属车辆一起，用数日时间探索南岛；根据您的兴趣灵活规划私人路线。",
+      intro: "用数日时间深入探索 Te Waipounamu 南岛，由本地司导和专属车辆全程陪伴。从皇后镇、基督城或西海岸出发，灵活规划路线、沿途风景停留、过夜地点，以及您最想体验的内容。",
+      recommendedRoutesTitle: "南岛路线推荐",
+      recommendedRoutes: [
+        { title: "经典高山中线", duration: "约 4 天", stops: ["皇后镇", "特卡波湖", "基督城"] },
+        { title: "南部人文与东海岸环线", duration: "约 3 天", stops: ["皇后镇", "因弗卡吉尔", "卡特林斯", "但尼丁", "中奥塔哥", "皇后镇"] },
+        { title: "原始西海岸之旅", duration: "约 7 天", stops: ["皇后镇", "瓦纳卡", "哈斯特", "冰川地区", "霍基蒂卡", "亚瑟山口", "基督城"] },
       ],
-      destinationsTitle: "热门皇后镇私人路线",
-      destinationsIntro: "可以选择一个主要目的地，也可以告诉我们您的兴趣，由我们组合附近地点，安排节奏舒适的专属路线。",
-      destinations: ["格林诺奇", "瓦纳卡", "箭镇", "米尔福德峡湾"],
-      whyTitle: "围绕您的需要安排行程",
+      destinationsTitle: "按您的方式探索南岛",
+      destinationsIntro: "把高山湖泊、峡湾、冰川、酒庄产区和海岸小镇串成专属行程。点击地图标记，了解不同地区；可根据路线安排在特卡波、奥拉基／库克山、Franz Josef 或 Fox Glacier 等地过夜。",
+      whyTitle: "一位司导，陪伴完整旅程",
       why: [
-        ["适合当天时间的路线", "根据抵达时间、必去地点、活动预订和喜欢的节奏来规划。"],
-        ["本地司导", "结合本地经验安排出发时间、风景停留、天气变化和值得前往的小绕路。"],
-        ["舒适的小团体出行", "适合个人、情侣、家庭及最多6位客人的私人小团体。"],
-        ["把时间留给喜欢的地方", "可从容安排摄影、短途散步、当地美食、湖景和季节限定体验，无需跟随固定大巴行程。"],
+        ["专属本地司导", "全程由一位友善的本地司导陪同，分享沿途地点的故事与实用建议。"],
+        ["灵活掌握节奏", "围绕可用天数、兴趣和旅行节奏规划路线，并为沿途值得一停的风景留出时间。"],
+        ["打造喜欢的旅行体验", "可咨询酒庄、当地餐厅、摄影停留、短途步行、米尔福德峡湾游船、观光飞行或其他体验。"],
+        ["共同规划路线", "无论数日短途还是更长的南岛旅程，我们都可以提供路线建议并协助设计专属行程。"],
       ],
-      faqTitle: "皇后镇私人旅行常见问题",
+      faqTitle: "多日游常见问题",
       faqs: [
-        ["皇后镇私人旅行可以包含哪些内容？", "可安排风景公路、观景点、短途散步、当地美食、酒庄、活动接送，以及格林诺奇、瓦纳卡、箭镇或米尔福德峡湾等目的地。"],
-        ["可以定制行程吗？", "可以。请告诉我们日期、人数、兴趣和必去地点，我们会按照舒适的车程与停留时间建议合适路线。"],
-        ["私人行程通常多长？", "可按小时、半日或一日预订，也欢迎咨询更长时间或多日行程。"],
-        ["最多可以乘坐多少人？", "7座奔驰商务车最多可乘坐6位客人。如包含机场接送或长途行程，请在咨询时说明行李数量。"],
-        ["可以把机场接送和私人行程结合吗？", "可以。我们会根据航班时间和行李情况，安排直接接送，或在入住酒店、前往机场之前加入合适的风景停留。"],
+        ["多日游可以从哪里出发？", "可根据行程和车辆安排，从皇后镇、基督城或西海岸出发。"],
+        ["可以协助安排过夜地点吗？", "可以根据路线规划在特卡波、奥拉基／库克山、Franz Josef 或 Fox Glacier 等地过夜。住宿安排可在咨询时讨论。"],
+        ["可以定制行程吗？", "可以。请告诉我们日期、人数、兴趣和必去地点，我们会根据可用时间建议合适路线。"],
+        ["可以在途中加入活动吗？", "可咨询酒庄、当地餐厅、摄影停留、短途步行、米尔福德峡湾游船或观光飞行等选择。第三方活动须视供应商名额及其条款而定。"],
+        ["住宿、餐饮和活动门票包含在内吗？", "除非报价单或预订确认信中明确列出，否则不包含在内。"],
       ],
-      cta: "定制私人行程",
+      cta: "咨询南岛多日游",
     },
   },
   {
@@ -957,7 +1043,7 @@ const servicePages = [
 ];
 
 const serviceNavItems = [
-  { id: "queenstown-private-tours", en: "Queenstown Private Tours", zh: "皇后镇私人旅行", path: "/queenstown-private-tours/" },
+  { id: "queenstown-private-tours", en: "Multi-Day Tours", zh: "南岛多日游", path: "/queenstown-private-tours/" },
   { id: "airport-transfers", en: "Airport Transfers", zh: "机场接送", path: "/airport-transfers/" },
   { id: "private-day-tours", en: "Private Charters", zh: "包车服务", path: "/private-charters/" },
   { id: "activity-bookings", en: "Activity Bookings", zh: "活动预订", path: "/activities/" },
@@ -1025,10 +1111,24 @@ const routesSeo = {
   },
 };
 
+const termsSeo = {
+  en: {
+    title: "Terms & Conditions | Remarkable Routes",
+    description:
+      "Read the Remarkable Routes booking terms for payment, cancellations, additional charges, transportation, safety and third-party activities.",
+  },
+  zh: {
+    title: "条款与细则 | Remarkable Routes",
+    description: "查看 Remarkable Routes 预订条款，涵盖付款、取消与退款、附加费用、交通、安全及第三方活动。",
+  },
+};
+
 const siteUrl = "https://remarkableroutes.com";
 const defaultSocialImage = `${siteUrl}/gallery/rrhomepagepic2.png`;
+const termsPath = "/terms-and-conditions";
 
 function getCanonicalPath({ view, selectedSeasonId, selectedServiceId }) {
+  if (view === "terms") return termsPath;
   if (view === "team") return "/our-team/";
   if (view === "routes") return "/routes/";
   if (view === "season" && seasonPaths[selectedSeasonId]) return seasonPaths[selectedSeasonId];
@@ -1055,6 +1155,9 @@ function normalisePath(pathname) {
 
 function getRouteFromPath(pathname) {
   const path = normalisePath(pathname);
+  if (path === termsPath) {
+    return { view: "terms", serviceId: servicePages[0].id };
+  }
   if (path === "/routes") {
     return { view: "routes", serviceId: servicePages[0].id };
   }
@@ -1438,7 +1541,9 @@ function App() {
     const seasonIntro =
       language === "zh" ? selectedSeason?.introZh ?? selectedSeason?.intro : selectedSeason?.intro;
     const seo =
-      view === "team"
+      view === "terms"
+        ? termsSeo[language]
+        : view === "team"
         ? teamSeo[language]
         : view === "routes"
           ? routesSeo[language]
@@ -1625,7 +1730,20 @@ function App() {
           text={text}
         />
       )}
-      <ImageCredits />
+      {view === "terms" && (
+        <TermsAndConditionsPage
+          language={language}
+          onContact={openContact}
+          onHome={() => goTo("home")}
+          onLanguageChange={setLanguage}
+          onRoutes={openRoutes}
+          onSelectService={openService}
+          onServices={openServices}
+          onTeam={openTeam}
+          text={text}
+        />
+      )}
+      <ImageCredits language={language} />
     </main>
   );
 }
@@ -1713,6 +1831,9 @@ function BrandNav({
         <button className="transition hover:text-teal-700" onClick={onContact} type="button">
           {text.nav.contact}
         </button>
+        <a className="transition hover:text-teal-700" href={termsPath}>
+          T&amp;C
+        </a>
       </div>
       <div
         className={`language-switcher flex items-center gap-2 text-sm font-semibold ${
@@ -1830,7 +1951,7 @@ function HomePage({
 }) {
   return (
     <>
-      <section className="hero-section relative min-h-screen overflow-hidden bg-stone-950">
+      <section className="hero-section relative min-h-screen bg-stone-950">
         <picture>
           <source media="(min-width: 768px)" srcSet={heroImage} />
           <img
@@ -1857,18 +1978,43 @@ function HomePage({
         />
         <div className="relative z-10 mx-auto flex min-h-[calc(100svh-84px)] max-w-7xl items-end px-5 pb-14 pt-40 sm:px-8">
           <div className="max-w-4xl">
-            <button
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-stone-950 shadow-lg shadow-stone-950/25 transition hover:bg-teal-100"
-              onClick={onExplore}
-              type="button"
-            >
-              {text.hero.explore}
-              <ArrowRight className="size-4" aria-hidden="true" />
-            </button>
+            <div className="flex flex-wrap items-center gap-3">
+              <button
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-stone-950 shadow-lg shadow-stone-950/25 transition hover:bg-teal-100"
+                onClick={onExplore}
+                type="button"
+              >
+                {text.hero.explore}
+                <ArrowRight className="size-4" aria-hidden="true" />
+              </button>
+            </div>
           </div>
         </div>
+        <a
+          className="hero-scroll-cue"
+          href="#home-intro"
+          aria-label={language === "zh" ? "向下滚动，继续探索" : "Scroll down to continue exploring"}
+        >
+          <span>{language === "zh" ? "下一站就在下方" : "YOUR NEXT STOP IS BELOW"}</span>
+          <svg className="hero-scroll-route" viewBox="0 0 24 68" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="hero-route-gradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#ffffff" />
+                <stop offset="48%" stopColor="#ffffff" />
+                <stop offset="76%" stopColor="#0f766e" />
+                <stop offset="100%" stopColor="#0f766e" />
+              </linearGradient>
+            </defs>
+            <circle className="hero-scroll-marker" cx="12" cy="4" r="2.5" />
+            <path
+              className="hero-scroll-path"
+              d="M12 9 C2 14 22 19 12 25 C2 31 22 36 12 42 C2 48 22 53 12 59"
+            />
+            <path className="hero-scroll-arrow" d="m7 57 5 6 5-6" />
+          </svg>
+        </a>
       </section>
-      <section className="bg-stone-50 px-5 py-16 text-stone-950 sm:px-8 lg:py-20">
+      <section id="home-intro" className="bg-stone-50 px-5 py-16 text-stone-950 sm:px-8 lg:py-20">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.85fr_1.4fr] lg:items-start">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal-700">
             {text.intro.kicker}
@@ -2424,6 +2570,39 @@ function ServicePage({
           </div>
 
           <div className="rounded-lg border border-stone-200 bg-white p-5 shadow-sm sm:p-7">
+            {serviceContent.recommendedRoutes?.length > 0 && (
+              <section className="recommended-routes" aria-labelledby="recommended-routes-heading">
+                <div className="recommended-routes-heading-row">
+                  <div>
+                    <p className="recommended-routes-eyebrow">{language === "zh" ? "为你规划的旅程" : "THOUGHTFUL ITINERARIES"}</p>
+                    <h2 id="recommended-routes-heading">{serviceContent.recommendedRoutesTitle}</h2>
+                  </div>
+                  <span className="recommended-routes-compass" aria-hidden="true">✳</span>
+                </div>
+                <div className="recommended-routes-list">
+                  {serviceContent.recommendedRoutes.map((route, index) => (
+                    <article className="recommended-route-card" key={route.title}>
+                      <span className="recommended-route-index">0{index + 1}</span>
+                      <div className="recommended-route-content">
+                        <div className="recommended-route-title-row">
+                          <h3>{route.title}</h3>
+                          <span className="recommended-route-duration">{route.duration}</span>
+                        </div>
+                        <div className="recommended-route-stops" aria-label={language === "zh" ? "沿途地点" : "Stops along the route"}>
+                          {route.stops.map((stop, stopIndex) => (
+                            <React.Fragment key={`${route.title}-${stop}`}>
+                              {stopIndex > 0 && <span className="recommended-route-arrow" aria-hidden="true">→</span>}
+                              <span className="recommended-route-stop">{stop}</span>
+                            </React.Fragment>
+                          ))}
+                        </div>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            )}
+
             {serviceContent.serviceLinks?.length > 0 && (
               <div className="grid gap-3">
                 <h2 className="text-lg font-semibold text-stone-950">
@@ -2457,6 +2636,9 @@ function ServicePage({
 
             {serviceContent.rates?.length > 0 && (
               <div className="grid gap-3">
+                <p className="text-sm font-medium text-stone-600">
+                  {language === "zh" ? "以上价格不含 GST。" : "All prices shown exclude GST."}
+                </p>
                 {serviceContent.rates.map(([label, price]) => (
                   <div
                     className="flex flex-col justify-between gap-2 border-b border-stone-200 py-4 sm:flex-row sm:items-center"
@@ -2482,6 +2664,16 @@ function ServicePage({
             {serviceContent.note && (
               <p className="mt-5 rounded-md bg-teal-50 px-4 py-4 text-sm font-semibold leading-6 text-teal-900">
                 {serviceContent.note}
+              </p>
+            )}
+
+            {service.id === "private-day-tours" && (
+              <p className="mt-5 text-sm leading-6 text-stone-600">
+                {language === "zh" ? "所有预订均须遵守我们的 " : "All bookings are subject to our "}
+                <a className="font-semibold text-teal-800 underline underline-offset-2 hover:text-teal-700" href={termsPath}>
+                  {language === "zh" ? "条款与细则" : "Terms & Conditions"}
+                </a>
+                {language === "zh" ? "。" : "."}
               </p>
             )}
 
@@ -2516,7 +2708,7 @@ function ServicePage({
           </section>
         )}
 
-        {serviceContent.destinations?.length > 0 && (
+        {(serviceContent.mapDestinations?.length > 0 || serviceContent.destinations?.length > 0) && (
           <section className="mt-8 border-t border-stone-200 pt-8" aria-labelledby="charter-destinations">
             <h2 className="text-3xl font-semibold text-stone-950" id="charter-destinations">
               {serviceContent.destinationsTitle}
@@ -2524,30 +2716,34 @@ function ServicePage({
             <p className="mt-3 max-w-3xl leading-7 text-stone-600">
               {serviceContent.destinationsIntro}
             </p>
-            <div className="mt-5 flex flex-wrap gap-3">
-              {serviceContent.destinations.map((destination) => (
-                <a
-                  className="rounded-md border border-stone-200 bg-white px-4 py-3 font-semibold text-stone-950 transition hover:border-teal-700 hover:text-teal-700"
-                  href="/"
-                  key={destination}
-                  onClick={(event) => {
-                    if (
-                      event.button !== 0 ||
-                      event.metaKey ||
-                      event.ctrlKey ||
-                      event.shiftKey ||
-                      event.altKey
-                    ) {
-                      return;
-                    }
-                    event.preventDefault();
-                    onRoutes();
-                  }}
-                >
-                  {destination}
-                </a>
-              ))}
-            </div>
+            {serviceContent.mapDestinations?.length > 0 ? (
+              <InteractiveDestinationMap language={language} locations={serviceContent.mapDestinations} />
+            ) : (
+              <div className="mt-5 flex flex-wrap gap-3">
+                {serviceContent.destinations.map((destination) => (
+                  <a
+                    className="rounded-md border border-stone-200 bg-white px-4 py-3 font-semibold text-stone-950 transition hover:border-teal-700 hover:text-teal-700"
+                    href="/"
+                    key={destination}
+                    onClick={(event) => {
+                      if (
+                        event.button !== 0 ||
+                        event.metaKey ||
+                        event.ctrlKey ||
+                        event.shiftKey ||
+                        event.altKey
+                      ) {
+                        return;
+                      }
+                      event.preventDefault();
+                      onRoutes();
+                    }}
+                  >
+                    {destination}
+                  </a>
+                ))}
+              </div>
+            )}
           </section>
         )}
 
@@ -2582,6 +2778,300 @@ function ServicePage({
             </div>
           </section>
         )}
+
+      </div>
+    </section>
+  );
+}
+
+function InteractiveDestinationMap({ language, locations }) {
+  const [activeId, setActiveId] = React.useState(null);
+  const activeIndex = locations.findIndex((location) => location.id === activeId);
+  const activeLocation = activeIndex >= 0 ? locations[activeIndex] : null;
+  const isChinese = language === "zh";
+  const displayName = (location) => isChinese ? location.nameZh : location.name;
+  const displayShortName = (location) => isChinese ? location.shortNameZh : location.shortName;
+  const displayDescription = (location) => isChinese ? location.descriptionZh : location.description;
+
+  return (
+    <div className="destination-map-layout">
+      <div className="destination-map-canvas">
+        <img className="destination-map-art" src="/gallery/south-island-routed-watercolour-map.png" alt={isChinese ? "标有南岛目的地与路线的新西兰南岛地图" : "Illustrated South Island map with destination names and routes"} />
+
+        {locations.map((location) => (
+          <React.Fragment key={location.id}>
+          <button
+            className={`destination-map-pin destination-map-hotspot ${activeId === location.id ? "destination-map-pin-active" : ""}`}
+            onClick={() => setActiveId(location.id)}
+            style={{ left: `${location.x}%`, top: `${location.y}%` }}
+            type="button"
+            aria-label={`${isChinese ? "查看" : "Explore"} ${displayName(location)}`}
+            aria-expanded={activeId === location.id}
+          >
+          </button>
+          </React.Fragment>
+        ))}
+        {activeLocation && <div className={`destination-map-popover ${activeLocation.x > 60 ? "destination-map-popover-left" : "destination-map-popover-right"} ${activeLocation.y < 18 ? "destination-map-popover-below" : activeLocation.y > 72 ? "destination-map-popover-above" : ""}`} style={{ left: `${activeLocation.x}%`, top: `${activeLocation.y}%`, "--popup-x": `${activeLocation.x}%` }} role="dialog" aria-labelledby="destination-map-popover-title">
+          <button className="destination-map-close" type="button" onClick={() => setActiveId(null)} aria-label={isChinese ? "关闭介绍" : "Close destination details"}>×</button>
+          <p className="destination-map-detail-kicker">{isChinese ? `目的地 ${activeIndex + 1} / ${locations.length}` : `DESTINATION ${String(activeIndex + 1).padStart(2, "0")} / ${String(locations.length).padStart(2, "0")}`}</p>
+          <h3 id="destination-map-popover-title">{displayName(activeLocation)}</h3>
+          <p>{displayDescription(activeLocation)}</p>
+        </div>}
+      </div>
+
+      <aside className="destination-map-sidebar">
+        <p className="destination-map-list-heading">{isChinese ? "点击地图标记，打开目的地介绍" : "Select a map marker to open a destination note"}</p>
+        <div className="destination-map-list" role="group" aria-label={isChinese ? "选择目的地区域" : "Choose a destination area"}>
+          {locations.map((location, index) => (
+            <button
+              className={`destination-map-list-item ${activeId === location.id ? "destination-map-list-item-active" : ""}`}
+              key={location.id}
+              onClick={() => setActiveId(location.id)}
+              type="button"
+              aria-pressed={activeId === location.id}
+            >
+              <span className="destination-map-list-number">{String(index + 1).padStart(2, "0")}</span>
+              <span>{displayShortName(location)}</span>
+            </button>
+          ))}
+        </div>
+      </aside>
+    </div>
+  );
+}
+
+function parseTermsMarkdown(markdown, language = "en") {
+  const lines = markdown.split(/\r?\n/);
+  const blocks = [];
+  let index = 0;
+
+  while (index < lines.length) {
+    const line = lines[index].trim();
+    if (!line || line === "---") {
+      index += 1;
+      continue;
+    }
+
+    if (language === "zh" && line === "预订条款与条件") {
+      index += 1;
+      continue;
+    }
+
+    if (/^#\s/.test(line)) {
+      index += 1;
+      continue;
+    }
+
+    if (language === "zh") {
+      const tableConfig = {
+        "取消通知时间（出发前）": { secondHeader: "退款比例", rowCount: 4 },
+        "取消通知时间（服务开始前）": { secondHeader: "退款比例", rowCount: 4 },
+        "额外时间": { secondHeader: "收费金额（含 GST）", rowCount: 3 },
+      }[line];
+      if (tableConfig) {
+        let cursor = index + 1;
+        while (cursor < lines.length && !lines[cursor].trim()) cursor += 1;
+        if (lines[cursor]?.trim() === tableConfig.secondHeader) {
+          const rows = [[line, tableConfig.secondHeader]];
+          cursor += 1;
+          for (let rowIndex = 0; rowIndex < tableConfig.rowCount; rowIndex += 1) {
+            while (cursor < lines.length && !lines[cursor].trim()) cursor += 1;
+            const firstCell = lines[cursor]?.trim();
+            cursor += 1;
+            while (cursor < lines.length && !lines[cursor].trim()) cursor += 1;
+            const secondCell = lines[cursor]?.trim();
+            cursor += 1;
+            if (firstCell && secondCell) rows.push([firstCell, secondCell]);
+          }
+          blocks.push({ type: "table", rows });
+          index = cursor;
+          continue;
+        }
+      }
+    }
+
+    if (line.startsWith("|")) {
+      const rows = [];
+      while (index < lines.length && lines[index].trim().startsWith("|")) {
+        const cells = lines[index]
+          .trim()
+          .replace(/^\||\|$/g, "")
+          .split("|")
+          .map((cell) => cell.trim());
+        if (!cells.every((cell) => /^:?-{3,}:?$/.test(cell))) {
+          rows.push(cells);
+        }
+        index += 1;
+      }
+      blocks.push({ type: "table", rows });
+      continue;
+    }
+
+    if (/^#{2,3}\s/.test(line)) {
+      const level = line.startsWith("###") ? 3 : 2;
+      blocks.push({ type: "heading", level, text: line.replace(/^#{2,3}\s+/, "") });
+      index += 1;
+      continue;
+    }
+
+    if (language === "zh") {
+      const subsectionHeading = line.match(/^(\d+\.\d+)\s+(.+)$/);
+      const sectionHeading = line.match(/^(\d+)\.\s+(.+)$/);
+      if (subsectionHeading || sectionHeading) {
+        blocks.push({
+          type: "heading",
+          level: subsectionHeading ? 3 : 2,
+          text: subsectionHeading
+            ? `${subsectionHeading[1]} ${subsectionHeading[2]}`
+            : `${sectionHeading[1]}. ${sectionHeading[2]}`,
+        });
+        index += 1;
+        continue;
+      }
+    }
+
+    if (line.startsWith("- ")) {
+      const items = [];
+      while (index < lines.length && lines[index].trim().startsWith("- ")) {
+        items.push(lines[index].trim().slice(2));
+        index += 1;
+      }
+      blocks.push({ type: "list", items });
+      continue;
+    }
+
+    const paragraph = [line];
+    index += 1;
+    while (
+      index < lines.length &&
+      lines[index].trim() &&
+      lines[index].trim() !== "---" &&
+      !lines[index].trim().startsWith("#") &&
+      !lines[index].trim().startsWith("- ") &&
+      !lines[index].trim().startsWith("|") &&
+      !(language === "zh" && /^\d+(?:\.\d+)?\.\s|^\d+\.\d+\s/.test(lines[index].trim()))
+    ) {
+      paragraph.push(lines[index].trim());
+      index += 1;
+    }
+    blocks.push({ type: "paragraph", text: paragraph.join(" ") });
+  }
+
+  return blocks;
+}
+
+const termsBlocks = parseTermsMarkdown(termsMarkdown);
+const termsChineseBlocks = parseTermsMarkdown(termsChineseText, "zh");
+
+function TermsAndConditionsPage({
+  language,
+  onContact,
+  onHome,
+  onLanguageChange,
+  onRoutes,
+  onSelectService,
+  onServices,
+  onTeam,
+  text,
+}) {
+  function renderInline(value) {
+    return value.split(/(\*\*.*?\*\*)/g).map((part, index) =>
+      part.startsWith("**") && part.endsWith("**") ? (
+        <strong key={`${part}-${index}`}>{part.slice(2, -2)}</strong>
+      ) : (
+        part
+      ),
+    );
+  }
+
+  return (
+    <section className="min-h-screen bg-stone-100 text-stone-950">
+      <BrandNav
+        language={language}
+        onContact={onContact}
+        onHome={onHome}
+        onLanguageChange={onLanguageChange}
+        onRoutes={onRoutes}
+        onSelectService={onSelectService}
+        onServices={onServices}
+        onTeam={onTeam}
+        text={text}
+        right={
+          <button
+            className="rounded-full border border-stone-200 bg-white px-5 py-2.5 text-sm font-semibold text-stone-950 transition hover:border-teal-700 hover:text-teal-700"
+            onClick={onHome}
+            type="button"
+          >
+            {text.nav.home}
+          </button>
+        }
+      />
+      <div className="mx-auto max-w-5xl px-5 pb-20 pt-8 sm:px-8 lg:pb-28">
+        <header className="mb-8 border-b border-stone-200 pb-7">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-teal-700">
+            REMARKABLE ROUTES
+          </p>
+          <h1 className="mt-3 text-4xl font-semibold leading-tight sm:text-5xl">
+            {language === "zh" ? "条款与细则" : "Terms & Conditions"}
+          </h1>
+        </header>
+        <article className="terms-content rounded-lg border border-stone-200 bg-white px-5 py-7 shadow-sm sm:px-9 sm:py-10">
+          {(language === "zh" ? termsChineseBlocks : termsBlocks).map((block, blockIndex) => {
+            if (block.type === "heading") {
+              const Heading = block.level === 2 ? "h2" : "h3";
+              return (
+                <Heading className={`terms-heading terms-heading-${block.level}`} key={`${block.text}-${blockIndex}`}>
+                  {renderInline(block.text)}
+                </Heading>
+              );
+            }
+
+            if (block.type === "list") {
+              return (
+                <ul className="terms-list" key={`list-${blockIndex}`}>
+                  {block.items.map((item, itemIndex) => (
+                    <li key={`${itemIndex}-${item}`}>{renderInline(item)}</li>
+                  ))}
+                </ul>
+              );
+            }
+
+            if (block.type === "table") {
+              const [headers, ...rows] = block.rows;
+              return (
+                <div
+                  className="terms-table-scroll"
+                  key={`table-${blockIndex}`}
+                  role="region"
+                  aria-label={headers?.join("; ")}
+                  tabIndex={0}
+                >
+                  <table className="terms-table">
+                    <thead>
+                      <tr>{headers?.map((cell, cellIndex) => <th key={`${cell}-${cellIndex}`} scope="col">{renderInline(cell)}</th>)}</tr>
+                    </thead>
+                    <tbody>
+                      {rows.map((row, rowIndex) => (
+                        <tr key={`row-${rowIndex}`}>
+                          {row.map((cell, cellIndex) => (
+                            <td key={`${cell}-${cellIndex}`}>{renderInline(cell)}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              );
+            }
+
+            const isUpdatedDate = block.text.startsWith("Last updated:") || block.text.startsWith("最后更新日期：");
+            return (
+              <p className={isUpdatedDate ? "terms-updated" : "terms-paragraph"} key={`p-${blockIndex}`}>
+                {renderInline(block.text)}
+              </p>
+            );
+          })}
+        </article>
       </div>
     </section>
   );
@@ -3363,7 +3853,7 @@ function ContactLink({ icon: LinkIcon, label, value, href, target }) {
   );
 }
 
-function ImageCredits() {
+function ImageCredits({ language }) {
   return (
     <footer className="bg-white px-5 py-7 text-xs leading-6 text-stone-500 sm:px-8">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
@@ -3376,7 +3866,12 @@ function ImageCredits() {
           width="4725"
           height="4725"
         />
-        <p>Images are from the uploaded Queenstown and South Island photo set.</p>
+        <div className="flex flex-col gap-2 sm:items-end">
+          <a className="font-semibold text-stone-700 transition hover:text-teal-700" href={termsPath}>
+            {language === "zh" ? "条款与细则" : "Terms & Conditions"}
+          </a>
+          <p>Images are from the uploaded Queenstown and South Island photo set.</p>
+        </div>
       </div>
     </footer>
   );

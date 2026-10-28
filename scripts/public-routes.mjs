@@ -21,4 +21,9 @@ export const publicRoutes = [
   },
   { path: "/activities/", inputName: "activities", inputFile: "activities/index.html" },
   { path: "/special-offers/", inputName: "specialOffers", inputFile: "special-offers/index.html" },
+  {
+    path: "/terms-and-conditions",
+    inputName: "termsAndConditions",
+    inputFile: "terms-and-conditions/index.html",
+  },
 ];
