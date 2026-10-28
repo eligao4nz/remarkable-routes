@@ -18,6 +18,7 @@ export const publicRoutes = [
     path: "/queenstown-private-tours/",
     inputName: "queenstownPrivateTours",
     inputFile: "queenstown-private-tours/index.html",
+    lastModified: "2026-10-29",
   },
   { path: "/activities/", inputName: "activities", inputFile: "activities/index.html" },
   { path: "/special-offers/", inputName: "specialOffers", inputFile: "special-offers/index.html" },

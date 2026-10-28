@@ -20,11 +20,12 @@ async function verifyRouteInputs(routes) {
   );
 }
 
-function renderSitemap(paths) {
-  const urls = paths
-    .map((path) => {
+function renderSitemap(routes) {
+  const urls = routes
+    .map(({ path, lastModified }) => {
       const loc = path === "/" ? `${siteUrl}/` : `${siteUrl}${path}`;
-      return `  <url>\n    <loc>${loc}</loc>\n  </url>`;
+      const lastmod = lastModified ? `\n    <lastmod>${lastModified}</lastmod>` : "";
+      return `  <url>\n    <loc>${loc}</loc>${lastmod}\n  </url>`;
     })
     .join("\n");
 
@@ -32,6 +33,5 @@ function renderSitemap(paths) {
 }
 
 await verifyRouteInputs(publicRoutes);
-const paths = publicRoutes.map(({ path }) => path);
-await writeFile(join(process.cwd(), "public", "sitemap.xml"), renderSitemap(paths));
-console.log(`Generated sitemap.xml with ${paths.length} URLs.`);
+await writeFile(join(process.cwd(), "public", "sitemap.xml"), renderSitemap(publicRoutes));
+console.log(`Generated sitemap.xml with ${publicRoutes.length} URLs.`);
