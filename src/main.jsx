@@ -818,22 +818,22 @@ const servicePages = [
   },
   {
     id: "queenstown-private-tours",
-    title: "Multi-Day South Island Tours",
+    title: "Private Multi-Day South Island Tours",
     kicker: "Private journeys across Te Waipounamu",
-    seoTitle: "Multi-Day South Island Tours | Remarkable Routes",
+    seoTitle: "South Island Multi-Day Tours from Queenstown | Remarkable Routes",
     seoDescription:
-      "Explore the South Island over several days with a private local driver-guide, a dedicated vehicle and an itinerary shaped around your interests.",
+      "Private multi-day tours across New Zealand’s South Island, starting in Queenstown, Christchurch or the West Coast. Explore Tekapo, the glaciers and Fiordland with a local driver-guide.",
     intro:
-      "See more of Te Waipounamu over several days with your own local driver-guide and private vehicle. Shape a flexible route from Queenstown, Christchurch or the West Coast, with time for scenic detours, overnight stops and the experiences that matter to you.",
+      "Explore New Zealand’s South Island on a private multi-day tour with a local driver-guide. Start in Queenstown, Christchurch or the West Coast, and build a flexible itinerary through Lake Tekapo, Aoraki / Mt Cook, the West Coast glaciers, Fiordland and more.",
     recommendedRoutesTitle: "Suggested South Island routes",
     recommendedRoutes: [
       { title: "Classic Alpine Route", duration: "Approx. 4 days", stops: ["Queenstown", "Lake Tekapo", "Christchurch"] },
       { title: "Southern Heritage & East Coast Loop", duration: "Approx. 3 days", stops: ["Queenstown", "Invercargill", "The Catlins", "Dunedin", "Central Otago", "Queenstown"] },
       { title: "Wild West Coast Journey", duration: "Approx. 7 days", stops: ["Queenstown", "Wānaka", "Haast", "Glacier Country", "Hokitika", "Arthur’s Pass", "Christchurch"] },
     ],
-    destinationsTitle: "A South Island journey, your way",
+    destinationsTitle: "South Island Itineraries & Destinations",
     destinationsIntro:
-      "Link alpine lakes, fiords, glaciers, wine regions and coastal towns into a private itinerary. Select a marker to explore an area. Overnight stops can be planned in places such as Tekapo, Aoraki / Mt Cook, Franz Josef or Fox Glacier.",
+      "Travel Queenstown to Christchurch via Lake Tekapo in about 4 days, follow the West Coast via Wānaka, Haast, glacier country and Arthur’s Pass in about 7 days, or take a southern east coast loop through Invercargill, The Catlins and Dunedin in about 3 days. Select a map marker to explore South Island destinations.",
     mapDestinations: [
       {
         id: "nelson", name: "Nelson", shortName: "Nelson", x: 72.5, y: 11.8,
@@ -955,19 +955,19 @@ const servicePages = [
     ],
     cta: "Plan your multi-day tour",
     zh: {
-      title: "南岛多日私人旅行",
+      title: "新西兰南岛多日私人游",
       kicker: "探索 Te Waipounamu 南岛",
-      seoTitle: "南岛多日私人旅行 | Remarkable Routes",
-      seoDescription: "与本地司导和专属车辆一起，用数日时间探索南岛；根据您的兴趣灵活规划私人路线。",
-      intro: "用数日时间深入探索 Te Waipounamu 南岛，由本地司导和专属车辆全程陪伴。从皇后镇、基督城或西海岸出发，灵活规划路线、沿途风景停留、过夜地点，以及您最想体验的内容。",
+      seoTitle: "新西兰南岛多日私人游 | 皇后镇出发 | Remarkable Routes",
+      seoDescription: "提供皇后镇、基督城或西海岸出发的新西兰南岛多日私人游，由本地司导陪同，灵活串联特卡波、冰川、峡湾和沿途景点。",
+      intro: "乘坐专属车辆、由本地司导陪同，开启新西兰南岛多日私人游。可从皇后镇、基督城或西海岸出发，灵活规划特卡波湖、奥拉基／库克山、西海岸冰川、峡湾地区等目的地。",
       recommendedRoutesTitle: "南岛路线推荐",
       recommendedRoutes: [
         { title: "经典高山中线", duration: "约 4 天", stops: ["皇后镇", "特卡波湖", "基督城"] },
         { title: "南部人文与东海岸环线", duration: "约 3 天", stops: ["皇后镇", "因弗卡吉尔", "卡特林斯", "但尼丁", "中奥塔哥", "皇后镇"] },
         { title: "原始西海岸之旅", duration: "约 7 天", stops: ["皇后镇", "瓦纳卡", "哈斯特", "冰川地区", "霍基蒂卡", "亚瑟山口", "基督城"] },
       ],
-      destinationsTitle: "按您的方式探索南岛",
-      destinationsIntro: "把高山湖泊、峡湾、冰川、酒庄产区和海岸小镇串成专属行程。点击地图标记，了解不同地区；可根据路线安排在特卡波、奥拉基／库克山、Franz Josef 或 Fox Glacier 等地过夜。",
+      destinationsTitle: "南岛路线与目的地",
+      destinationsIntro: "皇后镇经特卡波前往基督城约 4 天；经瓦纳卡、哈斯特、冰川地区、霍基蒂卡和亚瑟山口走西海岸约 7 天；也可经因弗卡吉尔、卡特林斯和但尼丁走南部东海岸环线，约 3 天。点击地图标记，了解沿途目的地。",
       whyTitle: "一位司导，陪伴完整旅程",
       why: [
         ["专属本地司导", "全程由一位友善的本地司导陪同，分享沿途地点的故事与实用建议。"],

@@ -103,8 +103,8 @@ const pageSchema = {
     pageType: "WebPage",
     breadcrumbs: ["/", "Services", "/queenstown-private-tours/"],
     service: {
-      name: "Multi-Day South Island Tours",
-      serviceType: "Private Multi-Day Sightseeing Tours",
+      name: "Private Multi-Day South Island Tours",
+      serviceType: "Private South Island Multi-Day Tours",
       areaServed: "Queenstown and the South Island, New Zealand",
     },
   },
@@ -264,15 +264,15 @@ const pageSeo = {
     ],
   },
   "/queenstown-private-tours/": {
-    title: "Multi-Day South Island Tours | Remarkable Routes",
+    title: "South Island Multi-Day Tours from Queenstown | Remarkable Routes",
     description:
-      "Explore the South Island over several days with a private local driver-guide, a dedicated vehicle and an itinerary shaped around your interests.",
-    h1: "Multi-Day South Island Tours",
+      "Private multi-day tours across New Zealand’s South Island, starting in Queenstown, Christchurch or the West Coast. Explore Tekapo, the glaciers and Fiordland with a local driver-guide.",
+    h1: "Private Multi-Day South Island Tours",
     intro:
-      "See more of Te Waipounamu over several days with your own local driver-guide and private vehicle. Shape a flexible route from Queenstown, Christchurch or the West Coast, with time for scenic detours and overnight stops.",
+      "Explore New Zealand’s South Island on a private multi-day tour with a local driver-guide. Start in Queenstown, Christchurch or the West Coast, and build a flexible itinerary through Lake Tekapo, Aoraki / Mt Cook, the West Coast glaciers, Fiordland and more.",
     sections: [
-      { h2: "A South Island journey, your way", text: "Plan routes across Fiordland, Milford Sound, Stewart Island, Tekapo, Aoraki / Mt Cook, the glaciers, West Coast, Nelson, Marlborough, Kaikōura, Dunedin and more." },
-      { h2: "A private guide for the whole journey", text: "Shape a multi-day itinerary around your available time, interests and preferred pace, with stops for scenery, food, wine and activities." },
+      { h2: "South Island Itineraries from Queenstown", text: "Travel Queenstown to Christchurch via Lake Tekapo in about 4 days, follow the West Coast via Wānaka, Haast, glacier country, Hokitika and Arthur’s Pass in about 7 days, or take a southern east coast loop through Invercargill, The Catlins and Dunedin in about 3 days." },
+      { h2: "Private Multi-Day Tours with a Local Driver-Guide", text: "Plan a private South Island tour around your available time, interests and preferred pace. Routes can include Queenstown, Wānaka, Milford Sound, Te Anau, Franz Josef, Fox Glacier, Hokitika, Christchurch, Akaroa, Nelson, Picton, Dunedin and Bluff." },
     ],
   },
   "/activities/": {
